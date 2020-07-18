@@ -1,6 +1,9 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Image from "../components/image"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const Header = ({ siteTitle }) => (
   <header
@@ -12,21 +15,24 @@ const Header = ({ siteTitle }) => (
     <div
       style={{
         margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        maxWidth: 1440,
+        overflow: `hidden`
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `#243e50`,
-            textDecoration: `none`,
+        <div 
+          style={{ 
+            width: `140px`, 
+            float: `left` 
           }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+          > <Image />
+        </div>
+        <div style={{ float: `right` }}>
+        <SEO title="Menu" />
+          <ul>
+            <li><Link to="/">Strona Główna</Link></li>
+            <li><Link to="/">Blog</Link></li>
+          </ul>
+        </div>
     </div>
   </header>
 )
