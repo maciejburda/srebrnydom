@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <p>Tu powstaje strona internetowa domu opieki Srebrny Dom w miejscowości Swornegacie.</p>
+    <p>Tu powstaje strona internetowa domu seniora Srebrny Dom w miejscowości Swornegacie.</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
