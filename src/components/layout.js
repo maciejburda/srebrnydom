@@ -1,83 +1,39 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import styled from 'styled-components'
+import Header from './Header'
+import Footer from './Footer'
+import 'prismjs/themes/prism-tomorrow.css'
+import { GlobalStyle } from './Commons'
+import { media } from '../tokens'
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+const SiteContent = styled.div`
+  margin: 0 0;
 
-import Header from "./header"
-import "./layout.css"
+  @media ${media.medium} {
+    margin: 60px 0;
+  }
+`
 
-import { Link } from "gatsby"
+class Template extends React.Component {
+  render() {
+    const { children } = this.props
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 1440,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        
-      </div>
-      <footer 
-        style = {{ 
-          margin: `0 auto`
-        }}>
-          <div
-            style = {{ 
-              background: `#243e50`, 
-              margin: `0 auto`,
-              padding: 12,
-            }}>
-              <div 
-                style = {{ 
-                  maxWidth: 1440,
-                  margin: `auto`
-              }}>
-                <Link to="https://www.facebook.com/SrebrnyDomSwornegacie/">Strona na Facebooku</Link> <br />
-              </div>
-          </div>
-          <div
-            style = {{ 
-              background: `#f6b3cd`, 
-              margin: `0 auto`,
-              padding: 12,
-              color: `white`
-          }}>
-              <div 
-                style = {{ 
-                  maxWidth: 1440,
-                  margin: `auto`
-              }}>
-                © srebrnydom.pl {new Date().getFullYear()} - Wszelkie prawa zastrzeżone.
-              </div>
-          </div>
-        </footer>
-    </>
-  )
+    return (
+      <>
+        <Helmet>
+          <link
+            href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap"
+            rel="stylesheet"
+          />
+        </Helmet>
+        <GlobalStyle />
+        <Header />
+        <SiteContent>{children}</SiteContent>
+        <Footer />
+      </>
+    )
+  }
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Layout
+export default Template
