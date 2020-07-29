@@ -1,11 +1,13 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
-import React, { useState } from 'react'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
-import useSiteMetadata from '../hooks/use-site-config'
-import { colors, media } from '../tokens'
-import useSiteImages from '../hooks/use-site-images'
+import React, { useState } from "react"
+import { Link } from "gatsby"
+import styled from "styled-components"
+import useSiteMetadata from "../hooks/use-site-config"
+import { colors, media } from "../tokens"
+import useSiteImages from "../hooks/use-site-images"
+
+import LanguageSwitch, { LanguageLink } from "./LanguageSwitch"
 
 const HeaderWrapper = styled.header`
   top: 0;
@@ -16,34 +18,34 @@ const HeaderWrapper = styled.header`
   z-index: 1000;
   background-color: ${colors.primaryLight};
   font-weight: 700;
+  padding: 0 1rem 0 0;
 
   @media ${media.medium} {
     position: fixed;
+    padding: 0 4rem 0 0;
   }
 `
 
 const HeaderNav = styled.nav`
-  font-weight: 700;
-  margin-left: auto;
-  margin-right: auto;
-  height: 140px;
-  display: flex;
-  flex-direction: row;
-  max-width: 770px;
-  z-index: 1000;
-  justify-content: space-between;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  padding: 0px 20px;
+  display: grid;
+  grid-template-areas: "logo settings";
+  grid-template-columns: 1fr auto;
+  @media ${media.medium} {
+    grid-template-areas:
+      "logo settings"
+      "logo navigation";
+  }
 `
 
 const HeaderLinksContainer = styled.div`
   display: none;
   -webkit-box-align: center;
-  align-items: center;
+  align-items: flex-end;
+  padding: 0 0 2rem 0;
   @media ${media.medium} {
     display: flex;
+    grid-area: navigation;
+    justify-content: flex-end;
   }
 `
 
@@ -54,22 +56,31 @@ const HeaderLink = styled(Link)`
   color: ${colors.text};
   border: 0;
   margin: 0;
-  padding: 8px 10px;
-
   min-width: 42px;
   z-index: 10;
-  & + & {
-    margin-left: 0.7rem;
-  }
 `
 
 const HeaderLinkTitle = styled(HeaderLink)`
-  padding-left: 0;
+  grid-area: logo;
+`
+
+const HeaderSetting = styled.div`
+  display: none;
+  @media ${media.medium} {
+    display: block;
+    grid-area: settings;
+    justify-self: flex-end;
+    padding: 1rem 0 0 0;
+  }
 `
 
 const HeaderImage = styled.img`
-  height: 140px;
-  width: 140px;
+  height: 80px;
+  width: 80px;
+  @media ${media.medium} {
+    height: 140px;
+    width: 140px;
+  }
 `
 
 const MobilePanel = styled.div`
@@ -81,6 +92,8 @@ const MobilePanel = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
   background-color: ${colors.primary};
   @media ${media.medium} {
     display: none;
@@ -99,6 +112,7 @@ const MobileNav = styled.nav`
   & a {
     display: flex;
     margin: 10px 0 !important;
+    color: ${colors.primaryLight};
   }
 `
 
@@ -126,6 +140,7 @@ const BurgerButton = styled.button`
   padding: 8px 12px;
   outline: none;
   -webkit-tap-highlight-color: transparent;
+  grid-area: settings;
 
   @media ${media.medium} {
     display: none;
@@ -141,11 +156,11 @@ const BurgerContent = styled.div`
   left: 0;
   ${props =>
     props.isToggledOn
-      ? 'background: transparent'
+      ? "background: transparent"
       : `background: ${colors.textLightest}`};
   transition: all 250ms cubic-bezier(0.86, 0, 0.07, 1);
   ::before {
-    content: '';
+    content: "";
     top: -8px;
     width: 24px;
     height: 2px;
@@ -154,13 +169,13 @@ const BurgerContent = styled.div`
     left: 0;
     ${props =>
       props.isToggledOn
-        ? 'transform: rotate(45deg); top: 0;'
-        : 'transform: rotate(0)'};
+        ? "transform: rotate(45deg); top: 0;"
+        : "transform: rotate(0)"};
     transition: all 250ms cubic-bezier(0.86, 0, 0.07, 1);
   }
   ::after {
     top: 8px;
-    content: '';
+    content: "";
     width: 24px;
     height: 2px;
     background: white;
@@ -168,9 +183,16 @@ const BurgerContent = styled.div`
     left: 0;
     ${props =>
       props.isToggledOn
-        ? 'transform: rotate(-45deg); top: 0;'
-        : 'transform: rotate(0)'};
+        ? "transform: rotate(-45deg); top: 0;"
+        : "transform: rotate(0)"};
     transition: all 250ms cubic-bezier(0.86, 0, 0.07, 1);
+  }
+`
+
+const MobileLanguageSwitch = styled(LanguageSwitch)`
+  margin: 0 0 4rem 0;
+  ${LanguageLink} {
+    color: ${colors.primaryLight};
   }
 `
 
@@ -182,12 +204,13 @@ const MobileHeader = ({ headerLinks }) => {
     <>
       <BurgerButton
         onClick={toggle}
-        aria-label={`${isToggledOn ? 'close menu' : 'open menu'}`}
+        aria-label={`${isToggledOn ? "close menu" : "open menu"}`}
       >
         <BurgerContent isToggledOn={isToggledOn} />
       </BurgerButton>
       {isToggledOn && (
         <MobilePanel>
+          <MobileLanguageSwitch />
           <MobileNav>
             <HeaderLinks headerLinks={headerLinks} />
           </MobileNav>
@@ -198,11 +221,7 @@ const MobileHeader = ({ headerLinks }) => {
 }
 
 const Header = () => {
-  const {
-    headerLinks,
-    siteTitle,
-    headerLinksIcon,
-  } = useSiteMetadata()
+  const { headerLinks, siteTitle, headerLinksIcon } = useSiteMetadata()
   const iconSrc = headerLinksIcon
     ? useSiteImages(headerLinksIcon).fluid.src
     : null
@@ -213,6 +232,9 @@ const Header = () => {
         <HeaderLinkTitle to={`/`} aria-label={`View home page`}>
           {iconSrc && <HeaderImage src={iconSrc} alt={siteTitle} />}
         </HeaderLinkTitle>
+        <HeaderSetting>
+          <LanguageSwitch />
+        </HeaderSetting>
         <HeaderLinksContainer>
           <HeaderLinks headerLinks={headerLinks} />
         </HeaderLinksContainer>
