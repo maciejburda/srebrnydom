@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { injectIntl } from "gatsby-plugin-intl"
 
 import Layout from '../components/layout'
 import Wrapper from '../components/Wrapper'
@@ -12,12 +13,13 @@ class BlogList extends React.Component {
   render() {
     const { title, description } = this.props.data.site.siteMetadata
     const posts = this.props.data.posts.edges
-    const { pageContext } = this.props
+    const { pageContext, intl } = this.props
 
     return (
       <Layout location={this.props.location}>
         <SEO />
         <Hero title={title} subTitle={description} />
+        {intl.formatMessage({ id: "test-message" })}
 
         <Wrapper>
           <PostsList posts={posts} />
@@ -32,7 +34,7 @@ class BlogList extends React.Component {
   }
 }
 
-export default BlogList
+export default injectIntl(BlogList)
 
 export const pageQuery = graphql`
   query blogListQuery($skip: Int!, $limit: Int!) {

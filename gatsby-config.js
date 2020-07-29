@@ -98,5 +98,18 @@ module.exports = {
         modules: ['gatsby-starter-morning-dew'],
       },
     },
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        // language JSON resource path
+        path: `${__dirname}/src/translations`,
+        // supported language
+        languages: [`pl`, `en`, `de`],
+        // language file path
+        defaultLanguage: `pl`,
+        // option to redirect to `/ko` when connecting `/`
+        redirect: true,
+      },
+    },
   ],
 }
