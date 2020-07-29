@@ -11,7 +11,7 @@ const SiteContent = styled.div`
   margin: 0 0;
 
   @media ${media.medium} {
-    margin: 60px 0;
+    margin: 140px 0 60px 0;
   }
 `
 
