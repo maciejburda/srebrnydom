@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Image from 'gatsby-image'
 import styled from 'styled-components'
 import useSiteMetadata from '../hooks/use-site-config'
-import { colors } from '../tokens'
+import { colors, media } from '../tokens'
+import useSiteImages from "../hooks/use-site-images"
 
 const FooterWrapper = styled.footer`
   text-align: left;
@@ -18,7 +20,7 @@ const FooterWrapper = styled.footer`
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
 
     .footer-col {
@@ -83,9 +85,18 @@ const FooterWrapper = styled.footer`
     }
   }
 `
+const LogoImage = styled(Image)`
+  height: 80px;
+  width: 80px;
+  @media ${media.medium} {
+    height: 200px;
+    width: 200px;
+  }
+`
 
 const Footer = () => {
-  const { authorName, footerLinks } = useSiteMetadata()
+  const { footerLinks, footerLinksIcon } = useSiteMetadata()
+  const iconSrc = useSiteImages(footerLinksIcon).fluid
 
   const FooterItem = ({ item }) => {
     if (item.url.startsWith('/')) {
@@ -125,8 +136,7 @@ const Footer = () => {
     return (
       <div className="footer-col">
         <h3 className="footer-title">
-          © srebrnydom.pl {new Date().getFullYear()} - Wszelkie prawa
-          zastrzeżone.
+          © srebrnydom.pl {new Date().getFullYear()} - Wszelkie prawa zastrzeżone.
         </h3>
       </div>
     )
@@ -135,11 +145,13 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <nav>
+        <LogoImage fluid={iconSrc}/>
         {footerLinks.map((column, i) => {
           return <FooterColumn column={column} key={`footer-column-${i}`} />
         })}
       </nav>
     </FooterWrapper>
+    
   )
 }
 

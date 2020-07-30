@@ -10,6 +10,7 @@ const useSiteMetadata = () => {
           siteCover
           authorName
           authorAvatar
+          homepageImage
           authorDescription
           siteDescription
           twitterUsername
@@ -18,6 +19,7 @@ const useSiteMetadata = () => {
           defaultLang
           headerTitle
           headerLinksIcon
+          footerLinksIcon
           headerLinks {
             label
             url

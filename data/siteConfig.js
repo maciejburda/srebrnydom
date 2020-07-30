@@ -24,7 +24,9 @@ module.exports = {
   postsPerPage: 6,
   disqusShortname: 'maxpou',
   headerTitle: 'gatsby-starter-morning-dew',
-  headerLinksIcon: 'logo.png', //  (leave empty to disable: '')
+  headerLinksIcon: 'logo.png',
+  footerLinksIcon: 'logo-dark.png',
+  homepageImage: 'cover-baymax.jpeg',
   headerLinks: [
     {
       label: 'header.links.blog',
@@ -58,7 +60,7 @@ module.exports = {
       links: [
         {
           label: 'Facebook',
-          url: 'https://github.com/maxpou/gatsby-starter-morning-dew',
+          url: 'https://www.facebook.com/SrebrnyDomSwornegacie/',
         },
         {
           label: 'Twitter',

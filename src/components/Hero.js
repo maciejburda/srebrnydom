@@ -9,6 +9,8 @@ const HeroContainer = styled.div`
   display: table;
   width: 100%;
   height: 400px;
+  max-width: 1440px;
+  margin: 0 auto;
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center;
