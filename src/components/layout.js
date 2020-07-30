@@ -11,7 +11,7 @@ const SiteContent = styled.div`
   margin: 0 0;
 
   @media ${media.medium} {
-    margin: 140px 0 60px 0;
+    margin: 0 0 60px 0;
   }
 `
 
@@ -23,7 +23,7 @@ class Template extends React.Component {
       <>
         <Helmet>
           <link
-            href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap"
+            href="https://fonts.googleapis.com/css?family=Lato:400,700|Nunito:400,700&display=swap"
             rel="stylesheet"
           />
         </Helmet>
