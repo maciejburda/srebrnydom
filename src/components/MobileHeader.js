@@ -5,6 +5,7 @@ import LanguageSwitch from "./LanguageSwitch"
 import { ms } from "../styles/helpers"
 import Text, { StyledText, TextStyle } from "./Text"
 import Link from "./Link"
+import { injectIntl } from "gatsby-plugin-intl"
 
 const MobilePanel = styled.div`
   position: absolute;
@@ -94,7 +95,7 @@ const BurgerContent = styled.div`
 `
 
 const StyledLanguageSwitch = styled(LanguageSwitch)`
-  margin: 0 0 4rem 0;
+  margin: 0 0 ${ms(4)} 0;
 `
 const HeaderLink = styled(Link)`
   &.active {
@@ -108,7 +109,7 @@ const HeaderLinkText = styled(Text)`
   font-weight: ${typography.weights.regular};
 `
 
-const MobileHeader = ({ headerLinks, className }) => {
+const MobileHeader = ({ headerLinks, className, intl }) => {
   const [isToggledOn, setToggle] = useState(false)
   const toggle = () => setToggle(!isToggledOn)
 
@@ -136,7 +137,8 @@ const MobileHeader = ({ headerLinks, className }) => {
                     textStyle={TextStyle.Heading2}
                     color={colors.textLightest}
                   >
-                    {headerLink.label}
+                    {intl.formatMessage({ id: headerLink.label })}
+
                   </HeaderLinkText>
                 </HeaderLink>
               ))}
@@ -149,4 +151,4 @@ const MobileHeader = ({ headerLinks, className }) => {
   )
 }
 
-export default MobileHeader
+export default injectIntl(MobileHeader)

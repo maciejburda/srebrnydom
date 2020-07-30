@@ -27,11 +27,11 @@ module.exports = {
   headerLinksIcon: 'logo.png', //  (leave empty to disable: '')
   headerLinks: [
     {
-      label: 'Blog',
+      label: 'header.links.blog',
       url: '/blog',
     },
     {
-      label: 'O nas',
+      label: 'header.links.about-us',
       url: '/o-nas',
     },
   ],

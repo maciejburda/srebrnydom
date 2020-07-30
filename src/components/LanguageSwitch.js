@@ -41,11 +41,8 @@ const LanguageSwitch = ({ className, textColor }) => {
       <IntlContextConsumer>
         {({ languages, language: currentLocale }) =>
           languages.map(language => (
-            <Item>
-              <LanguageLink
-                key={language}
-                onClick={() => changeLocale(language)}
-              >
+            <Item key={language}>
+              <LanguageLink onClick={() => changeLocale(language)}>
                 <StyledText
                   textStyle={TextStyle.LabelDefault}
                   isActive={currentLocale === language}

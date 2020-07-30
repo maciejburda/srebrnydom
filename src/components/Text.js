@@ -65,12 +65,6 @@ const getTextStyles = props => {
         fontFamily: typography.fonts.secondary
       })
 
-    case TextStyle.Body:
-      return styleFonts(props, {
-        fontSizeStep: 0,
-        lineHeightRatio: 1.75,
-      })
-
     case TextStyle.LabelDefault:
       return styleFonts(props, {
         fontSizeStep: -1,
@@ -78,6 +72,12 @@ const getTextStyles = props => {
         spacing: "1.5px",
         fontWeight: typography.weights.bold,
         fontFamily: typography.fonts.secondary
+      })
+    default:
+    case TextStyle.Body:
+      return styleFonts(props, {
+        fontSizeStep: 0,
+        lineHeightRatio: 1.75,
       })
 
   }

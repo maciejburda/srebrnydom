@@ -1,3 +1,4 @@
 {
-  "test-message": "Wiadomość testowa"
+  "header.links.blog": "Blog",
+  "header.links.about-us": "O nas"
 }
