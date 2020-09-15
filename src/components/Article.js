@@ -29,9 +29,7 @@ class Article extends React.Component {
           tags={post.frontmatter.tags}
           translations={post.frontmatter.translations}
         />
-        <ArticleFooter>
-          
-        </ArticleFooter>
+        
       </ArticleWrapper>
     )
   }

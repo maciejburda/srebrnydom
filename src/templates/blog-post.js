@@ -37,10 +37,6 @@ class BlogPostTemplate extends React.Component {
           <Article post={post} />
         </Wrapper>
 
-        <Wrapper>
-          <Disqus slug={post.frontmatter.slug} title={post.frontmatter.title} />
-        </Wrapper>
-
         <PrevNextPost previous={previous} next={next} />
       </Layout>
     )

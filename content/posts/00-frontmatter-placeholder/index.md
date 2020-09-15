@@ -7,14 +7,14 @@ date: 2020-01-01
 published: false
 unlisted: true
 generate-card: false
-language: fr
+language: pl
 cover: ./cover.jpeg
 imageShare: ./cover.jpeg
 tags: ['fake']
 translations:
-  - link: 'https://www.maxpou.fr/about'
-    language: 'french'
-    hreflang: fr
+  - link: 'https://srebrnydom.pl/pl/o-nas'
+    language: 'polish'
+    hreflang: pl
 ---
 
 This exists to populate GraphQL fields and avoid null errors. It should contain

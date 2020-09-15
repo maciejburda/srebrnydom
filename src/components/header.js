@@ -11,7 +11,6 @@ import useSiteImages from "../hooks/use-site-images"
 import { ms } from "../styles/helpers"
 
 import Text, { TextStyle, StyledText } from "./Text"
-import LanguageSwitch from "./LanguageSwitch"
 import MobileHeader from "./MobileHeader"
 
 const HeaderWrapper = styled.header`
@@ -131,9 +130,7 @@ const Header = ({ intl }) => {
             {iconSrc && <LogoImage src={iconSrc} alt={siteTitle} />}
           </Link>
         </LogoWrapper>
-        <HeaderSetting>
-          <LanguageSwitch />
-        </HeaderSetting>
+        <HeaderSetting/>
         <HeaderLinksContainer>
           {headerLinks.map((headerLink, i) => (
             <LinkItem key={`header-link-${i}`}>
