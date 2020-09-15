@@ -22,6 +22,7 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
+    "deploy": "gatsby build && gh-pages -d public -b master",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js' 'data/siteConfig.js' 'gatsby-*.js' 'scripts/*.js'",
     "generatePostPreviewImages": "./scripts/generatePostPreviewImages.js",
