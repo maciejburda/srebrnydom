@@ -11,6 +11,14 @@ module.exports = {
   pathPrefix: config.pathPrefix,
   plugins: [
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-177633808-1",
+        head: true,
+        anonymize: true,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: 'posts',
@@ -73,12 +81,13 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          config.googleAnalyticsId, // Google Analytics / GA
+          "UA-177633808-1", // Google Analytics / GA
           "AW-994571338'", // Google Ads / Adwords / AW
         ],
         // This object gets passed directly to the gtag config command
