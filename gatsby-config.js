@@ -130,11 +130,11 @@ module.exports = {
         // language JSON resource path
         path: `${__dirname}/src/translations`,
         // supported language
-        languages: [`pl`, `en`, `de`],
+        languages: [`pl`],
         // language file path
         defaultLanguage: `pl`,
         // option to redirect to `/ko` when connecting `/`
-        redirect: true,
+        redirect: false,
       },
     },
   ],

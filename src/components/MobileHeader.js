@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { colors, media, typography } from "../tokens"
 import styled from "styled-components"
-import LanguageSwitch from "./LanguageSwitch"
 import { ms } from "../styles/helpers"
 import Text, { StyledText, TextStyle } from "./Text"
 import Link from "./Link"
@@ -94,9 +93,6 @@ const BurgerContent = styled.div`
   }
 `
 
-const StyledLanguageSwitch = styled(LanguageSwitch)`
-  margin: 0 0 ${ms(4)} 0;
-`
 const HeaderLink = styled(Link)`
   &.active {
     ${StyledText} {
@@ -125,7 +121,6 @@ const MobileHeader = ({ headerLinks, className, intl }) => {
       {isToggledOn && (
         <MobilePanel>
           <MobilePanelWrapper>
-            <StyledLanguageSwitch textColor={colors.textLightest} />
             <MobileNav>
               {headerLinks.map((headerLink, i) => (
                 <HeaderLink

@@ -22,7 +22,7 @@ module.exports = {
   homepageImage: 'covers/index-cover.jpg',
   headerLinks: [
     {
-      label: 'header.links.about-us',
+      label: 'O nas',
       url: '/o-nas',
     },
     {
