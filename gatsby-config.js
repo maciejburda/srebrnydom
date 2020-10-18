@@ -11,6 +11,12 @@ module.exports = {
   pathPrefix: config.pathPrefix,
   plugins: [
     {
+      resolve: `gatsby-gallery-simple`,
+      options: {
+        basePath: "/",
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-177633808-1",

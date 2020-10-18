@@ -30,6 +30,10 @@ module.exports = {
       url: '/cennik',
     },
     {
+      label: 'Galeria',
+      url: '/galeria',
+    },
+    {
       label: 'Montessori',
       url: '/montessori',
     },

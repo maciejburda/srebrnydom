@@ -12,6 +12,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const ListPostsTemplate = require.resolve(
     './src/templates/blog-list-template.js'
   )
+  const GalleryTemplate = require.resolve(
+    './src/templates/gallery-template.js'
+  )
 
   const allMarkdownQuery = await graphql(`
     {
@@ -140,6 +143,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         },
       })
     })
+
+  // gallery
+  createPage({
+    path: `galeria`,
+    component: GalleryTemplate
+  })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
