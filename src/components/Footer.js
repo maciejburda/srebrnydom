@@ -19,6 +19,7 @@ const FooterWrapper = styled.footer`
     align-items: flex-start;
     max-width: 1100px;
     margin: 0 auto;
+    padding-bottom: 8px;
 
     .footer-col {
       flex: 1 auto;
@@ -78,7 +79,7 @@ const FooterWrapper = styled.footer`
 
   .footer-bottom {
     background-color: #f6b3cd;
-    padding: 14px;
+    padding: 19px;
   }
 
   .footer-bottom-title {
