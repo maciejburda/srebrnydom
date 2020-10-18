@@ -20,7 +20,7 @@ const useSiteImages = imageName => {
                 srcSetWebp
                 originalName
               }
-              fluid {
+              fluid(maxWidth: 3080, quality: 100) {
                 base64
                 tracedSVG
                 aspectRatio

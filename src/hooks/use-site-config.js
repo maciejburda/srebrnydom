@@ -8,6 +8,8 @@ const useSiteMetadata = () => {
           siteTitle
           siteUrl
           siteCover
+          bannerLeftTrees
+          bannerRightTrees
           authorName
           authorAvatar
           homepageImage

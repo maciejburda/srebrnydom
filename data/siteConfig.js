@@ -18,6 +18,8 @@ module.exports = {
   headerTitle: 'Srebrny Dom',
   headerLinksIcon: 'logo.png',
   footerLinksIcon: 'logo-dark.png',
+  bannerLeftTrees: 'trees-left.png',
+  bannerRightTrees: 'trees-right.png',
   homepageImage: 'covers/index-cover.jpg',
   headerLinks: [
     {
