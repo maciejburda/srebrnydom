@@ -34,10 +34,33 @@ const Trees = styled.div`
   z-index: 1;
 `
 
+const TitleContainer = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 100%;
+  vertical-align: bottom;
+  padding-bottom: 32px;
+`
+
+const Title = styled.h1`
+  font-weight: 700;
+  font-size: 32sp;
+  margin: 10px 50px;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.85);
+`
+
 const Hero = props => {
   return (
     <Container>    
-      <HeroImage style={{ backgroundImage: `url("${ props.heroImg}")` }}/>
+      <HeroImage style={{ backgroundImage: `url("${ props.heroImg}")` }}>
+        <TitleContainer>
+          <Title>{props.title}</Title>
+        </TitleContainer>
+      </HeroImage>
       <Trees style={{ backgroundImage: `url("${props.treesImg}")` }}/>
     </Container>
   )

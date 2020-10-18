@@ -8,8 +8,14 @@ import Hero from '../components/Hero'
 import SEO from '../components/SEO'
 import Disqus from '../components/Disqus'
 
+import useSiteImages from '../hooks/use-site-images'
+import useSiteMetadata from "../hooks/use-site-config"
+
 export default props => {
   const page = props.data.page
+
+  const { trees } = useSiteMetadata()
+  const treesImage = useSiteImages(trees).fluid.src
 
   return (
     <Layout location={props.location}>
@@ -22,6 +28,7 @@ export default props => {
 
       <Hero
         heroImg={page.frontmatter.cover && page.frontmatter.cover.publicURL}
+        treesImg={treesImage}
         title={page.frontmatter.title}
       />
 

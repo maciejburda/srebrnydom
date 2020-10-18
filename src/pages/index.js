@@ -41,7 +41,7 @@ const NotFoundPage = props => {
       
     <Layout location={props.location} noCover={true}>
       <SEO title="Strona Główna" />
-      <Hero heroImg={homeImage} treesImg={treesImage}/>
+      <Hero heroImg={homeImage} treesImg={treesImage} title="Dom Seniora w Sercu Kaszub"/>
       <Wrapper>
         <MainTitle>Otwarcie pod koniec 2020 roku. Trwa nabór pensjonariuszy.</MainTitle>
         <SubTitle>Witamy na stronie domu opieki dla osób starszych Srebrny Dom.</SubTitle>
