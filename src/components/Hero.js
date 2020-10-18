@@ -2,40 +2,43 @@ import React from 'react'
 import styled from 'styled-components'
 import useSiteMetadata from '../hooks/use-site-config'
 import useSiteImages from '../hooks/use-site-images'
-import { colors } from '../tokens'
 
-const HeroContainer = styled.div`
+const Container = styled.div`
+  width: 100%;
+  height: 500px;
+  max-width: 1440px;
+`
+
+const HeroImage = styled.div`
   position: relative;
   display: table;
   width: 100%;
-  height: 400px;
-  max-width: 1440px;
+  height: 500px;
+  max-width: 1140px;
   margin: 0 auto;
+  overflow: hidden;
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 `
 
-const TitleContainer = styled.div`
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  width: 100%;
+const LeftTrees = styled.div`
+  float: left;
+  width: 200px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 `
 
-const HeroTitle = styled.h1`
-  font-weight: 700;
-  font-size: 3rem;
-  margin: 10px 50px;
-  color: ${colors.white};
-  text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.85);
-`
-
-const HeroSubTitle = styled.h2`
-  margin: 10px 50px;
-  color: ${colors.white};
-  text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.85);
+const RightTrees = styled.div`
+  float: right;
+  width: 200px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 `
 
 const Hero = props => {
@@ -44,7 +47,9 @@ const Hero = props => {
   const heroImg = props.heroImg || fluid.src
 
   return (
-    <HeroContainer style={{ backgroundImage: `url("${heroImg}")` }}/>
+    <Container>
+      <HeroImage style={{ backgroundImage: `url("${heroImg}")` }}/>
+    </Container>
   )
 }
 

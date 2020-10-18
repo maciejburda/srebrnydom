@@ -40,10 +40,7 @@ const NotFoundPage = props => {
       
     <Layout location={props.location} noCover={true}>
       <SEO title="Strona Główna" />
-      <Hero
-          heroImg={homeImage}
-          title="Strona Główna"
-        />
+      <Hero heroImg={homeImage} />
       <Wrapper>
         <MainTitle>Otwarcie pod koniec 2020 roku. Trwa nabór pensjonariuszy.</MainTitle>
         <SubTitle>Witamy na stronie domu opieki dla osób starszych Srebrny Dom.</SubTitle>

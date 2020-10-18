@@ -8,12 +8,9 @@ import useSiteImages from "../hooks/use-site-images"
 
 const FooterWrapper = styled.footer`
   text-align: left;
-  padding-top: 30px;
-  padding-bottom: 50px;
+  padding-top: 8px;
   background-color: ${colors.primary};
   color: ${colors.textLightest};
-  padding-left: 20px;
-  padding-right: 20px;
   margin: 0 auto;
 
   & nav {
@@ -27,7 +24,7 @@ const FooterWrapper = styled.footer`
       flex: 1 auto;
       display: inline-flex;
       flex-direction: column;
-      padding-right: 1em;
+      padding-left: 5em;
     }
   }
 
@@ -45,8 +42,8 @@ const FooterWrapper = styled.footer`
   }
 
   .footer-title {
-    font-size: 0.83em;
-    margin: 0 0 1rem;
+    font-size: 18sp;
+    margin: 1.5rem 0 1rem;
   }
 
   .footer-item {
@@ -77,6 +74,17 @@ const FooterWrapper = styled.footer`
   .footer-column-items {
     grid-template-columns: 1fr;
     display: grid;
+  }
+
+  .footer-bottom {
+    background-color: #f6b3cd;
+    padding: 14px;
+  }
+
+  .footer-bottom-title {
+    max-width: 1100px;
+    margin: 0 auto;
+    font-size: 0.83em;
   }
 
   @media (max-width: 564px) {
@@ -134,9 +142,9 @@ const Footer = () => {
 
   const FooterEnd = () => {
     return (
-      <div className="footer-col">
-        <h3 className="footer-title">
-          © srebrnydom.pl {new Date().getFullYear()} - Wszelkie prawa zastrzeżone.
+      <div className="footer-bottom">
+        <h3 className="footer-bottom-title">
+          © SREBRNYDOM.PL {new Date().getFullYear()} - WSZELKIE PRAWA ZASTRZEŻONE.
         </h3>
       </div>
     )
@@ -146,12 +154,13 @@ const Footer = () => {
     <FooterWrapper>
       <nav>
         <LogoImage fluid={iconSrc}/>
+
         {footerLinks.map((column, i) => {
           return <FooterColumn column={column} key={`footer-column-${i}`} />
         })}
       </nav>
-    </FooterWrapper>
-    
+      <FooterEnd/>
+    </FooterWrapper> 
   )
 }
 
