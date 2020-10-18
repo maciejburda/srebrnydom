@@ -1,22 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-import useSiteMetadata from '../hooks/use-site-config'
-import useSiteImages from '../hooks/use-site-images'
 
 const Container = styled.div`
   width: 100%;
+  margin: 0 auto;
   height: 500px;
   max-width: 1440px;
 `
 
 const HeroImage = styled.div`
-  position: relative;
-  display: table;
   width: 100%;
   height: 500px;
   max-width: 1140px;
   margin: 0 auto;
-  overflow: hidden;
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center;
@@ -24,31 +20,37 @@ const HeroImage = styled.div`
 `
 
 const LeftTrees = styled.div`
-  float: left;
+  position: absolute;
+  left: 7.15%;
+  /* float: left; */
   width: 200px;
   height: 500px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  z-index: 1;
 `
 
 const RightTrees = styled.div`
-  float: right;
+  position: absolute;
+  right: 7.15%;
+  /* float: right; */
   width: 200px;
   height: 500px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  z-index: 1;
+  padding-left: 180px;
 `
 
 const Hero = props => {
-  const { siteCover } = useSiteMetadata()
-  const { fluid } = useSiteImages(siteCover)
-  const heroImg = props.heroImg || fluid.src
-
   return (
-    <Container>
-      <HeroImage style={{ backgroundImage: `url("${heroImg}")` }}/>
+    <Container>    
+      <HeroImage style={{ backgroundImage: `url("${ props.heroImg}")` }}>
+        <LeftTrees style={{ backgroundImage: `url("${props.leftTrees}")` }}/>
+        <RightTrees style={{ backgroundImage: `url("${props.rightTrees}")` }}/>
+      </HeroImage>
     </Container>
   )
 }
