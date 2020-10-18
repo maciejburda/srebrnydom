@@ -26,12 +26,20 @@ module.exports = {
       url: '/o-nas',
     },
     {
+      label: 'Cennik',
+      url: '/cennik',
+    },
+    {
       label: 'Montessori',
       url: '/montessori',
     },
     {
-      label: 'Oferta',
-      url: '/oferta',
+      label: 'Nasz Patron',
+      url: '/patron',
+    },
+    {
+      label: 'COVID-19',
+      url: '/covid-19',
     },
     {
       label: 'Dlaczego warto nam zaufać?',

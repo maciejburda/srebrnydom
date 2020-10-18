@@ -11,7 +11,7 @@ const Wrapper = styled.main.attrs({
   background-color: ${colors.backgroundArticle};
   margin: 0px auto 0px auto;
   top: 8px;
-  padding: 8px 50px 8px 50px;
+  padding: 8px 0px 8px 0px;
 
   @media (max-width: 780px) {
     width: 100%;

@@ -1,12 +1,11 @@
 ---
-title: "Patron Jan Kosno"
-slug: patron-jan-kosno
-cover: ./DSC_0341.JPG
+title: "Nasz Patron - Jan Kosno"
+slug: patron
+cover: ./kosno-cover.png
 disqus: false
+language: pl
 ---
-### Jan Kosno - patron Srebrnego Domu
-
-Srebrny Dom został uświetniony obrazami wybinego malarza Jana Kosno. W korytarzach oraz pokojach pensjonariuszy mona zaleźć owoce jego twórczości.
+Srebrny Dom został uświetniony obrazami wybinego malarza Jana Kosno. W korytarzach oraz pokojach pensjonariuszy mona zaleźć owoce jego twórczości. Każdemu z pensjonariuszy przysługuje możliwość wyboru obrazu, który zostanie zawieszony w jego pokoju. Dodatkowo w przypadku większego zainteresowania twórczością Jana Kosno istnieje możliwość zakupu poszczególnych dzieł z dodatkowym rabatem dla pensjonariuszy. Pełną listę obrazów można znaleźć [*tutaj*.](https://www.dropbox.com/sh/khjy701309n5c17/AABGZZK1e6m_NYNO_W4-Km2ba?dl=0)
 
 Jan Kosno przyszedł na świat w rodzinie górniczej 14 czerwca 1913 roku i choć rysunek, i malarstwo pasjonują go od najmłodszych lat, dopiero po wojnie studiuje w Akademii Sztuk Pięknych w Krakowie uzyskując dyplom w 1955 roku. Poszukując nauczycieli rysunku przyjeżdża do Krakowa już w latach trzydziestych, jednak w latach okupacji  dzieli los wielu innych rodaków. Aresztowany przez gestapo i więziony na Montelupich, a następnie w obozie w Płaszowie walczyć  będzie długo z powikłaniami chorobowymi nabytymi w obozie.
 

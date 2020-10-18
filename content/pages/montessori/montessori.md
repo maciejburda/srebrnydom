@@ -1,7 +1,7 @@
 ---
 title: "Montessori"
 slug: montessori
-cover: ./DSC_0430.JPG
+cover: ./montessori-cover.jpg
 disqus: false
 ---
 _„Kto jest obsługiwany, a nie wspomagany, jest w pewien sposób ograniczony w swojej niezależności. Dla godności ludzkiej pojęcie to jest fundamentalne: Nie chcę być obsługiwany, ponieważ nie jestem bezradny, ale musimy sobie pomagać, ponieważ jesteśmy istotami społecznymi – oto co należy zrozumieć, by móc poczuć się naprawdę wolnym.”_

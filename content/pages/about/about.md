@@ -1,11 +1,9 @@
 ---
 title: "O nas"
 slug: o-nas
-cover: ./DSC_0310.JPG
+cover: ./about-us-cover.jpg
 disqus: false
 ---
-
-### O nas
 
 Usługi Opiekuńcze i Rehabilitacyjne _Srebrny Dom_ to nowa firma rodzinna, która rozpoczęła swoją działalność w 2019 roku.
 

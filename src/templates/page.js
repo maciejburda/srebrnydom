@@ -7,7 +7,6 @@ import Wrapper from '../components/Wrapper'
 import Hero from '../components/Hero'
 import SEO from '../components/SEO'
 import Disqus from '../components/Disqus'
-
 import useSiteImages from '../hooks/use-site-images'
 import useSiteMetadata from "../hooks/use-site-config"
 
@@ -37,12 +36,6 @@ export default props => {
           <Content content={page.body} date={page.frontmatter.date} />
         </article>
       </Wrapper>
-
-      {page.frontmatter.disqus && (
-        <Wrapper>
-          <Disqus slug={page.frontmatter.slug} title={page.frontmatter.title} />
-        </Wrapper>
-      )}
     </Layout>
   )
 }
