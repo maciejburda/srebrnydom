@@ -33,14 +33,15 @@ const SubTitle = styled.h2`
 `
 
 const NotFoundPage = props => {
-  const { homepageImage } = useSiteMetadata()
+  const { homepageImage, trees } = useSiteMetadata()
   const homeImage = useSiteImages(homepageImage).fluid.src
+  const treesImage = useSiteImages(trees).fluid.src
 
   return (
       
     <Layout location={props.location} noCover={true}>
       <SEO title="Strona Główna" />
-      <Hero heroImg={homeImage} />
+      <Hero heroImg={homeImage} treesImg={treesImage}/>
       <Wrapper>
         <MainTitle>Otwarcie pod koniec 2020 roku. Trwa nabór pensjonariuszy.</MainTitle>
         <SubTitle>Witamy na stronie domu opieki dla osób starszych Srebrny Dom.</SubTitle>
