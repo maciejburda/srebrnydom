@@ -19,6 +19,11 @@ module.exports = {
   headerLinksIcon: 'logo.png',
   footerLinksIcon: 'logo-dark.png',
   trees: 'trees.png',
+  circle1: 'circles/circle1.png',
+  circle2: 'circles/circle2.png',
+  circle3: 'circles/circle3.png',
+  circle4: 'circles/circle4.png',
+  circle5: 'circles/circle5.png',
   homepageImage: 'covers/index-cover.jpg',
   headerLinks: [
     {
@@ -44,10 +49,6 @@ module.exports = {
     {
       label: 'COVID-19',
       url: '/covid-19',
-    },
-    {
-      label: 'Dlaczego warto nam zaufać?',
-      url: '/dlaczego-warto',
     },
   ],
   websiteHost: {

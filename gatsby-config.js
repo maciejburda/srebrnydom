@@ -13,7 +13,7 @@ module.exports = {
     {
       resolve: `gatsby-gallery-simple`,
       options: {
-        basePath: "/",
+        basePath: "/gallery",
       },
     },
     {

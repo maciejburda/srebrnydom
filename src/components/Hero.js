@@ -5,7 +5,6 @@ const Container = styled.div`
   width: 100%;
   margin: 0 auto;
   height: 500px;
-  max-width: 1440px;
 `
 
 const HeroImage = styled.div`
@@ -24,11 +23,11 @@ position: absolute;
 
 const Trees = styled.div`
   position: absolute;
-  max-width: 1440px;
+  max-width: 2070px;
   width: 100%;
   height: 500px;
   margin: 0 auto;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   background-position: center;
   background-size: cover;
   z-index: 1;

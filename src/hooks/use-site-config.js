@@ -9,6 +9,11 @@ const useSiteMetadata = () => {
           siteUrl
           siteCover
           trees
+          circle1
+          circle2
+          circle3
+          circle4
+          circle5
           authorName
           authorAvatar
           homepageImage
