@@ -119,7 +119,7 @@ const Footer = () => {
     }
     return (
       <span className="footer-item">
-        <a className="footer-link" href={item.url} target="_blank">
+        <a className="footer-link" href={item.url} target="_blank" rel="noreferrer">
           {item.label}
         </a>
       </span>

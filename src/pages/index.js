@@ -9,25 +9,11 @@ import useSiteImages from '../hooks/use-site-images'
 import Hero from '../components/Hero'
 import useSiteMetadata from "../hooks/use-site-config"
 
-const MainTitle = styled.h1`
-  margin: 16px;
-  line-height: 1.5;
-  text-align: center;
-  font-size: 2rem;
-`
-
 const Content = styled.span`
   display: block;
   line-height: 1.5;
   text-align: justify;
   margin-bottom: 16px;
-`
-
-const SubTitle = styled.h2`
-  padding-top: 40px;
-  line-height: 1.2;
-  border-top: 1px solid #ececec;
-  margin-bottom: 32px;
 `
 
 const CircleWrapper = styled.div`
