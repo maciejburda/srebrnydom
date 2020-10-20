@@ -1,6 +1,6 @@
 module.exports = {
   siteTitle: 'Srebrny Dom Swornegacie',
-  siteDescription: 'Wolne miejsca! Trwa nabór pensjonariuszy. Domu spokojnej starości prowadzony w metodyce Montessori w miejscowości Swornegacie w województwie pomorskim.',
+  siteDescription: 'Wolne miejsca! Trwa nabór pensjonariuszy. Dom spokojnej starości prowadzony w metodyce Montessori w miejscowości Swornegacie w województwie pomorskim.',
   authorName: 'Srebrny Dom Swornegacie',
   twitterUsername: 'srebrnydomswornegacie',
   authorAvatar: 'logo.png', // file in content/images
@@ -19,11 +19,11 @@ module.exports = {
   headerLinksIcon: 'logo.png',
   footerLinksIcon: 'logo-dark.png',
   trees: 'trees.png',
-  circle1: 'circles/circle1.png',
-  circle2: 'circles/circle2.png',
-  circle3: 'circles/circle3.png',
-  circle4: 'circles/circle4.png',
-  circle5: 'circles/circle5.png',
+  health24: 'circles/health24.png',
+  doctor: 'circles/doctor.png',
+  physio: 'circles/physio.png',
+  nature: 'circles/nature.png',
+  comfort: 'circles/comfort.png',
   homepageImage: 'covers/index-cover.jpg',
   headerLinks: [
     {

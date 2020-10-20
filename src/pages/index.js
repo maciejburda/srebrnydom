@@ -33,6 +33,7 @@ const SubTitle = styled.h2`
 const CircleWrapper = styled.div`
   margin-top: 40px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 `
 
@@ -61,20 +62,22 @@ const CircleText = styled.div`
 `
 
 const NotFoundPage = props => {
-  const { homepageImage, trees, circle1, circle2, circle3, circle4, circle5 } = useSiteMetadata()
+  const { homepageImage, trees, health24, doctor, physio, nature, comfort } = useSiteMetadata()
   const homeImage = useSiteImages(homepageImage).fluid.src
   const treesImage = useSiteImages(trees).fluid.src
-  const circle1Img = useSiteImages(circle1).fluid.src
-  const circle2Img = useSiteImages(circle2).fluid.src
-  const circle3Img = useSiteImages(circle3).fluid.src
-  const circle4Img = useSiteImages(circle4).fluid.src
-  const circle5Img = useSiteImages(circle5).fluid.src
+  const circle1Img = useSiteImages(health24).fluid.src
+  const circle2Img = useSiteImages(doctor).fluid.src
+  const circle3Img = useSiteImages(physio).fluid.src
+  const circle4Img = useSiteImages(nature).fluid.src
+  const circle5Img = useSiteImages(comfort).fluid.src
 
   return (
     <Layout location={props.location} noCover={true}>
       <SEO title="Strona Główna" />
       <Hero heroImg={homeImage} treesImg={treesImage} title="Dom Seniora w Sercu Kaszub"/>
+
       <Wrapper>
+
         <Content>
           Mimo najszczerszych chęci bliscy często nie są w stanie zapewnić rodzicom, babci lub dziadkowi odpowiedniej opieki. Praca zawodowa, rodzina, często zamieszkanie w znacznej odległości  nie daje fizycznej możliwości opiekowania się nimi. Opieka nad starszymi osobami to zajęcie niezwykle absorbujące wymagające jednocześnie dużej ilości czasu oraz cierpliwości.
         </Content>
