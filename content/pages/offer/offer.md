@@ -1,7 +1,7 @@
 ---
 title: "Cennik"
 slug: cennik
-cover: ./offer-cover.jpg
+cover: ./offer-cover.jpeg
 disqus: false
 ---
 
