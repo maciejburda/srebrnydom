@@ -6,12 +6,12 @@ const Wrapper = styled.main.attrs({
 })`
   position: relative;
   border-radius: 5px;
-  max-width: 1100px;
+  max-width: 720px;
   word-wrap: break-word;
   background-color: ${colors.backgroundArticle};
   margin: 0px auto 0px auto;
   top: 8px;
-  padding: 8px 0px 8px 0px;
+  padding: 60px 0px 80px 0px;
 
   @media (max-width: 780px) {
     width: 100%;

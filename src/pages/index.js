@@ -17,7 +17,10 @@ const Content = styled.span`
 `
 
 const CircleWrapper = styled.div`
-  margin-top: 40px;
+  margin: 0 auto;
+  max-width: 900px;
+  margin-top: 16px;
+  padding-bottom: 60px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -61,9 +64,7 @@ const NotFoundPage = props => {
     <Layout location={props.location} noCover={true}>
       <SEO title="Strona Główna" />
       <Hero heroImg={homeImage} treesImg={treesImage} title="Dom Seniora w Sercu Kaszub"/>
-
       <Wrapper>
-
         <Content>
           Mimo najszczerszych chęci bliscy często nie są w stanie zapewnić rodzicom, babci lub dziadkowi odpowiedniej opieki. Praca zawodowa, rodzina, często zamieszkanie w znacznej odległości  nie daje fizycznej możliwości opiekowania się nimi. Opieka nad starszymi osobami to zajęcie niezwykle absorbujące wymagające jednocześnie dużej ilości czasu oraz cierpliwości.
         </Content>
@@ -79,8 +80,8 @@ const NotFoundPage = props => {
         <Content>
         Prywatna opieka nad osobami starszymi, którą zapewniamy, jest realizowana przez wykwalifikowany, życzliwy i w pełni zaangażowany personel, który wspiera seniorów i dzieli się z nimi uśmiechem. 
         </Content>
-
-        <CircleWrapper>
+      </Wrapper>
+      <CircleWrapper>
           <Cell>
             <Circle style={{ backgroundImage: `url("${circle1Img}")` }}/>
             <CircleText>Całodobowa<br/>opieka medyczna</CircleText>
@@ -99,10 +100,9 @@ const NotFoundPage = props => {
           </Cell>
           <Cell>
             <Circle style={{ backgroundImage: `url("${circle5Img}")` }}/>
-            <CircleText>Komofortowe<br/>pomieszczenia</CircleText>
+            <CircleText>Komfortowe<br/>pomieszczenia</CircleText>
           </Cell>
         </CircleWrapper>
-      </Wrapper>
     </Layout>
   )
 }

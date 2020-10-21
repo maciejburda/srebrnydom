@@ -26,6 +26,7 @@ const FooterWrapper = styled.footer`
       display: inline-flex;
       flex-direction: column;
       padding-left: 5em;
+      padding-bottom: 2em;
     }
   }
 
@@ -95,8 +96,8 @@ const FooterWrapper = styled.footer`
   }
 `
 const LogoImage = styled(Image)`
-  height: 80px;
-  width: 80px;
+  height: 0px;
+  width: 0px;
   @media ${media.medium} {
     height: 200px;
     width: 200px;
