@@ -7,6 +7,8 @@
 <url> <loc>https://www.srebrnydom.pl/pl/blog</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.srebrnydom.pl/start-bloga</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.srebrnydom.pl/pl/start-bloga</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.srebrnydom.pl/o-nas</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.srebrnydom.pl/pl/o-nas</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.srebrnydom.pl/montessori</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.srebrnydom.pl/pl/montessori</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.srebrnydom.pl/covid-19</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -17,8 +19,6 @@
 <url> <loc>https://www.srebrnydom.pl/pl/kontakt</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.srebrnydom.pl/cennik</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.srebrnydom.pl/pl/cennik</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.srebrnydom.pl/o-nas</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.srebrnydom.pl/pl/o-nas</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.srebrnydom.pl/tags/blog</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.srebrnydom.pl/pl/tags/blog</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.srebrnydom.pl/tags/start</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
