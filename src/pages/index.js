@@ -66,19 +66,13 @@ const NotFoundPage = props => {
       <Hero heroImg={homeImage} treesImg={treesImage} title="Dom Seniora w Sercu Kaszub"/>
       <Wrapper>
         <Content>
-          Mimo najszczerszych chęci bliscy często nie są w stanie zapewnić rodzicom, babci lub dziadkowi odpowiedniej opieki. Praca zawodowa, rodzina, często zamieszkanie w znacznej odległości  nie daje fizycznej możliwości opiekowania się nimi. Opieka nad starszymi osobami to zajęcie niezwykle absorbujące wymagające jednocześnie dużej ilości czasu oraz cierpliwości.
+          Mimo najszczerszych chęci często nie jesteśmy w stanie zapewnić naszym rodzicom, babciom lub dziadkom odpowiedniej opieki, jakiej te osoby wymagają. Obowiązki zawodowe, rodzinne, a często zamieszkanie w znacznej odległości od naszych najbliższych nie dają nam fizycznej możliwości należytego zatroszczenia się o ich los. W takich sytuacjach wybór profesjonalnej placówki opiekuńczej często jest najlepszym rozwiązaniem. W ten sposób możemy zapewnić naszym bliskim seniorom komfortowe warunki zamieszkania, opiekę medyczno-rehabilitacyjną, a także odpowiednią pomoc w wykonywaniu codziennych czynności.
         </Content>
         <Content>
-          W takiej sytuacji wybór placówki prywatnej jest najlepszym możliwym rozwiązaniem. Wielu seniorów tylko w domu opieki może otrzymać pomoc w wykonywaniu codziennych czynności.  Spędzenie jesieni życia w takiej placówce, z dala od znajomych ulic, osób i środowiska, z którym seniorzy są związani emocjonalnie, łączy się z dużym stresem. Często prowadzi też do zniechęcenia i wycofania się z aktywnego życia. Jako specjaliści i pasjonaci doskonale rozumiemy potrzebę stworzenia miejsca, w którym nasi podopieczni poczują się jak w domu. Dlatego w naszym <i>Srebrnym Domu</i>  zapewnimy  nie tylko opiekę.
+          Jako specjaliści i pasjonaci doskonale rozumiemy potrzebę stworzenia miejsca, w którym nasi podopieczni poczują się jak w domu. Dlatego w <i>Srebrnym Domu</i> tworzymy bezpieczne i przyjazne warunki maksymalnie zbliżone do tych znanych z codziennego życia. Oferowana przez naszą kameralną placówkę prywatna opieka nad osobami starszymi uwzględnia zarówno pielęgnację, jak i pomoc medyczną świadczoną przez wykwalifikowaną kadrę. Zapewniamy również ciepłą, domową atmosferę i spokój w przyjemnych pomieszczeniach, dostosowanych do potrzeb osób starszych i niepełnosprawnych.
         </Content>
         <Content>
-          Tworzymy w nim warunki maksymalnie zbliżone do tych znanych z codziennego życia. Oferowana przez naszą placówkę prywatna opieka nad osobami starszymi uwzględnia zarówno pielęgnację, jak i pomoc medyczną. Zapewniamy też domową atmosferę i spokój w przyjemnych pomieszczeniach. Dzięki którym nasi mieszkańcy mogą wypoczywać, nawiązywać kontakty towarzyskie oraz wypełniać czas rozrywką i aktywnymi zajęciami.
-        </Content>
-        <Content>
-          <i>Srebrny Dom</i> znajduje się w środku lasu, nieopodal miejscowości Swornegacie w gminie Chojnice, w województwie pomorskim. Wyjątkowe walory przyrodnicze i zdrowotne z uwagi na położenie w sąsiedztwie Parku Narodowego „Bory Tucholskie” w Zaborskim Parku Krajobrazowym. Wspaniała okolica sprzyja spacerom i relaksowi na świeżym powietrzu. Dużym atutem jest położenie w centrum prawie 5ha działki leśnej. Nie ma wokół żadnej zabudowy mieszkaniowej ani usługowej co gwarantuje spokój. Wokół budynku mamy 800 m2 płaskiej  powierzchni w polbruku. Mogą na niej spędzać czas ci podopieczni, którym ograniczona sprawność nie pozwala na długie wędrówki. Doskonałe warunki zapewnia też wnętrze budynku – przystosowane do potrzeb osób niepełnosprawnych.
-        </Content>
-        <Content>
-        Prywatna opieka nad osobami starszymi, którą zapewniamy, jest realizowana przez wykwalifikowany, życzliwy i w pełni zaangażowany personel, który wspiera seniorów i dzieli się z nimi uśmiechem. 
+          <i>Srebrny Dom</i> znajduje się w środku lasu, nieopodal miejscowości Swornegacie w gminie Chojnice, w województwie pomorskim. Jest położony w centrum 5ha działki leśnej, a dookoła nie ma żadnej zabudowy mieszkaniowej ani usługowej, co gwarantuje spokój. Dodatkowo, bezpośrednie położenie w sąsiedztwie Parku Narodowego „Bory Tucholskie” w Zaborskim Parku Krajobrazowym, powoduje, że miejsce to cieszy się wyjątkowymi walorami przyrodniczymi i zdrowotnymi. Wspaniała okolica sprzyja spacerom i relaksowi na świeżym powietrzu.
         </Content>
       </Wrapper>
       <CircleWrapper>

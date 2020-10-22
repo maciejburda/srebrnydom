@@ -5,16 +5,10 @@ cover: ./about-us-cover.jpg
 disqus: false
 ---
 
-Usługi Opiekuńcze i Rehabilitacyjne _Srebrny Dom_ to nowa firma rodzinna, która rozpoczęła swoją działalność w 2019 roku.
+Jesteśmy firmą rodzinną, utworzoną w 2019 roku. Idea utworzenia Srebrnego Domu narodziła się na kanwie naszych własnych doświadczeń i konieczności sprawowania wieloletniej opieki nad bliską nam osobą.
 
-Naszą misją jest stworzenie miejsca przyjaznego dla osób starszych i samotnych. Gdzie w miłej rodzinnej atmosferze  będziemy wykorzystywać własny potencjał aby miło spędzać wolny czas, rozwijać swoje umiejętności, dbać o zdrowie psychiczne i fizyczne poprzez indywidualną ścieżkę ćwiczeń i zabiegów fizjoterapeutycznych.
+Naszą misją jest stworzenie miejsca przyjaznego dla osób starszych i samotnych, w którym nasi podopieczni w bezpiecznej, rodzinnej atmosferze będą mogli wykorzystywać własny potencjał i doświadczenie życiowe aby wspólnie miło spędzać wolny czas, rozwijać umiejętności, a także zadbać o swoje zdrowie fizyczne i psychiczne. Wszystko przy pomocy i zaangażowaniu wykwalifikowanego personelu posiadającego bogate doświadczenie w opiece nad osobami starszymi oraz wyszkolonego w zakresie Metody Montesorii.
 
-Jeśli chcesz korzystać z ciszy, świeżego powietrza, dobrego jedzenia, ćwiczeń rehabilitacyjnych, oferty turystyczno-rekreacyjnej to miejsce jest dla Ciebie. 
+Oferujemy naszym mieszkańcom 9 przestronnych, w pełni wyposażonych pokoi z prywatną łazienką, w tym 7 pokoi 2-osobowych oraz 2 pokoje 3-osobowe. Do dyspozycji naszych pensjonariuszy pozostaje również sala gimnastyczna, sala rehabilitacyjna, sauna, biblioteka z kawiarnią, jadalnia oraz atrakcyjny teren wokół budynku z miejscem na ognisko.
 
-Przyjmujemy osoby z dysfunkcjami ruchowymi, ale poruszające się o własnych siłach przy pomocy balkoników, lasek, kuli itp. Nie jest to ośrodek dla osób psychicznie chorych ani ośrodek hospicyjny. Tu każdy mieszkaniec odnajdzie własne miejsce i sposób na siebie. Każdy coś umie, na czymś się zna, coś lubi robić i to wszystko będzie mógł zrealizować z nami.
-
-Czekają na Państwa pokoje 2 i 3 osobowe, sala gimnastyczna, sala rehabilitacyjna, sauna, biblioteka z kawiarnią, jadalnia, miejsce na ognisko … z nami możliwe jest  „Wesołe życie staruszka” pełne wzajemnego szacunku i zrozumienia. Nasz kadra ma bogate doświadczenie w opiece nad osobami starszymi i przeszła szkolenie w zakresie Metody Montesorii. 
-
-Mieszkańcami obiektu będą osoby w różnym wieku,  wymagające stałej opieki i kontroli. Plan zajęć będzie dobrany do możliwości pensjonariuszy. Ośrodek jest ofertą dla ludzi starszych, ale nie wymagających opieki paliatywnej w hospicjum. Przewiduje się, że zastosowana nowoczesna technologia  Metoda Montessori dla Seniorów zatrzymująca proces demencji, otępienia i depresji będzie skuteczna.  Miarą sukcesu firmy będzie zadowolenie pensjonariuszy i ich aktywność. Misja firmy polegająca na podniesieniu standardu i jakości życia zagwarantuje stabilne miejsce firmy na rynku.
-
-Struktura właścicielska to jednoosobowa działalność gospodarcza, którą prowadzić będę  osobiście. Posiadam duże doświadczenie zawodowe (29 lat pracy) a od 11 lat sprawuje funkcje kierownicze. Mam duże umiejętności kierowania zespołem. Pracowałam jako nauczyciel, edukator, koordynator ośrodka wypoczynkowego, kierownik biura, a obecnie dyrektor wydziału w urzędzie gminy. W domu, prywatnie  opiekowałam się 13 lat leżącą babcią, stąd wiedząc ile wysiłku kosztowało to całą rodzinę, narodził się pomysł otwarcia domu opieki.
+Z nami możliwe jest „wesołe życie staruszka”, pełne wzajemnego szacunku i zrozumienia. 

@@ -50,6 +50,10 @@ module.exports = {
       label: 'COVID-19',
       url: '/covid-19',
     },
+    {
+      label: 'Kontakt',
+      url: '/kontakt',
+    },
   ],
   websiteHost: {
     name: 'GitHub',
