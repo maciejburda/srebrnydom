@@ -13,4 +13,4 @@ disqus: false
 
 [kontakt@srebrnydom.pl](mailto:kontakt@srebrnydom.pl)
 
-[+48 692 407 428](tel:+48692407428)
+[+48 692 407 428 - codziennie od 8:00 do 20:00](tel:+48692407428)

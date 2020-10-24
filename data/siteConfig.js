@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: 'Srebrny Dom Swornegacie',
+  siteTitle: 'Dom Seniora - Srebrny Dom - Swornegacie',
   siteDescription: 'Wolne miejsca! Trwa nabór pensjonariuszy. Dom spokojnej starości prowadzony w metodyce Montessori w miejscowości Swornegacie w województwie pomorskim.',
   authorName: 'Srebrny Dom Swornegacie',
   twitterUsername: 'srebrnydomswornegacie',
@@ -76,7 +76,7 @@ module.exports = {
           url: 'mailto:kontakt@srebrnydom.pl',
         },
         {
-          label: '+48 692 407 428',
+          label: '+48 692 407 428 - codziennie od 8:00 do 20:00',
           url: 'tel:+48692407428',
         },
       ],
