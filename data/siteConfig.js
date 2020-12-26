@@ -89,12 +89,12 @@ module.exports = {
           url: 'https://www.facebook.com/SrebrnyDomSwornegacie/',
         },
         {
-          label: 'Twitter',
-          url: 'https://twitter.com/DomSrebrny',
+          label: 'LinkedIn',
+          url: 'https://www.linkedin.com/company/74240750',
         },
         {
-          label: 'YouTube',
-          url: 'https://www.youtube.com/channel/UCqByLTfjiphb-XciugxaXcA',
+          label: 'Twitter',
+          url: 'https://twitter.com/DomSrebrny',
         },
         {
           label: 'Instagram',

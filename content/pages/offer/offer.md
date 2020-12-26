@@ -5,6 +5,21 @@ cover: ./offer-cover.jpeg
 disqus: false
 ---
 
+Oficjalne otwarcie na przełomie stycznia/lutego 2021. Czekamy na pozwolenie wojewody. Z tej okazji specjalna oferta promocyjna dla naszych pierwszych klientów.
+
+
+## Opieka krótkoterminowa
+
+Inaczej zwana opieką wytchnieniową - oferta przeznaczona dla rodzin chcących skorzystać z urlopu lub wyjazdu, nie mającej nikogo kto zapewniłby całodobową opiekę nad osobą starszą. W Srebrnym Domu pomimo otoczenia lasem mamy dobre połączenie Internetowe i zasięg GSM, dlatego możemy pozostać w stałym kontakcie. Pobyt krótkoterminowy różni się od długoterminowego większą intensywnością indywidualnych zajęć fizjoterapeutycznych.
+
+Pobyt minimum 7 dni - **~~1300 zł~~ 1200 zł** za tydzień
+
+## Opieka długoterminowa
+
+Oferta skierowana do osób zainteresowanych długotrwałym pobytem w Srebrnym Domu. Naszym stałym pensjonariuszom oferujemy personalizację pokoi pod kątem wystroju oraz instalacji pomocy ruchowych. W każdym pokoju wedle życzenia mieszkańców zawieszamy odpowiadajcy im obraz naszego patrona Jana Kosno. Dodatkowo osoby decydujące się na pobyt długoterminowy mogą liczyć na rabat 20% na wszystkie usługi dodatkowe wykupione poza pakietem podstawowym.
+
+Pobyt minimum 1 miesiąc - **~~4400 zł~~ 3900 zł** za miesiąc
+
 ### W ofercie:
 - zakwaterowanie w pokóju 2 lub 3-osobowym z osobną łazienką,
 - pełne wyżwienie - 4 posiłki z możliwością wyboru diety,
@@ -27,18 +42,6 @@ disqus: false
 - pranie, suszenie i prasowanie,
 - dowóz na Msze Święte,
 - realizacja zakupów lub dowóz do sklepu.
-
-## Opieka krótkoterminowa
-
-Inaczej zwana opieką wytchnieniową - oferta przeznaczona dla rodzin chcących skorzystać z urlopu lub wyjazdu, nie mającej nikogo kto zapewniłby całodobową opiekę nad osobą starszą. W Srebrnym Domu pomimo otoczenia lasem mamy dobre połączenie Internetowe i zasięg GSM, dlatego możemy pozostać w stałym kontakcie. Pobyt krótkoterminowy różni się od długoterminowego większą intensywnością indywidualnych zajęć fizjoterapeutycznych.
-
-Pobyt minimum 7 dni - **1300 zł** za tydzień
-
-## Opieka długoterminowa
-
-Oferta skierowana do osób zainteresowanych długotrwałym pobytem w Srebrnym Domu. Naszym stałym pensjonariuszom oferujemy personalizację pokoi pod kątem wystroju oraz instalacji pomocy ruchowych. W każdym pokoju wedle życzenia mieszkańców zawieszamy odpowiadajcy im obraz naszego patrona Jana Kosno. Dodatkowo osoby decydujące się na pobyt długoterminowy mogą liczyć na rabat 20% na wszystkie usługi dodatkowe.
-
-Pobyt minimum 1 miesiąc - **4400 zł** za miesiąc
 
 ## Usługi dodatkowe
 - Indywidualna sesja fizjoterapeutyczna - **100 zł**
