@@ -43,7 +43,7 @@ Pobyt minimum 1 miesiąc - **~~4400 zł~~ 3900 zł** za miesiąc
 - dowóz na Msze Święte,
 - realizacja zakupów lub dowóz do sklepu.
 
-## Usługi dodatkowe
+## Usługi dodatkowe (wykupione poza pakietem podstawowym)
 - Indywidualna sesja fizjoterapeutyczna - **100 zł**
 - Masaż relaksacyjny - **80 zł**
 - Ćwiczenia czynne z obciążeniem i odciążeniem z przyrządami - **40 zł**
