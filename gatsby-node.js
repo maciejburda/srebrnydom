@@ -91,13 +91,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const next = index === 0 ? null : posts[index - 1].node
 
     createPage({
-      path: post.node.frontmatter.slug,
+      path: `/blog/${post.node.frontmatter.slug}`,
       component: BlogPostTemplate,
       context: {
         slug: post.node.frontmatter.slug,
         previous,
         next,
       },
+
     })
 
     // generate post share images (dev only)

@@ -6,15 +6,11 @@ import Hero from '../components/Hero'
 import Article from '../components/Article'
 import PrevNextPost from '../components/PrevNextPost'
 import SEO from '../components/SEO'
-import useSiteImages from '../hooks/use-site-images'
-import useSiteMetadata from "../hooks/use-site-config"
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.post
     const { previous, next } = this.props.pageContext
-    const { trees } = useSiteMetadata()
-    const treesImage = useSiteImages(trees).fluid.src
 
     return (
       <Layout location={this.props.location}>
@@ -33,7 +29,6 @@ class BlogPostTemplate extends React.Component {
 
         <Hero
           heroImg={post.frontmatter.cover && post.frontmatter.cover.publicURL}
-          treesImg={treesImage}
           title={post.frontmatter.title}
         />
 

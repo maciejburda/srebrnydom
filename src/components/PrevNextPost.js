@@ -91,7 +91,7 @@ const PrevNextPost = props => {
 
           return (
             <Preview key={`prev-next-${i}`}>
-              <Link to={`/${slug}`} aria-label={`View ${title} article`}>
+              <Link to={`/blog/${slug}`} aria-label={`View ${title} article`}>
                 <PreviewCover
                   style={{ backgroundImage: `url("${heroImg}")` }}
                 />

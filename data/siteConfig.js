@@ -47,6 +47,10 @@ module.exports = {
       url: '/patron',
     },
     {
+      label: 'Blog',
+      url: '/blog',
+    },
+    {
       label: 'COVID-19',
       url: '/covid-19',
     },
