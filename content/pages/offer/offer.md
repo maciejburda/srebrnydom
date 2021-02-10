@@ -5,7 +5,7 @@ cover: ./offer-cover.jpeg
 disqus: false
 ---
 
-Oficjalne otwarcie na przełomie stycznia/lutego 2021. Czekamy na pozwolenie wojewody. Z tej okazji specjalna oferta promocyjna dla naszych pierwszych klientów.
+Oficjalne otwarcie 1 marca 2021. Z tej okazji specjalna oferta promocyjna dla naszych pierwszych 9 pensjonariuszy i pensjonariuszek.
 
 
 ## Opieka krótkoterminowa
