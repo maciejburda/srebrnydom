@@ -66,6 +66,7 @@ const NotFoundPage = props => {
       <Hero heroImg={homeImage} treesImg={treesImage} title="Dom Seniora w Sercu Kaszub"/>
       <Wrapper>
         <Content>
+          Posiadamy zezwolenie nr 114 w rejestrze placówek zapewniających całodobową opiekę osobom niepełnosprawnym, przewlekle chorym lub osobom w podeszłym wieku Wojewody Pomorskiego.
           W dzisiejszych czasach wielu ludzi, mimo najszczerszych chęci, często nie jest w stanie zapewnić swoim rodzicom, babciom lub dziadkom odpowiedniej opieki, takiej jakiej te osoby wymagają. Obowiązki zawodowe, rodzinne, a często zamieszkanie w znacznej odległości od naszych najbliższych nie dają nam fizycznej możliwości należytego zatroszczenia się o ich los. W takich sytuacjach wybór profesjonalnej placówki opiekuńczej często jest najlepszym rozwiązaniem. W ten sposób możemy zapewnić naszym bliskim seniorom komfortowe warunki zamieszkania, opiekę medyczno-rehabilitacyjną, a także odpowiednią pomoc w wykonywaniu codziennych czynności.
         </Content>
         <Content>
