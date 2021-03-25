@@ -1,6 +1,6 @@
 ---
-title: Opowieść cz. 4
-slug: opowiesc-czesc-4
+title: O starości myślmy dobrze
+slug: o-starosci-myslmy-dobrze
 date: 2021-03-25
 cover: ./starosc.jpg
 generate-card: false
@@ -8,9 +8,11 @@ language: pl
 disqus: false
 tags:
     - blog
-    - opowieść
+    - starość
     - srebrnydom
 ---
+
+## O starości myślmy dobrze
 
 „O starości myślmy dobrze, bo po co myśleć źle” – parafrazując Lema 
 Patrząc na starość, dobrze jest być wybrednym co do naszych myśli. Bardzo łatwo jest nam zobaczyć wszystkie jej wady, bo są przeciwieństwem naszej młodości. Zmarszczki, osłabienie ciała, mniej sprawny umysł to wartości przeciwne do naszego szybkiego, energicznego życia. Warto jednak przyjrzeć się temu, co postrzegane jest przez nas jako negatywne, a co jako pozytywne, innymi słowy – jakimi myślami okraszamy rzeczywistość. I tak, o starości możemy myśleć jak o stanie niedołęstwa, stagnacji. Możemy uważać, że wtedy już nic nie warto robić, a rozwój to domena młodych. Możemy nawet uważać, że życie to szafa, w którym są szufladki, i gdy się już do którejś wejdzie, to zabronione jest z niej wyjść. 
