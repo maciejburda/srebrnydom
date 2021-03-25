@@ -17,10 +17,10 @@
 <url> <loc>https://www.srebrnydom.pl/pl/blog/o-otwartosci</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.srebrnydom.pl/blog/opowiesc-czesc-3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.srebrnydom.pl/pl/blog/opowiesc-czesc-3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.srebrnydom.pl/blog/opowiesc-czesc-4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.srebrnydom.pl/pl/blog/opowiesc-czesc-4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.srebrnydom.pl/blog/o-starosci-myslmy-dobrze</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.srebrnydom.pl/pl/blog/o-starosci-myslmy-dobrze</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.srebrnydom.pl/blog/opowiesc-czesc-4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.srebrnydom.pl/pl/blog/opowiesc-czesc-4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.srebrnydom.pl/cennik</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.srebrnydom.pl/pl/cennik</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.srebrnydom.pl/covid-19</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -47,6 +47,8 @@
 <url> <loc>https://www.srebrnydom.pl/pl/tags/dom seniora</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.srebrnydom.pl/tags/otwartość</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.srebrnydom.pl/pl/tags/otwartość</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.srebrnydom.pl/tags/starość</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.srebrnydom.pl/pl/tags/starość</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.srebrnydom.pl/galeria</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.srebrnydom.pl/pl/galeria</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.srebrnydom.pl/pl/404/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
