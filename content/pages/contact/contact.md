@@ -17,4 +17,8 @@ disqus: false
 
 [kontakt@srebrnydom.pl](mailto:kontakt@srebrnydom.pl)
 
+Chcesz zarezerwować pobyt?
 [+48 692 407 428 - codziennie od 8:00 do 20:00](tel:+48692407428)
+
+Szukasz pracy?
+[+48 642 123 12 - na chwilę obecną zespół jest kompletny](tel:+48)

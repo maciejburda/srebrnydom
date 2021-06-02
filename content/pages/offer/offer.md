@@ -12,13 +12,13 @@ Posiadamy zezwolenie nr 114 w rejestrze placówek zapewniających całodobową o
 
 Inaczej zwana opieką wytchnieniową - oferta przeznaczona dla rodzin chcących skorzystać z urlopu lub wyjazdu, nie mającej nikogo kto zapewniłby całodobową opiekę nad osobą starszą. W Srebrnym Domu pomimo otoczenia lasem mamy dobre połączenie Internetowe i zasięg GSM, dlatego możemy pozostać w stałym kontakcie. Pobyt krótkoterminowy różni się od długoterminowego większą intensywnością indywidualnych zajęć fizjoterapeutycznych.
 
-Pobyt minimum 7 dni - **~~1300 zł~~ 1200 zł** za tydzień
+Pobyt minimum 7 dni - **1400 zł** za tydzień
 
 ## Opieka długoterminowa
 
 Oferta skierowana do osób zainteresowanych długotrwałym pobytem w Srebrnym Domu. Naszym stałym pensjonariuszom oferujemy personalizację pokoi pod kątem wystroju oraz instalacji pomocy ruchowych. W każdym pokoju wedle życzenia mieszkańców zawieszamy odpowiadajcy im obraz naszego patrona Jana Kosno. Dodatkowo osoby decydujące się na pobyt długoterminowy mogą liczyć na rabat 20% na wszystkie usługi dodatkowe wykupione poza pakietem podstawowym.
 
-Pobyt minimum 1 miesiąc - **~~4400 zł~~ 3900 zł** za miesiąc
+Pobyt minimum 1 miesiąc - **4400 zł** za miesiąc
 
 ### W ofercie:
 - zakwaterowanie w pokóju 2 lub 3-osobowym z osobną łazienką,
