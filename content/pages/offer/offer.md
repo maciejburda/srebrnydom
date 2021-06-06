@@ -5,7 +5,6 @@ cover: ./offer-cover.jpeg
 disqus: false
 ---
 Posiadamy zezwolenie nr 114 w rejestrze placówek zapewniających całodobową opiekę osobom niepełnosprawnym, przewlekle chorym lub osobom w podeszłym wieku Wojewody Pomorskiego.
-**Oficjalne otwarcie 1 marca 2021**. Z tej okazji **specjalna oferta promocyjna** dla naszych pierwszych 9 pensjonariuszy i pensjonariuszek.
 
 
 ## Opieka krótkoterminowa
