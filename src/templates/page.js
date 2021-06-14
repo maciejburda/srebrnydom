@@ -18,8 +18,8 @@ export default props => {
   return (
     <Layout location={props.location}>
       <SEO
-        title={page.frontmatter.title}
-        description={page.excerpt}
+        title={page.frontmatter.seoTitle}
+        description={page.frontmatter.seoContent}
         path={page.frontmatter.slug}
         cover={page.frontmatter.cover && page.frontmatter.cover.publicURL}
       />
@@ -46,6 +46,8 @@ export const pageQuery = graphql`
       excerpt
       frontmatter {
         title
+        seoTitle
+        seoContent
         date(formatString: "MMMM DD, YYYY")
         slug
         disqus

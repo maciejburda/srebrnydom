@@ -10,8 +10,8 @@ class GalleryTemplate extends React.Component {
     return (
       <Layout location={this.props.location}>
         <SEO
-          title="Galeria"
-          description="Zdjęcia srebrnego domu seniora w miejscowości Swornegacie."
+          title="Galeria Zdjęć - Srebrny Dom"
+          description="Zdjęcia domu seniora w miejscowości Swornegacie w województwie pomorskim."
           path="galeria"
         />
         <Wrapper>

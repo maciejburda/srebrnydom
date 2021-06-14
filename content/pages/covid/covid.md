@@ -3,8 +3,11 @@ title: "Zapobieganie zachorowaniom COVID-19"
 slug: covid-19
 cover: ./cover-covid.jpeg
 disqus: false
-language: pl
+seoTitle: "Chronimy naszych podopiczenych przed ewentualnymi skutkami COVID-19."
+seoContent: "Nasza kadra dba o zdrowie i dobre samopoczucie podopiecznych."
 ---
+
+Cała kadra, oraz wszyscy pensjonariusze są zaszczepieni przeciwko COVID-19.
 
 Covid-19 to choroba wywoływana przez wirusa SARS-CoV-2. Głównym obszarem atakowanym przez wirusa są drogi oddechowe. Objawy są podobne do przeziębienia lub grypy. W przypadku ciężkich przypadków może wywoływać zapalania płuc oraz niewydolności oddechowe. Choroba po raz pierwszy wystąpiła w 2019 roku w Chinach (miasto Wuhan).
 

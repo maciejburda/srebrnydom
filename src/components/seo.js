@@ -14,8 +14,8 @@ const SEO = props => {
   } = useSiteMetadata()
 
   const title = props.title
-    ? `${props.title} | ${siteTitle}`
-    : `${siteTitle} - ${siteDescription}`
+    ? `${props.title}`
+    : `${siteTitle}`
   const formatedSiteUrl = siteUrl.endsWith('/')
     ? siteUrl.substring(0, siteUrl.length - 1)
     : siteUrl

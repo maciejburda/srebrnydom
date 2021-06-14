@@ -3,6 +3,8 @@ title: "Montessori"
 slug: montessori
 cover: ./montessori-cover.jpeg
 disqus: false
+seoTitle: "Wykorzystanie metody Montessori z pracy osobami starszymi."
+seoContent: "Metoda Montessori sprawdza się nie tylko dla dzieci, ale również jej wykorzystanie przynosi efekty w aktywizacji osób starszych."
 ---
 _„Kto jest obsługiwany, a nie wspomagany, jest w pewien sposób ograniczony w swojej niezależności. Dla godności ludzkiej pojęcie to jest fundamentalne: Nie chcę być obsługiwany, ponieważ nie jestem bezradny, ale musimy sobie pomagać, ponieważ jesteśmy istotami społecznymi – oto co należy zrozumieć, by móc poczuć się naprawdę wolnym.”_
 

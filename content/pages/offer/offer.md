@@ -3,6 +3,8 @@ title: "Cennik"
 slug: cennik
 cover: ./offer-cover.jpeg
 disqus: false
+seoTitle: "Cennik domu opieki, ile kosztuje pobyt seniora - Srebrny Dom"
+seoContent: "Wiele osób zastanawia się, ile kosztuje pobyt w domu seniora. Oferujemy miejsce w naszym ośrodku w niezwykle atrakcyjnej cenie. Zapoznaj się z naszym cennikiem."
 ---
 Posiadamy zezwolenie nr 114 w rejestrze placówek zapewniających całodobową opiekę osobom niepełnosprawnym, przewlekle chorym lub osobom w podeszłym wieku Wojewody Pomorskiego.
 

@@ -3,6 +3,8 @@ title: "O nas"
 slug: o-nas
 cover: ./about-us-cover.jpg
 disqus: false
+seoTitle: "Kto jest właścicielem domu seniora - Srebrny Dom"
+seoContent: "Jesteśmy rodzinną firmą, a pomysł na biznes zrodził się z pasji do opieki na osobami starszymi."
 ---
 
 Jesteśmy firmą rodzinną, utworzoną w 2019 roku. Idea utworzenia Srebrnego Domu narodziła się na kanwie naszych własnych doświadczeń i konieczności sprawowania wieloletniej opieki nad bliską nam osobą.

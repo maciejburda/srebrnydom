@@ -4,6 +4,8 @@ slug: patron
 cover: ./kosno-cover.png
 disqus: false
 language: pl
+seoTitle: "Patronem domu opieki jest znany malarz Jan Kosno - Srebrny Dom"
+seoContent: "Kim jest malarz Jan Kosno, patron Srebrnego Domu?"
 ---
 Srebrny Dom został uświetniony obrazami wybinego malarza Jana Kosno. W korytarzach oraz pokojach pensjonariuszy mona zaleźć owoce jego twórczości. Każdemu z pensjonariuszy przysługuje możliwość wyboru obrazu, który zostanie zawieszony w jego pokoju. Dodatkowo w przypadku większego zainteresowania twórczością Jana Kosno istnieje możliwość zakupu poszczególnych dzieł z dodatkowym rabatem dla pensjonariuszy. Pełną listę obrazów można znaleźć [*tutaj*.](https://www.dropbox.com/sh/khjy701309n5c17/AABGZZK1e6m_NYNO_W4-Km2ba?dl=0)
 
@@ -18,3 +20,5 @@ Do Paryża przyjeżdża w 1968 roku jako stypendysta ówczesnego Ministerstwa Ku
 Po powrocie do kraju nadal mieszka i tworzy w Warszawie aż do chwili śmierci, tj. 3 czerwca 1996. Dziś jego prace znaleźć można w zbiorach państwowych, m.in. w Muzeum w Katowicach, w zbiorach Ministerstwa Kultury oraz kolekcjach prywatnych w kraju i za granicą we Francji, USA i Japonii.
 
 Jan Kosno zaliczany jest do awangardy polskich malarzy. Jego prace noszą ślady nauk jego wielkich nauczycieli, lecz są też ciągłym poszukiwaniem własnego stylu, stąd tak wiele podejmowanych tematów i technik. Ten skromny z natury skryty i cichy artysta urzekał swoimi pejzażami syntezując impresję z abstrakcją, dodając w każdym obrazie liczne treści liryki młodopolskiej. Wiele jego prac cechują nastroje wypowiedziane w ciepłym kolorycie i architektonicznej kompozycji. Nie obce są w jego dziełach zmagania z realnością, często przedstawiane za pomocą „złowieszczych symboli” to w tle obrazu, to w jego centrum, które mimo tych apokaliptycznych elementów skłaniają uwagę raczej ku odkryciom wielorakości treści obrazu pozostawiając jednak ostrzeżenie w percepcji odbiorcy.
+
+Po latach wznowiono sprzeda obrazów. Pierwszy z nich sprzedał się w Sopockim Domu Aukcyjnym w 2021.
