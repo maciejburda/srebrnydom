@@ -143,5 +143,37 @@ module.exports = {
         redirect: false,
       },
     },
+    {
+      resolve: `gatsby-plugin-cookie-though`,
+      options: {
+        config: {
+          policies: [
+            {
+              id: "analytics",
+              label: "Google Analytics",
+              description:
+                "Zbieramy anonimowe informacje dotyczące ruchu na stronie.",
+              category: "essential",
+            },
+          ],
+          permissionLabels: {
+            accept: "Akceptuj",
+            acceptAll: "Zaakceptuj wszystko",
+            decline: "Odmów",
+          },
+          cookiePreferenceKey: "cookie-preferences",
+          header: {
+            title: "Ciasteczka na stronie",
+            subTitle: "Techniczne pliki cookies są niezbędne dla prawidłowego działania strony.",
+            description:
+              "Na stronie portalu wykorzystujemy pliki cookies techniczne, analityczne i marketingowe.",
+          },
+          cookiePolicy: {
+            url: "https://www.srebrnydom.pl/polityka-prywatnosci",
+            label: "Czytaj więcej",
+          },
+        },
+      },
+    },
   ],
 }
