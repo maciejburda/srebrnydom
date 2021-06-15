@@ -35,6 +35,10 @@ module.exports = {
       url: '/cennik',
     },
     {
+      label: 'Oferta',
+      url: '/oferta',
+    },
+    {
       label: 'Galeria',
       url: '/galeria',
     },

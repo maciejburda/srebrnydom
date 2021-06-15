@@ -1,13 +1,15 @@
 ---
-title: "Cennik"
+title: "Cennik Domu Seniora"
 slug: cennik
 cover: ./offer-cover.jpeg
 disqus: false
 seoTitle: "Cennik domu opieki, ile kosztuje pobyt seniora - Srebrny Dom"
 seoContent: "Wiele osób zastanawia się, ile kosztuje pobyt w domu seniora. Oferujemy miejsce w naszym ośrodku w niezwykle atrakcyjnej cenie. Zapoznaj się z naszym cennikiem."
 ---
-Posiadamy zezwolenie nr 114 w rejestrze placówek zapewniających całodobową opiekę osobom niepełnosprawnym, przewlekle chorym lub osobom w podeszłym wieku Wojewody Pomorskiego.
+Planujesz skierować schorowanego, obarczonego niepełnosprawnością lub w podeszłym wieku członka rodziny do placówki opiekuńczej? Jeśli tak, to na pewno zastanawiasz się nad tym, ile kosztuje pobyt w domu seniora? Ceny domu seniora zależne są od tego, czy decydujesz się na opiekę krótkoterminową (minimum 7 dni), czy długoterminową (minimum miesiąc).
+Dodatkowo, poza pakietami podstawowymi (obejmującymi zakwaterowanie, pełne wyżywienie, zajęcia warsztatowe, rehabilitacyjne, itp.) w naszej placówce spokojnej starości proponujemy również płatne usługi dodatkowe, na które można się zdecydować w zależności od indywidualnych potrzeb oraz możliwości (także finansowych).
 
+Posiadamy zezwolenie nr 114 w rejestrze placówek zapewniających całodobową opiekę osobom niepełnosprawnym, przewlekle chorym lub osobom w podeszłym wieku Wojewody Pomorskiego.
 
 ## Opieka krótkoterminowa
 

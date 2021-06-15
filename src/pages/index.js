@@ -65,17 +65,25 @@ const NotFoundPage = props => {
       <SEO title="Dom seniora, opieka, spokojna starość - pomorskie - Srebrny Dom"
            description="Nasz luksusowy dom spokojnej starości położony jest na malowniczych Kaszubach w województwie pomorskim. Zapewniamy seniorom profesjonalną i całodobową opiekę."
       />
-      <Hero heroImg={homeImage} treesImg={treesImage} title="Dom Seniora w Sercu Kaszub"/>
+      <Hero heroImg={homeImage} treesImg={treesImage} title="Dom Opieki nad seniorami - Srebrny Dom"/>
       <Wrapper>
         <Content>
-          Posiadamy zezwolenie nr 114 w rejestrze placówek zapewniających całodobową opiekę osobom niepełnosprawnym, przewlekle chorym lub osobom w podeszłym wieku Wojewody Pomorskiego.
-          W dzisiejszych czasach wielu ludzi, mimo najszczerszych chęci, często nie jest w stanie zapewnić swoim rodzicom, babciom lub dziadkom odpowiedniej opieki, takiej jakiej te osoby wymagają. Obowiązki zawodowe, rodzinne, a często zamieszkanie w znacznej odległości od naszych najbliższych nie dają nam fizycznej możliwości należytego zatroszczenia się o ich los. W takich sytuacjach wybór profesjonalnej placówki opiekuńczej często jest najlepszym rozwiązaniem. W ten sposób możemy zapewnić naszym bliskim seniorom komfortowe warunki zamieszkania, opiekę medyczno-rehabilitacyjną, a także odpowiednią pomoc w wykonywaniu codziennych czynności.
+          Zajmowanie się rodzicami, babciami oraz dziadkami (zwłaszcza tymi potrzebującymi wsparcia w wykonywaniu codziennych czynności) to dla wielu osób spore wyzwanie. Dzieci czy wnuki często mieszkają w sporej odległości od najbliższych, a dodatkowo są przytłoczone obowiązkami zawodowymi oraz zobowiązaniami rodzinnymi, przez co nie są w stanie sprawować całodobowej opieki. Rozwiązanie takiej trudnej sytuacji stanowi zdecydowanie się na profesjonalną luksusową placówkę opiekuńczą - taką, jak prowadzony przez nas dom seniora na Kaszubach. Posiadamy zezwolenie nr 114 w rejestrze placówek zapewniających całodobową opiekę osobom niepełnosprawnym, przewlekle chorym lub osobom w starszym wieku Wojewody Pomorskiego.
         </Content>
         <Content>
-          Jako specjaliści i pasjonaci doskonale rozumiemy potrzebę stworzenia miejsca, w którym nasi podopieczni poczują się jak w domu. Dlatego w <i>Srebrnym Domu</i>, domu seniora w województwie pomorskim tworzymy bezpieczne i przyjazne warunki maksymalnie zbliżone do tych znanych z codziennego życia. Oferowana przez naszą kameralną placówkę prywatna opieka nad osobami starszymi uwzględnia zarówno pielęgnację, jak i pomoc medyczną świadczoną przez wykwalifikowaną kadrę. Zapewniamy również ciepłą, domową atmosferę i spokój w przyjemnych pomieszczeniach, dostosowanych do potrzeb osób starszych i niepełnosprawnych.
+          Luksusowy dom opieki dla seniorów na Kaszubach.
         </Content>
         <Content>
-          <i>Srebrny Dom</i> znajduje się w środku lasu, nieopodal miejscowości Swornegacie w gminie Chojnice (pomorskie). Jest położony w centrum 5ha działki leśnej, a dookoła nie ma żadnej zabudowy mieszkaniowej ani usługowej, co gwarantuje spokój. Dodatkowo, bezpośrednie położenie w sąsiedztwie Parku Narodowego „Bory Tucholskie” w Zaborskim Parku Krajobrazowym, powoduje, że miejsce to cieszy się wyjątkowymi walorami przyrodniczymi i zdrowotnymi. Wspaniała okolica sprzyja spacerom i relaksowi na świeżym powietrzu.
+          Prowadzony przez nas na terenie województwa pomorskiego dom seniora zapewni starszym i schorowanym osobom nie tylko komfortowe warunki pobytu ze stała opieką medyczno - rehabilitacyjną, ale również pomoc w wykonywaniu codziennych czynności. Kładziemy nacisk na tworzenie bezpiecznych oraz przyjaznych warunków życia, by żaden senior nie czuł się u nas nieswojo. Pomieszczenia dostosowaliśmy do potrzeb osób starszych oraz niepełnosprawnych, co zapewnia komfortowy wypoczynek. Oferowana przez naszą luksusową placówkę opieka obejmuje również troskę o zdrowie – dbamy o pielęgnację pensjonariuszy i dysponujemy kadrą świadczącą pomoc medyczną.
+        </Content>
+        <Content>
+          Kaszuby - bliskość natury
+        </Content>
+        <Content>
+          Prowadzony przez nas luksusowy dom spokojnej starości znajduje się w środku lasu, nieopodal miejscowości Swornegacie w gminie Chojnice. Jest położony w centrum ogromnej działki leśnej, spokój i możliwość wypoczynku w komfortowych warunkach gwarantuje brak zabudowy mieszkaniowej oraz usługowej wokół. Bezpośrednie położenie w sąsiedztwie Parku Narodowego „Bory Tucholskie” w Zaborskim Parku Krajobrazowym powoduje, że prowadzony przez nas dom seniora cieszy się wyjątkowymi walorami przyrodniczymi i zdrowotnymi.
+        </Content>
+        <Content>
+          Zapewniamy, że stworzyliśmy luksusowe miejsce, w którym każda osoba starsza, schorowana czy niepełnosprawna wymagające opieki poczują się jak we własnym domu.
         </Content>
       </Wrapper>
       <CircleWrapper>

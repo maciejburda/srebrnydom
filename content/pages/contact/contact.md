@@ -34,3 +34,8 @@ seoContent: "W jaki sposób skontaktować się z domem seniora w województwie p
 **Szukasz pracy?**
 
 [+48 880 615 812 - na chwilę obecną zespół jest kompletny](tel:+48880615812)
+
+### Mapa
+<br/>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9410.103678313948!2d17.4946838!3d53.8690776!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf227301449af310d!2sSrebrny%20Dom%20Us%C5%82ugi%20Rehabilitacyjne%20i%20Opieku%C5%84cze!5e0!3m2!1spl!2spl!4v1623739565013!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</iframe>
