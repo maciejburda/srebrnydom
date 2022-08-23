@@ -6,6 +6,7 @@ import Footer from './Footer'
 import 'prismjs/themes/prism-tomorrow.css'
 import { GlobalStyle } from './Commons'
 import { media } from '../tokens'
+import './cookie-though-layout.css'
 
 const SiteContent = styled.div`
   margin: 0 0;

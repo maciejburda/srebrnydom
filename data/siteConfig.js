@@ -55,10 +55,6 @@ module.exports = {
       url: '/blog',
     },
     {
-      label: 'COVID-19',
-      url: '/covid-19',
-    },
-    {
       label: 'Kontakt',
       url: '/kontakt',
     },

@@ -164,7 +164,6 @@ module.exports = {
           cookiePreferenceKey: "cookie-preferences",
           header: {
             title: "Ciasteczka na stronie",
-            subTitle: "Techniczne pliki cookies są niezbędne dla prawidłowego działania strony.",
             description:
               "Na stronie portalu wykorzystujemy pliki cookies techniczne, analityczne i marketingowe.",
           },
