@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{"z+dg":function(n,e,t){"use strict";t.r(e);var u=t("q1tI"),a=t("YAE/");e.default=function(){return u.createElement(a.a,null)}}}]);
+//# sourceMappingURL=component---node-modules-gatsby-gallery-simple-src-pages-index-tsx-90939b7e1f8bcbb47b62.js.map
