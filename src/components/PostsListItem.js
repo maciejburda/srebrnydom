@@ -77,7 +77,7 @@ const PostsListItem = props => {
           <TagList tags={tags} />
         </FooterLine>
         <ReadPost to={`/blog/${slug}`} aria-label={`View ${title} article`}>
-          Read post ›
+          Przeczytaj Post ›
         </ReadPost>
       </footer>
     </Post>

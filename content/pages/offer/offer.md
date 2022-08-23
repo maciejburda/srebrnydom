@@ -11,17 +11,13 @@ Dodatkowo, poza pakietami podstawowymi (obejmującymi zakwaterowanie, pełne wy�
 
 Posiadamy zezwolenie nr 114 w rejestrze placówek zapewniających całodobową opiekę osobom niepełnosprawnym, przewlekle chorym lub osobom w podeszłym wieku Wojewody Pomorskiego.
 
-## Opieka krótkoterminowa
+## Opieka krótkoterminowa - 1500 zł za tydzień
 
-Inaczej zwana opieką wytchnieniową - oferta przeznaczona dla rodzin chcących skorzystać z urlopu lub wyjazdu, nie mającej nikogo kto zapewniłby całodobową opiekę nad osobą starszą. W Srebrnym Domu pomimo otoczenia lasem mamy dobre połączenie Internetowe i zasięg GSM, dlatego możemy pozostać w stałym kontakcie. Pobyt krótkoterminowy różni się od długoterminowego większą intensywnością indywidualnych zajęć fizjoterapeutycznych.
+Inaczej zwana opieką wytchnieniową - oferta przeznaczona dla rodzin chcących skorzystać z urlopu lub wyjazdu, nie mającej nikogo kto zapewniłby całodobową opiekę nad osobą starszą. W Srebrnym Domu pomimo otoczenia lasem mamy dobre połączenie Internetowe i zasięg GSM, dlatego możemy pozostać w stałym kontakcie. Pobyt krótkoterminowy różni się od długoterminowego większą intensywnością indywidualnych zajęć fizjoterapeutycznych. **Pobyt minimum 7 dni.**
 
-Pobyt minimum 7 dni - **1500 zł** za tydzień
+## Opieka długoterminowa - 4800 zł za miesiąc
 
-## Opieka długoterminowa
-
-Oferta skierowana do osób zainteresowanych długotrwałym pobytem w Srebrnym Domu. Naszym stałym pensjonariuszom oferujemy personalizację pokoi pod kątem wystroju oraz instalacji pomocy ruchowych. W każdym pokoju wedle życzenia mieszkańców zawieszamy odpowiadajcy im obraz naszego patrona Jana Kosno. Dodatkowo osoby decydujące się na pobyt długoterminowy mogą liczyć na rabat 20% na wszystkie usługi dodatkowe wykupione poza pakietem podstawowym.
-
-Pobyt minimum 1 miesiąc - **4750 zł** za miesiąc
+Oferta skierowana do osób zainteresowanych długotrwałym pobytem w Srebrnym Domu. Naszym stałym pensjonariuszom oferujemy personalizację pokoi pod kątem wystroju oraz instalacji pomocy ruchowych. W każdym pokoju wedle życzenia mieszkańców zawieszamy odpowiadajcy im obraz naszego patrona Jana Kosno. Dodatkowo osoby decydujące się na pobyt długoterminowy mogą liczyć na rabat 20% na wszystkie usługi dodatkowe wykupione poza pakietem podstawowym. **Pobyt minimum 1 miesiąc.**
 
 ### W ofercie:
 - zakwaterowanie w pokóju 2 lub 3-osobowym z osobną łazienką,

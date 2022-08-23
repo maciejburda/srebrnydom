@@ -93,17 +93,17 @@ class Pagination extends React.Component {
     return (
       <PaginationWrapper>
         {currentPage !== 1 ? (
-          <PreviousBtn to={previousUrl}>‹ Newer posts</PreviousBtn>
+          <PreviousBtn to={previousUrl}>‹ Nowsze posts</PreviousBtn>
         ) : (
           <Spacer className="previous" />
         )}
 
         <PageInfo>
-          Page {currentPage} of {nbPages}
+          Strona {currentPage} z {nbPages}
         </PageInfo>
 
         {currentPage < nbPages ? (
-          <NextBtn to={`/pages/${currentPage + 1}`}>Older posts ›</NextBtn>
+          <NextBtn to={`/pages/${currentPage + 1}`}>Starsze posty ›</NextBtn>
         ) : (
           <Spacer className="next" />
         )}

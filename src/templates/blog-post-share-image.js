@@ -120,7 +120,7 @@ const BlogPostShareImage = props => {
       <Title>{post.frontmatter.title}</Title>
       <SubTitle>
         <AuthorImg src={fixed.src} />
-        <ReadTime>{post.timeToRead} min read</ReadTime>
+        <ReadTime>{post.timeToRead} min czytania</ReadTime>
       </SubTitle>
       <Preview
         width={width}
