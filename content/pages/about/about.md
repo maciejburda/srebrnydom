@@ -7,10 +7,10 @@ seoTitle: "Kto jest właścicielem domu seniora - Srebrny Dom"
 seoContent: "Jesteśmy rodzinną firmą, a pomysł na biznes zrodził się z pasji do opieki na osobami starszymi."
 ---
 
-Jesteśmy firmą rodzinną, utworzoną w 2019 roku. Idea utworzenia Srebrnego Domu narodziła się na kanwie naszych własnych doświadczeń i konieczności sprawowania wieloletniej opieki nad bliską nam osobą.
+Jako rodzinna firma, założona w 2019 roku, Srebrny Dom zrodził się z naszych osobistych doświadczeń oraz potrzeby wieloletniej opieki nad bliskimi nam osobami.
 
-Naszą misją jest stworzenie miejsca przyjaznego dla osób starszych i samotnych, w którym nasi podopieczni w bezpiecznej, rodzinnej atmosferze będą mogli wykorzystywać własny potencjał i doświadczenie życiowe aby wspólnie miło spędzać wolny czas, rozwijać umiejętności, a także zadbać o swoje zdrowie fizyczne i psychiczne. Wszystko przy pomocy i zaangażowaniu wykwalifikowanego personelu posiadającego bogate doświadczenie w opiece nad osobami starszymi oraz wyszkolonego w zakresie Metody Montessori.
+Naszym celem jest stworzenie przyjaznego, ciepłego miejsca dla seniorów oraz osób samotnych, gdzie nasi podopieczni będą mogli bezpiecznie, w rodzinnej atmosferze, rozwijać swój potencjał i wykorzystywać doświadczenie życiowe do wspólnego, miłego spędzania czasu wolnego. Dążymy również do umożliwienia im pracy nad umiejętnościami oraz dbania o zdrowie fizyczne i psychiczne, dzięki wsparciu i zaangażowaniu wykwalifikowanego personelu, posiadającego bogate doświadczenie w opiece nad seniorami oraz szkolenie z zakresu Metody Montessori.
 
-Oferujemy naszym mieszkańcom 9 przestronnych, w pełni wyposażonych pokoi z prywatną łazienką, w tym 7 pokoi 2-osobowych oraz 2 pokoje 3-osobowe. Do dyspozycji naszych pensjonariuszy pozostaje również sala gimnastyczna, sala rehabilitacyjna, sauna, biblioteka z kawiarnią, jadalnia oraz atrakcyjny teren wokół budynku z miejscem na ognisko.
+Przygotowaliśmy dla naszych mieszkańców 9 przestronnych, komfortowych i w pełni wyposażonych pokoi z własnymi łazienkami, w tym 7 pokoi dwuosobowych oraz 2 pokoje trzyosobowe. Dodatkowo, naszym pensjonariuszom oddajemy do dyspozycji sale gimnastyczną, rehabilitacyjną, bibliotekę z kawiarnią, jadalnię oraz atrakcyjne tereny zielone wokół budynku, gdzie znajduje się również miejsce na ognisko.
 
-Z nami możliwe jest „wesołe życie staruszka”, pełne wzajemnego szacunku i zrozumienia. 
+Z nami możliwe jest "wesołe życie staruszka", oparte na wzajemnym szacunku i zrozumieniu.

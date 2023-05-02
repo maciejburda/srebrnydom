@@ -1,61 +1,51 @@
 ---
 title: "Cennik Domu Seniora"
 slug: cennik
-cover: ./offer-cover.jpeg
+cover: ./offer-cover.png
 disqus: false
 seoTitle: "Cennik domu opieki, ile kosztuje pobyt seniora - Srebrny Dom"
 seoContent: "Wiele osób zastanawia się, ile kosztuje pobyt w domu seniora. Oferujemy miejsce w naszym ośrodku w niezwykle atrakcyjnej cenie. Zapoznaj się z naszym cennikiem."
 ---
-Planujesz skierować schorowanego, obarczonego niepełnosprawnością lub w podeszłym wieku członka rodziny do placówki opiekuńczej? Jeśli tak, to na pewno zastanawiasz się nad tym, ile kosztuje pobyt w domu seniora? Ceny domu seniora zależne są od tego, czy decydujesz się na opiekę krótkoterminową (minimum 7 dni), czy długoterminową (minimum miesiąc).
-Dodatkowo, poza pakietami podstawowymi (obejmującymi zakwaterowanie, pełne wyżywienie, zajęcia warsztatowe, rehabilitacyjne, itp.) w naszej placówce spokojnej starości proponujemy również płatne usługi dodatkowe, na które można się zdecydować w zależności od indywidualnych potrzeb oraz możliwości (także finansowych).
+Rozważasz umieszczenie schorowanego, niepełnosprawnego lub w podeszłym wieku członka rodziny w placówce opiekuńczej? Jeśli tak, z pewnością zadajesz sobie pytanie: ile kosztuje pobyt w domu seniora? Ceny pobytu w naszym domu seniora zależą od wyboru opieki krótko- (minimum 7 dni) czy długoterminowej (minimum miesiąc). Oferujemy pakiety podstawowe (zakwaterowanie, pełne wyżywienie, zajęcia warsztatowe, rehabilitacyjne itp.) oraz dodatkowe, płatne usługi, dostosowane do indywidualnych potrzeb i możliwości finansowych naszych podopiecznych.
 
-Posiadamy zezwolenie nr 114 w rejestrze placówek zapewniających całodobową opiekę osobom niepełnosprawnym, przewlekle chorym lub osobom w podeszłym wieku Wojewody Pomorskiego.
+Posiadamy zezwolenie nr 114 w rejestrze placówek zapewniających całodobową opiekę osobom niepełnosprawnym, przewlekle chorym lub w podeszłym wieku, wydane przez Wojewodę Pomorskiego.
 
 ## Opieka krótkoterminowa - 1500 zł za tydzień
 
-Inaczej zwana opieką wytchnieniową - oferta przeznaczona dla rodzin chcących skorzystać z urlopu lub wyjazdu, nie mającej nikogo kto zapewniłby całodobową opiekę nad osobą starszą. W Srebrnym Domu pomimo otoczenia lasem mamy dobre połączenie Internetowe i zasięg GSM, dlatego możemy pozostać w stałym kontakcie. Pobyt krótkoterminowy różni się od długoterminowego większą intensywnością indywidualnych zajęć fizjoterapeutycznych. **Pobyt minimum 7 dni.**
+Nazywana również opieką wytchnieniową, przeznaczona dla rodzin, które potrzebują czasu na urlop lub wyjazd, nie dysponując kimś do zapewnienia całodobowej opieki nad seniorem. W Srebrnym Domu, otoczonym lasem, zapewniamy doskonałe połączenie internetowe i zasięg GSM, dzięki czemu możemy utrzymywać stały kontakt. Pobyt krótkoterminowy różni się od długoterminowego większym naciskiem na indywidualne zajęcia fizjoterapeutyczne. **Pobyt minimum 7 dni.**
 
 ## Opieka długoterminowa - 4800 zł za miesiąc
 
-Oferta skierowana do osób zainteresowanych długotrwałym pobytem w Srebrnym Domu. Naszym stałym pensjonariuszom oferujemy personalizację pokoi pod kątem wystroju oraz instalacji pomocy ruchowych. W każdym pokoju wedle życzenia mieszkańców zawieszamy odpowiadajcy im obraz naszego patrona Jana Kosno. Dodatkowo osoby decydujące się na pobyt długoterminowy mogą liczyć na rabat 20% na wszystkie usługi dodatkowe wykupione poza pakietem podstawowym. **Pobyt minimum 1 miesiąc.**
+Oferta dla osób zainteresowanych długotrwałym pobytem w Srebrnym Domu. Naszym stałym pensjonariuszom gwarantujemy personalizację pokoi pod kątem wystroju oraz instalacji pomocy ruchowych. Na życzenie, w każdym pokoju zawieszamy obraz przedstawiający naszego patrona Jana Kosno. Dodatkowo, decydując się na pobyt długoterminowy, pensjonariusze mogą liczyć na 20% rabatu na wszystkie dodatkowe usługi wykupione poza pakietem podstawowym. **Pobyt minimum 1 miesiąc.**
 
-### W ofercie:
-- zakwaterowanie w pokóju 2 lub 3-osobowym z osobną łazienką,
-- pełne wyżwienie - 4 posiłki z możliwością wyboru diety,
-- nielimitowany dostęp do zimnych i ciepłych napojów,
-- zajęcia warsztatowe w metodyce Montessori,
+### W naszej ofercie
+
+- komfortowe zakwaterowanie w 2- lub 3-osobowych pokojach z prywatną łazienką,
+- pełne wyżywienie z 4 posiłkami dziennie i możliwością wyboru diety,
+- nieograniczony dostęp do napojów zimnych i ciepłych,
+- warsztaty oparte na metodyce Montessori,
 - grupowe zajęcia rehabilitacyjne,
-- indywidualna rehabilitacja pod okiem fizjoterapeuty,
-- spacery i krótkie wycieczki (w zależności od pory roku),
+- indywidualna rehabilitacja prowadzona przez doświadczonego fizjoterapeutę,
+- spacery i krótkie wycieczki dostosowane do pory roku,
 - dostęp do telewizji satelitarnej w przestrzeniach wspólnych,
-- dostęp do biblioteki książek z możliwością zakupu przez nas brakujących tytułów,
-- całodobowa opieka wykwalfikowanego personelu,
+- bogata biblioteka książek z opcją zakupu brakujących tytułów na życzenie,
+- całodobowe wsparcie wykwalifikowanego personelu,
 - aktywny system przyzywowy w każdym pokoju,
-- sala gimnastyczna dostosowana do potrzeb osób starszych,
-- indywidualny plan potrzeb i opieki,
-- opieka adaptacyjna,
-- regularne dyżury pielęgniarskie,
-- regularny nadzór lekarski,
-- comiesięczne wycieczki,
-- nielimitowany dostęp do sauny i strefy relaksacyjnej,
-- pranie, suszenie i prasowanie,
-- dowóz na Msze Święte,
-- realizacja zakupów lub dowóz do sklepu.
+- sala gimnastyczna przystosowana do potrzeb seniorów,
+- indywidualny plan opieki i wsparcia,
+- wsparcie adaptacyjne,
+- regularne dyżury pielęgniarek,
+- systematyczny nadzór lekarski,
+- comiesięczne organizowane wycieczki,
+- nieograniczony dostęp do sauny i strefy relaksacyjnej,
+- pranie, suszenie oraz prasowanie odzieży,
+- transport na Msze Święte,
+- pomoc w zakupach lub dowóz do sklepu,
+- Usługi dodatkowe (dostępne poza pakietem podstawowym).
 
-## Usługi dodatkowe (wykupione poza pakietem podstawowym)
-- Indywidualna sesja fizjoterapeutyczna - **100 zł**
-- Masaż relaksacyjny - **80 zł**
-- Ćwiczenia czynne z obciążeniem i odciążeniem z przyrządami - **40 zł**
-- Elektrostymulacja - **25 zł**
-- Jonoforeza - **20 zł**
-- Lampa Sollux - **15 zł**
-- Ultradzwięki / Fonoforeza - **20 zł**
-- Pole magnetycnze - **20 zł**
-- Wizyta kosmetyczki - **w zależności od zabiegu**
-- Wizyta fryzjerska - **w zależności od usługi**
+### Oferta nie obejmuje
 
-## Płatne dodatkowo
-- leki, pampersy, okulary, aparaty słuchowe,
-- dowóz do lekarzy specjalistów,
-- wizyty fryzjera czy kosmetyczki na zamówienie,
-- zakupy indywidualne
+- leki, pieluchomajtki, okulary, aparaty słuchowe,
+- transport do lekarzy specjalistów,
+- indywidualne wizyty fryzjera lub kosmetyczki,
+- osobiste zakupy.
