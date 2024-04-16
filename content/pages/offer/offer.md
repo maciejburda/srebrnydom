@@ -10,11 +10,11 @@ Rozważasz umieszczenie schorowanego, niepełnosprawnego lub w podeszłym wieku 
 
 Posiadamy zezwolenie nr 114 w rejestrze placówek zapewniających całodobową opiekę osobom niepełnosprawnym, przewlekle chorym lub w podeszłym wieku, wydane przez Wojewodę Pomorskiego.
 
-## Opieka krótkoterminowa - 220 zł za dzień
+## Opieka krótkoterminowa - 250 zł za dzień
 
 Nazywana również opieką wytchnieniową, przeznaczona dla rodzin, które potrzebują czasu na urlop lub wyjazd, nie dysponując kimś do zapewnienia całodobowej opieki nad seniorem. W Srebrnym Domu, otoczonym lasem, zapewniamy doskonałe połączenie internetowe i zasięg GSM, dzięki czemu możemy utrzymywać stały kontakt. Pobyt krótkoterminowy różni się od długoterminowego większym naciskiem na indywidualne zajęcia fizjoterapeutyczne.
 
-## Opieka długoterminowa - 5200 zł za miesiąc
+## Opieka długoterminowa - 5600 zł za miesiąc
 
 Oferta dla osób zainteresowanych długotrwałym pobytem w Srebrnym Domu. Naszym stałym pensjonariuszom gwarantujemy personalizację pokoi pod kątem wystroju oraz instalacji pomocy ruchowych. Na życzenie, w każdym pokoju zawieszamy obraz przedstawiający naszego patrona Jana Kosno. Dodatkowo, decydując się na pobyt długoterminowy, pensjonariusze mogą liczyć na 20% rabatu na wszystkie dodatkowe usługi wykupione poza pakietem podstawowym. **Pobyt minimum 1 miesiąc.**
 
