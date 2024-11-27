@@ -33,7 +33,14 @@ seoContent: "W jaki sposób skontaktować się z domem seniora w województwie p
 
 **Szukasz pracy?**
 
-[+48 880 615 812 - na chwilę obecną zespół jest kompletny](tel:+48880615812)
+Poszukujemy opiekunów / opiekunek osób starszych.
+Prosimy o przesyłanie CV na nasz adres e-mail lub o kontakt telefoniczny.
+
+<br/>
+
+**Telefon do Srebrnego Domu**
+
+[+48 880 615 812 - codziennie od 9:00 do 19:00](tel:+48880615812)
 
 ### Mapa
 <br/>
