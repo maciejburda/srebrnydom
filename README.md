@@ -25,3 +25,8 @@ Installation from scratch.
 5. Deploy
 
 ```npm run deploy```
+
+
+### Known Issues
+
+```export NODE_OPTIONS=--openssl-legacy-provider```
