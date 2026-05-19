@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import useSiteMetadata from '../hooks/use-site-config'
 import { colors, media } from '../tokens'
 import useSiteImages from "../hooks/use-site-images"
+import { Phone, Mail, MapPin, Facebook, Linkedin, Twitter, Instagram } from './Icons'
 
 const FooterWrapper = styled.footer`
   text-align: left;
@@ -117,6 +118,13 @@ const FooterWrapper = styled.footer`
     opacity: 0.7;
   }
 
+  .footer-icon {
+    display: inline-flex;
+    vertical-align: middle;
+    margin-right: 0.45em;
+    color: ${colors.textLightest};
+  }
+
   @media (max-width: 564px) {
     .footer-col:first-child {
       width: 100%;
@@ -136,11 +144,24 @@ const Footer = () => {
   const { footerLinks, footerLinksIcon } = useSiteMetadata()
   const iconImage = useSiteImages(footerLinksIcon).gatsbyImageData
 
+  const iconFor = item => {
+    if (item.url.startsWith('tel:')) return <Phone size={14} />
+    if (item.url.startsWith('mailto:')) return <Mail size={14} />
+    if (item.url.includes('google.com/maps')) return <MapPin size={14} />
+    if (item.label === 'Facebook') return <Facebook size={14} />
+    if (item.label === 'LinkedIn') return <Linkedin size={14} />
+    if (item.label === 'Twitter') return <Twitter size={14} />
+    if (item.label === 'Instagram') return <Instagram size={14} />
+    return null
+  }
+
   const FooterItem = ({ item }) => {
+    const icon = iconFor(item)
     if (item.url.startsWith('/')) {
       return (
         <span className="footer-item">
           <Link className="footer-link" to={item.url}>
+            {icon && <span className="footer-icon">{icon}</span>}
             {item.label}
           </Link>
         </span>
@@ -149,6 +170,7 @@ const Footer = () => {
     return (
       <span className="footer-item">
         <a className="footer-link" href={item.url} target="_blank" rel="noreferrer">
+          {icon && <span className="footer-icon">{icon}</span>}
           {item.label}
         </a>
       </span>

@@ -81,6 +81,8 @@ module.exports = {
     bookingHours: 'Mo-Su 09:00-17:00',
     licenseNumber: '114',
     licenseAuthority: 'Wojewoda Pomorski',
+    vatId: '5551232594',
+    regon: '384334284',
     sameAs: [
       'https://www.facebook.com/SrebrnyDomSwornegacie/',
       'https://www.linkedin.com/company/74240750',
