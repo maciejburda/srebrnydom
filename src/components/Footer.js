@@ -104,15 +104,17 @@ const FooterWrapper = styled.footer`
     padding: 0;
     margin: 0;
     font: inherit;
-    font-size: 0.83em;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
     color: inherit;
-    text-decoration: underline;
+    text-decoration: none;
     cursor: pointer;
   }
 
   .footer-cookie-link:hover,
   .footer-cookie-link:focus {
-    text-decoration: none;
+    opacity: 0.7;
   }
 
   @media (max-width: 564px) {
