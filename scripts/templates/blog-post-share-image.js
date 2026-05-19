@@ -2,9 +2,9 @@ import React from 'react'
 import { graphql, withPrefix } from 'gatsby'
 import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components'
-import useSiteMetadata from '../hooks/use-site-config'
-import useSiteImages from '../hooks/use-site-images'
-import colors from '../tokens/colors'
+import useSiteMetadata from '../../src/hooks/use-site-config'
+import useSiteImages from '../../src/hooks/use-site-images'
+import colors from '../../src/tokens/colors'
 
 const GlobalPageStyle = createGlobalStyle`
   * {
