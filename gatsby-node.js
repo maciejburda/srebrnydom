@@ -19,7 +19,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const BlogPostTemplate = require.resolve('./src/templates/blog-post.js')
   const BlogPostShareImage = require.resolve(
-    './src/templates/blog-post-share-image.js'
+    './scripts/templates/blog-post-share-image.js'
   )
   const PageTemplate = require.resolve('./src/templates/page.js')
   const PostsBytagTemplate = require.resolve('./src/templates/tags.js')
