@@ -88,12 +88,12 @@ const PageInfo = styled.span`
 class Pagination extends React.Component {
   render() {
     const { currentPage, nbPages } = this.props
-    const previousUrl = currentPage === 2 ? '/' : `/pages/${currentPage - 1}/`
+    const previousUrl = currentPage === 2 ? '/blog/' : `/pages/${currentPage - 1}/`
 
     return (
       <PaginationWrapper>
         {currentPage !== 1 ? (
-          <PreviousBtn to={previousUrl}>‹ Nowsze posts</PreviousBtn>
+          <PreviousBtn to={previousUrl}>‹ Nowsze posty</PreviousBtn>
         ) : (
           <Spacer className="previous" />
         )}
