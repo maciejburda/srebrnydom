@@ -37,6 +37,9 @@ const Circle = styled.div`
   width: 92px;
   height: 92px;
   background-color: #eff5fa;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 `
 const CircleText = styled.div`
   margin-top: 22px;

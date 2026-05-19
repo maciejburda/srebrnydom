@@ -1,5 +1,5 @@
 import { useStaticQuery, graphql } from 'gatsby'
-import { getImage, getSrc } from 'gatsby-plugin-image'
+import { getImage } from 'gatsby-plugin-image'
 
 const useSiteImages = imageName => {
   const result = useStaticQuery(graphql`
@@ -8,6 +8,7 @@ const useSiteImages = imageName => {
         edges {
           node {
             relativePath
+            publicURL
             childImageSharp {
               gatsbyImageData(layout: FULL_WIDTH, quality: 100)
             }
@@ -21,12 +22,11 @@ const useSiteImages = imageName => {
   if (image === undefined) {
     throw new Error(`Unable to find image: ${imageName} (in content/images)`)
   }
-  const data = image.node.childImageSharp
-  const src = getSrc(data)
+  const src = image.node.publicURL
   return {
     fluid: { src },
     fixed: { src },
-    gatsbyImageData: getImage(data),
+    gatsbyImageData: getImage(image.node.childImageSharp),
   }
 }
 
