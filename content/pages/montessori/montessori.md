@@ -3,8 +3,8 @@ title: "Montessori"
 slug: montessori
 cover: ./montessori-cover.jpeg
 disqus: false
-seoTitle: "Metoda Montessori w domu seniora - Srebrny Dom"
-seoContent: "Metoda Montessori sprawdza się nie tylko dla dzieci, ale również jej wykorzystanie przynosi efekty w aktywizacji osób starszych."
+seoTitle: "Montessori dla seniorów – metoda aktywizacji - Srebrny Dom"
+seoContent: "Metoda Montessori dla seniorów przynosi udowodnione efekty w aktywizacji i poprawie jakości życia osób starszych w naszym domu opieki."
 ---
 _„Kto jest obsługiwany, a nie wspomagany, jest w pewien sposób ograniczony w swojej niezależności. Dla godności ludzkiej pojęcie to jest fundamentalne: Nie chcę być obsługiwany, ponieważ nie jestem bezradny, ale musimy sobie pomagać, ponieważ jesteśmy istotami społecznymi – oto co należy zrozumieć, by móc poczuć się naprawdę wolnym.”_
 

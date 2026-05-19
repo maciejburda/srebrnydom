@@ -116,7 +116,7 @@ export default NotFoundPage
 
 export const Head = () => (
   <SEO
-    title="Dom seniora, opieka, spokojna starość - pomorskie - Srebrny Dom"
-    description="Nasz luksusowy dom spokojnej starości położony jest na malowniczych Kaszubach w województwie pomorskim. Zapewniamy seniorom profesjonalną i całodobową opiekę."
+    title="Dom seniora pomorskie – opieka całodobowa - Srebrny Dom"
+    description="Luksusowy prywatny dom seniora na Kaszubach w pomorskim. Całodobowa opieka, rehabilitacja i metoda Montessori dla Twoich bliskich."
   />
 )

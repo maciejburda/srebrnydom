@@ -3,8 +3,8 @@ title: "Oferta Domu Opieki"
 slug: oferta
 cover: ./offer-desc.jpg
 disqus: false
-seoTitle: "Oferta domu seniora – co wchodzi w cenę - Srebrny Dom"
-seoContent: "Sprawdź pełną ofertę naszego domu seniora na Kaszubach i dowiedz się, co wliczone jest w cenę pobytu."
+seoTitle: "Dom opieki w pomorskim – oferta Srebrny Dom"
+seoContent: "Prywatny dom opieki w pomorskim na Kaszubach: całodobowa opieka medyczna, rehabilitacja i metoda Montessori dla seniorów."
 ---
 
 ## Całodobowa opieka medyczna
