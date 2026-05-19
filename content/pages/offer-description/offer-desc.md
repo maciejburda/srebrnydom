@@ -3,8 +3,8 @@ title: "Oferta Domu Opieki"
 slug: oferta
 cover: ./offer-desc.jpg
 disqus: false
-seoTitle: "Oferta domu seniora, co wlicza sie w cenę pobytu - Srebrny Dom"
-seoContent: "Dostajemy wiele pytań, co wlicza się w cenę pobytu w domu seniora. Oferujemy masę atrakcji od zajęć z fizjoterapeutą po lekcje szycie na szydełku. Zapoznaj się z naszą ofertą."
+seoTitle: "Oferta domu seniora – co wchodzi w cenę - Srebrny Dom"
+seoContent: "Sprawdź pełną ofertę naszego domu seniora na Kaszubach i dowiedz się, co wliczone jest w cenę pobytu."
 ---
 
 ## Całodobowa opieka medyczna

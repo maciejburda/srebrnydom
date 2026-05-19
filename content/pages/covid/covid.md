@@ -3,7 +3,7 @@ title: "Zapobieganie zachorowaniom COVID-19"
 slug: covid-19
 cover: ./cover-covid.jpeg
 disqus: false
-seoTitle: "Chronimy naszych podopiczenych przed ewentualnymi skutkami COVID-19."
+seoTitle: "Bezpieczeństwo COVID-19 w domu seniora - Srebrny Dom"
 seoContent: "Nasza kadra dba o zdrowie i dobre samopoczucie podopiecznych."
 ---
 

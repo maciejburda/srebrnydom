@@ -4,7 +4,7 @@ slug: polityka-prywatnosci
 cover: ./privacy.png
 disqus: false
 seoTitle: "Polityka prywatności - Srebrny Dom"
-seoContent: "W Srebrnym Domu - dbamy o twoją prywatność"
+seoContent: "W Srebrnym Domu dbamy o Twoją prywatność i bezpieczeństwo danych osobowych."
 ---
 
 ### Gromadzenie danych

@@ -4,7 +4,7 @@ slug: kontakt
 cover: ./contact-cover.jpg
 disqus: false
 seoTitle: "Kontakt z domem seniora - Srebrny Dom"
-seoContent: "W jaki sposób skontaktować się z domem seniora w województwie pomorskim?"
+seoContent: "Skontaktuj się z naszym domem seniora w województwie pomorskim."
 ---
 
 ### Usługi opiekuńcze i rehabilitacyjne Srebrny Dom

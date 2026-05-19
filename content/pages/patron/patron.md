@@ -4,8 +4,8 @@ slug: patron
 cover: ./kosno-cover.png
 disqus: false
 language: pl
-seoTitle: "Patronem domu opieki jest znany malarz Jan Kosno - Srebrny Dom"
-seoContent: "Kim jest malarz Jan Kosno, patron Srebrnego Domu?"
+seoTitle: "Jan Kosno – patron domu opieki Srebrny Dom"
+seoContent: "Srebrny Dom zdobią obrazy malarza Jana Kosno, patrona naszego domu seniora na Kaszubach."
 ---
 Srebrny Dom został uświetniony obrazami wybinego malarza Jana Kosno. W korytarzach oraz pokojach pensjonariuszy mona zaleźć owoce jego twórczości. Każdemu z pensjonariuszy przysługuje możliwość wyboru obrazu, który zostanie zawieszony w jego pokoju. Dodatkowo w przypadku większego zainteresowania twórczością Jana Kosno istnieje możliwość zakupu poszczególnych dzieł z dodatkowym rabatem dla pensjonariuszy. Pełną listę obrazów można znaleźć [*tutaj*.](https://www.dropbox.com/sh/khjy701309n5c17/AABGZZK1e6m_NYNO_W4-Km2ba?dl=0)
 
