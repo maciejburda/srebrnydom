@@ -82,6 +82,16 @@ const NavBtn = styled.button`
   line-height: 1;
 `
 
+const imageAlt = name => {
+  if (!name) return ''
+  return name
+    .replace(/^\d+[-_]/, '')   // strip leading "01-" sort prefix
+    .replace(/[-_]+/g, ' ')     // dashes/underscores → spaces
+    .replace(/\.[^.]+$/, '')    // strip extension if present
+    .trim()
+    .replace(/^(.)/, c => c.toUpperCase())
+}
+
 const Gallery = () => {
   const data = useStaticQuery(graphql`
     query GalleryImages {
@@ -131,15 +141,15 @@ const Gallery = () => {
             key={image.id}
             type="button"
             onClick={() => setOpenIndex(index)}
-            aria-label={`View image ${image.name}`}
+            aria-label={`Pokaż zdjęcie: ${imageAlt(image.name)}`}
           >
-            <GatsbyImage image={getImage(image)} alt={image.name} />
+            <GatsbyImage image={getImage(image)} alt={imageAlt(image.name)} />
           </Tile>
         ))}
       </Grid>
       {openIndex !== null && (
         <Overlay onClick={() => setOpenIndex(null)}>
-          <ModalImg src={images[openIndex].publicURL} alt={images[openIndex].name} />
+          <ModalImg src={images[openIndex].publicURL} alt={imageAlt(images[openIndex].name)} />
           {images.length > 1 && (
             <>
               <NavBtn
