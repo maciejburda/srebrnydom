@@ -62,9 +62,6 @@ const NotFoundPage = props => {
 
   return (
     <Layout location={props.location} noCover={true}>
-      <SEO title="Dom seniora, opieka, spokojna starość - pomorskie - Srebrny Dom"
-           description="Nasz luksusowy dom spokojnej starości położony jest na malowniczych Kaszubach w województwie pomorskim. Zapewniamy seniorom profesjonalną i całodobową opiekę."
-      />
       <Hero heroImg={homeImage} treesImg={treesImage} title="Dom Opieki nad seniorami - Srebrny Dom"/>
       <Wrapper>
         <Content>
@@ -113,3 +110,10 @@ const NotFoundPage = props => {
 }
 
 export default NotFoundPage
+
+export const Head = () => (
+  <SEO
+    title="Dom seniora, opieka, spokojna starość - pomorskie - Srebrny Dom"
+    description="Nasz luksusowy dom spokojnej starości położony jest na malowniczych Kaszubach w województwie pomorskim. Zapewniamy seniorom profesjonalną i całodobową opiekę."
+  />
+)

@@ -17,13 +17,6 @@ const PageTemplate = props => {
 
   return (
     <Layout location={props.location}>
-      <SEO
-        title={page.frontmatter.seoTitle}
-        description={page.frontmatter.seoContent}
-        path={page.frontmatter.slug}
-        cover={page.frontmatter.cover && page.frontmatter.cover.publicURL}
-      />
-
       <Hero
         heroImg={page.frontmatter.cover && page.frontmatter.cover.publicURL}
         treesImg={treesImage}
@@ -40,6 +33,18 @@ const PageTemplate = props => {
 }
 
 export default PageTemplate
+
+export const Head = ({ data }) => {
+  const page = data.page
+  return (
+    <SEO
+      title={page.frontmatter.seoTitle}
+      description={page.frontmatter.seoContent}
+      path={`/${page.frontmatter.slug}/`}
+      cover={page.frontmatter.cover && page.frontmatter.cover.publicURL}
+    />
+  )
+}
 
 export const pageQuery = graphql`
   query($slug: String!) {

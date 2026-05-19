@@ -19,7 +19,6 @@ class Tags extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <SEO title={`Top blog posts on ${this.props.pageContext.tag}`} />
         <Hero title={pageTitle} />
 
         <Wrapper>
@@ -32,6 +31,10 @@ class Tags extends React.Component {
 }
 
 export default Tags
+
+export const Head = ({ pageContext }) => (
+  <SEO title={`Top blog posts on ${pageContext.tag}`} />
+)
 
 export const pageQuery = graphql`
   query PostsByTag($tag: String!) {

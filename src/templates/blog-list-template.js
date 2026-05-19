@@ -14,7 +14,6 @@ class BlogList extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <SEO />
         <Wrapper>
           <PostsList posts={posts} />
         </Wrapper>
@@ -29,6 +28,9 @@ class BlogList extends React.Component {
 }
 
 export default BlogList
+
+export const Head = () => <SEO />
+
 
 export const pageQuery = graphql`
   query blogListQuery($skip: Int!, $limit: Int!) {
