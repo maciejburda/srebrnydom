@@ -63,6 +63,25 @@ const CloseBtn = styled.button`
   line-height: 1;
 `
 
+const NavBtn = styled.button`
+  position: absolute;
+  top: 64px;
+  bottom: 0;
+  width: 20vw;
+  ${({ $side }) =>
+    $side === 'left'
+      ? 'left: 0; justify-content: flex-start; padding-left: 16px;'
+      : 'right: 0; justify-content: flex-end; padding-right: 16px;'}
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  line-height: 1;
+`
+
 const Gallery = () => {
   const data = useStaticQuery(graphql`
     query GalleryImages {
@@ -89,10 +108,16 @@ const Gallery = () => {
   const images = data.allFile.nodes.filter(n => n.childImageSharp)
   const [openIndex, setOpenIndex] = useState(null)
 
+  const goPrev = () =>
+    setOpenIndex(i => (i - 1 + images.length) % images.length)
+  const goNext = () => setOpenIndex(i => (i + 1) % images.length)
+
   useEffect(() => {
     if (openIndex === null) return
     const onKey = e => {
       if (e.key === 'Escape') setOpenIndex(null)
+      else if (e.key === 'ArrowLeft') goPrev()
+      else if (e.key === 'ArrowRight') goNext()
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
@@ -115,6 +140,32 @@ const Gallery = () => {
       {openIndex !== null && (
         <Overlay onClick={() => setOpenIndex(null)}>
           <ModalImg src={images[openIndex].publicURL} alt={images[openIndex].name} />
+          {images.length > 1 && (
+            <>
+              <NavBtn
+                type="button"
+                $side="left"
+                onClick={e => {
+                  e.stopPropagation()
+                  goPrev()
+                }}
+                aria-label="Previous image"
+              >
+                ‹
+              </NavBtn>
+              <NavBtn
+                type="button"
+                $side="right"
+                onClick={e => {
+                  e.stopPropagation()
+                  goNext()
+                }}
+                aria-label="Next image"
+              >
+                ›
+              </NavBtn>
+            </>
+          )}
           <CloseBtn
             type="button"
             onClick={e => {
