@@ -4,33 +4,40 @@ import ContentHeader from './ContentHeader'
 import { colors } from '../tokens'
 
 const ContentBody = styled.div`
-  line-height: 1.6;
-  text-align: justify;
+  line-height: 1.65;
+  text-align: left;
 
   & > h2 {
     padding-top: 3rem;
     margin-top: 3rem;
     border-top: 1px solid #ececec;
+    font-weight: 800;
+    line-height: 1.2;
+    font-size: 1.7em;
   }
 
   & > h3 {
-    padding-top: 3rem;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    font-size: 0.85em;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: ${colors.textLight};
   }
 
   & > p {
     margin: 1em 0 0 0;
+    font-size: 1.02em;
   }
 
   & a {
-    box-shadow: 0 2px 0 0 ${colors.links};
-
     &:hover {
-      filter: brightness(150%);
-      box-shadow: none;
+      text-decoration: underline;
     }
 
-    &.gatsby-resp-image-link {
-      box-shadow: none;
+    &.gatsby-resp-image-link:hover {
+      text-decoration: none;
     }
   }
 
