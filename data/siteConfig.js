@@ -25,6 +25,44 @@ module.exports = {
   nature: 'circles/nature@3x.png',
   comfort: 'circles/comfort@3x.png',
   homepageImage: 'covers/index-cover.jpg',
+  relatedPages: {
+    'o-nas': [
+      { label: 'Cennik', url: '/cennik/' },
+      { label: 'Oferta', url: '/oferta/' },
+      { label: 'Montessori', url: '/montessori/' },
+    ],
+    'cennik': [
+      { label: 'Oferta', url: '/oferta/' },
+      { label: 'O nas', url: '/o-nas/' },
+      { label: 'Kontakt', url: '/kontakt/' },
+    ],
+    'oferta': [
+      { label: 'Cennik', url: '/cennik/' },
+      { label: 'Montessori', url: '/montessori/' },
+      { label: 'Galeria', url: '/galeria/' },
+    ],
+    'montessori': [
+      { label: 'Oferta', url: '/oferta/' },
+      { label: 'Cennik', url: '/cennik/' },
+      { label: 'Galeria', url: '/galeria/' },
+    ],
+    'galeria': [
+      { label: 'Oferta', url: '/oferta/' },
+      { label: 'O nas', url: '/o-nas/' },
+    ],
+    'patron': [
+      { label: 'O nas', url: '/o-nas/' },
+      { label: 'Montessori', url: '/montessori/' },
+    ],
+    'kontakt': [
+      { label: 'Cennik', url: '/cennik/' },
+      { label: 'Oferta', url: '/oferta/' },
+    ],
+    'covid-19': [
+      { label: 'Oferta', url: '/oferta/' },
+      { label: 'Kontakt', url: '/kontakt/' },
+    ],
+  },
   business: {
     legalName: 'Srebrny Dom Usługi Rehabilitacyjne i Opiekuńcze',
     streetAddress: 'ul. Jałowcowa 8',

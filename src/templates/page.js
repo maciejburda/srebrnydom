@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Content from '../components/Content'
 import FaqList from '../components/FaqList'
+import RelatedPages from '../components/RelatedPages'
 import Wrapper from '../components/Wrapper'
 import Hero from '../components/Hero'
 import SEO from '../components/SEO'
@@ -28,6 +29,7 @@ const PageTemplate = props => {
         <article>
           <Content date={page.frontmatter.date}>{props.children}</Content>
           <FaqList items={page.frontmatter.faq} />
+          <RelatedPages slug={page.frontmatter.slug} />
         </article>
       </Wrapper>
     </Layout>
