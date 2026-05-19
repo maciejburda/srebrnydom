@@ -123,12 +123,14 @@ const buildArticleSchema = ({
   title,
   description,
   imageUrl,
+  publisherLogoUrl,
   url,
   datePublished,
   tags,
   business,
   siteUrl,
   siteTitle,
+  lang,
 }) => ({
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -148,11 +150,11 @@ const buildArticleSchema = ({
     url: siteUrl,
     logo: {
       '@type': 'ImageObject',
-      url: imageUrl,
+      url: publisherLogoUrl,
     },
   },
   keywords: (tags || []).join(', '),
-  inLanguage: 'pl',
+  inLanguage: lang,
 })
 
 const SEO = props => {
@@ -237,12 +239,14 @@ const SEO = props => {
             title,
             description,
             imageUrl: image,
+            publisherLogoUrl: `${formatedSiteUrl}/icons/icon-512x512.png`,
             url: formatedSiteUrl + withPrefix(normalizedPath),
             datePublished: articleDate,
             tags: articleTags,
             business,
             siteUrl: formatedSiteUrl,
             siteTitle,
+            lang,
           }))}
         </script>
       )}
