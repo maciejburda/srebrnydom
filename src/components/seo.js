@@ -38,6 +38,7 @@ const SEO = props => {
 
       {internalTranslations.map(translation => (
         <link
+          key={translation.hreflang}
           rel="alternate"
           hreflang={translation.hreflang}
           href={formatedSiteUrl + withPrefix(translation.link)}
