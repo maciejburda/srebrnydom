@@ -34,8 +34,12 @@ const Post = styled.article`
   }
 `
 
-const Thumb = styled.div`
+const ThumbLink = styled(Link)`
   grid-area: thumb;
+  display: block;
+`
+
+const Thumb = styled.div`
   width: 140px;
   height: 105px;
   border-radius: 6px;
@@ -119,11 +123,11 @@ const PostsListItem = props => {
 
   return (
     <Post>
-      <Link to={`/blog/${slug}/`} aria-label={`View ${title} article`}>
+      <ThumbLink to={`/blog/${slug}/`}>
         <Thumb>
           {image && <GatsbyImage image={image} alt={title} />}
         </Thumb>
-      </Link>
+      </ThumbLink>
 
       <PostHeader>
         <h2 style={{ margin: 0 }}>
@@ -152,7 +156,7 @@ const PostsListItem = props => {
             </>
           )}
         </FooterLine>
-        <ReadPost to={`/blog/${slug}/`} aria-label={`View ${title} article`}>
+        <ReadPost to={`/blog/${slug}/`}>
           Przeczytaj Post ›
         </ReadPost>
       </FooterArea>
