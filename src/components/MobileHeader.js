@@ -4,7 +4,6 @@ import styled from "styled-components"
 import { ms } from "../styles/helpers"
 import Text, { StyledText, TextStyle } from "./Text"
 import Link from "./Link"
-import { injectIntl } from "gatsby-plugin-intl"
 
 const MobilePanel = styled.div`
   position: absolute;
@@ -105,7 +104,7 @@ const HeaderLinkText = styled(Text)`
   font-weight: ${typography.weights.regular};
 `
 
-const MobileHeader = ({ headerLinks, className, intl }) => {
+const MobileHeader = ({ headerLinks, className }) => {
   const [isToggledOn, setToggle] = useState(false)
   const toggle = () => setToggle(!isToggledOn)
 
@@ -132,8 +131,7 @@ const MobileHeader = ({ headerLinks, className, intl }) => {
                     textStyle={TextStyle.Heading2}
                     color={colors.textLightest}
                   >
-                    {intl.formatMessage({ id: headerLink.label })}
-
+                    {headerLink.label}
                   </HeaderLinkText>
                 </HeaderLink>
               ))}
@@ -146,4 +144,4 @@ const MobileHeader = ({ headerLinks, className, intl }) => {
   )
 }
 
-export default injectIntl(MobileHeader)
+export default MobileHeader

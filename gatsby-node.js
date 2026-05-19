@@ -173,10 +173,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 const path = require('path')
 
 exports.onCreatePage = ({ page, actions }) => {
-  const originalPath = page.context && page.context.intl && page.context.intl.originalPath
-  const isHomePath = page.path === '/' || originalPath === '/'
   if (
-    isHomePath &&
+    page.path === '/' &&
     typeof page.component === 'string' &&
     page.component.includes('gatsby-gallery-simple')
   ) {
