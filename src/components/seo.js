@@ -86,6 +86,39 @@ const buildOrganizationSchema = (business, siteUrl, siteTitle, imageUrl) => {
   }
 }
 
+const buildBreadcrumbSchema = (path, siteUrl, siteTitle) => {
+  // Build a trail from path segments. Skip empty segments and the
+  // root itself. For `/blog/foo/` → [Home, Blog, Foo].
+  const segments = path.split('/').filter(Boolean)
+  if (segments.length === 0) return null
+
+  const humanize = slug =>
+    slug
+      .replace(/-/g, ' ')
+      .replace(/\b\w/g, c => c.toUpperCase())
+
+  const items = [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: siteTitle,
+      item: siteUrl,
+    },
+    ...segments.map((segment, index) => ({
+      '@type': 'ListItem',
+      position: index + 2,
+      name: humanize(segment),
+      item: `${siteUrl}/${segments.slice(0, index + 1).join('/')}/`,
+    })),
+  ]
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items,
+  }
+}
+
 const SEO = props => {
   const { isBlogPost, path = '', lang = 'pl' } = props
   const {
@@ -149,6 +182,11 @@ const SEO = props => {
       {business && (
         <script type="application/ld+json">
           {JSON.stringify(buildOrganizationSchema(business, formatedSiteUrl, siteTitle, image))}
+        </script>
+      )}
+      {normalizedPath !== '/' && (
+        <script type="application/ld+json">
+          {JSON.stringify(buildBreadcrumbSchema(normalizedPath, formatedSiteUrl, siteTitle))}
         </script>
       )}
     </>
