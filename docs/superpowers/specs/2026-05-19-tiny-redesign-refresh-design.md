@@ -1,7 +1,7 @@
 # Tiny redesign refresh — design
 
 Date: 2026-05-19
-Branch: `seo-phase-2` (will extend; not a fresh branch)
+Branch: `minor-redesign`
 
 ## Goal
 
