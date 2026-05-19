@@ -26,6 +26,8 @@ const Trees = styled.div`
   max-width: 2070px;
   width: 100%;
   height: 500px;
+  left: 0;
+  right: 0;
   margin: 0 auto;
   background-repeat: repeat-x;
   background-position: center;

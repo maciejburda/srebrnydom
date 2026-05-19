@@ -1,4 +1,3 @@
-const path = require('path')
 const config = require('./data/siteConfig')
 
 module.exports = {
@@ -11,17 +10,10 @@ module.exports = {
   pathPrefix: config.pathPrefix,
   plugins: [
     {
-      resolve: `gatsby-gallery-simple`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        basePath: "/gallery",
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-177633808-1",
-        head: true,
-        anonymize: true,
+        name: 'gallery',
+        path: 'content/gallery',
       },
     },
     {
@@ -43,12 +35,6 @@ module.exports = {
       options: {
         name: 'images',
         path: 'content/images',
-      },
-    },
-    {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
-        path: path.join(__dirname, `src`, `pages`),
       },
     },
     {
@@ -83,9 +69,9 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     {
@@ -120,57 +106,6 @@ module.exports = {
         theme_color: config.theme_color,
         display: config.display,
         icon: config.icon,
-      },
-    },
-    // https://www.gatsbyjs.org/docs/themes/converting-a-starter/#transpiling-your-theme-with-webpack
-    {
-      resolve: 'gatsby-plugin-compile-es6-packages',
-      options: {
-        modules: ['gatsby-starter-morning-dew'],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-intl`,
-      options: {
-        // language JSON resource path
-        path: `${__dirname}/src/translations`,
-        // supported language
-        languages: [`pl`],
-        // language file path
-        defaultLanguage: `pl`,
-        // option to redirect to `/ko` when connecting `/`
-        redirect: false,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-cookie-though`,
-      options: {
-        config: {
-          policies: [
-            {
-              id: "analytics",
-              label: "Google Analytics",
-              description:
-                "Zbieramy anonimowe informacje dotyczące ruchu na stronie.",
-              category: "essential",
-            },
-          ],
-          permissionLabels: {
-            accept: "Akceptuj",
-            acceptAll: "Zaakceptuj wszystko",
-            decline: "Odmów",
-          },
-          cookiePreferenceKey: "cookie-preferences",
-          header: {
-            title: "Ciasteczka na stronie",
-            description:
-              "Na stronie portalu wykorzystujemy pliki cookies techniczne, analityczne i marketingowe.",
-          },
-          cookiePolicy: {
-            url: "https://www.srebrnydom.pl/polityka-prywatnosci",
-            label: "Czytaj więcej",
-          },
-        },
       },
     },
   ],

@@ -79,7 +79,8 @@ const PrevNextPost = props => {
     <Fragment>
       <PreviewContainer>
         {articles.map((article, i) => {
-          const { excerpt, timeToRead } = article.node
+          const { excerpt } = article.node
+          const timeToRead = article.node.fields && article.node.fields.timeToRead
           const {
             tags,
             cover,
@@ -91,7 +92,7 @@ const PrevNextPost = props => {
 
           return (
             <Preview key={`prev-next-${i}`}>
-              <Link to={`/blog/${slug}`} aria-label={`View ${title} article`}>
+              <Link to={`/blog/${slug}/`} aria-label={`View ${title} article`}>
                 <PreviewCover
                   style={{ backgroundImage: `url("${heroImg}")` }}
                 />

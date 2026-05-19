@@ -59,7 +59,7 @@ const PostsListItem = props => {
     <Post>
       <PostHeader>
         <h2>
-          <PostTitleLink to={`/blog/${slug}`}>
+          <PostTitleLink to={`/blog/${slug}/`}>
             {defaultLang !== language && <Flag language={language} />}
             {title}
           </PostTitleLink>
@@ -76,7 +76,7 @@ const PostsListItem = props => {
           <Bull />
           <TagList tags={tags} />
         </FooterLine>
-        <ReadPost to={`/blog/${slug}`} aria-label={`View ${title} article`}>
+        <ReadPost to={`/blog/${slug}/`} aria-label={`View ${title} article`}>
           Przeczytaj Post ›
         </ReadPost>
       </footer>

@@ -19,7 +19,6 @@ class Tags extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <SEO title={`Top blog posts on ${this.props.pageContext.tag}`} />
         <Hero title={pageTitle} />
 
         <Wrapper>
@@ -33,10 +32,14 @@ class Tags extends React.Component {
 
 export default Tags
 
+export const Head = ({ pageContext }) => (
+  <SEO title={`Top blog posts on ${pageContext.tag}`} />
+)
+
 export const pageQuery = graphql`
   query PostsByTag($tag: String!) {
     posts: allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: {
         frontmatter: {
           tags: { eq: $tag }
@@ -48,7 +51,9 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
-          timeToRead
+          fields {
+            timeToRead
+          }
           frontmatter {
             title
             tags

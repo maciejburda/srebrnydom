@@ -3,7 +3,6 @@
 import React from "react"
 import Link from "../components/Link"
 import styled from "styled-components"
-import { injectIntl } from "gatsby-plugin-intl"
 
 import useSiteMetadata from "../hooks/use-site-config"
 import { colors, media, typography } from "../tokens"
@@ -116,7 +115,7 @@ const StyledMobileHeader = styled(MobileHeader)`
   }
 `
 
-const Header = ({ intl }) => {
+const Header = () => {
   const { headerLinks, siteTitle, headerLinksIcon } = useSiteMetadata()
   const iconSrc = headerLinksIcon
     ? useSiteImages(headerLinksIcon).fluid.src
@@ -139,7 +138,7 @@ const Header = ({ intl }) => {
                 aria-label={`View ${headerLink.label} page`}
               >
                 <HeaderLinkText textStyle={TextStyle.Heading2}>
-                  {intl.formatMessage({ id: headerLink.label })}
+                  {headerLink.label}
                 </HeaderLinkText>
               </HeaderLink>
             </LinkItem>
@@ -151,4 +150,4 @@ const Header = ({ intl }) => {
   )
 }
 
-export default injectIntl(Header)
+export default Header

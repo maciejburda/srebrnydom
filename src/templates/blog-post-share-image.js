@@ -120,7 +120,7 @@ const BlogPostShareImage = props => {
       <Title>{post.frontmatter.title}</Title>
       <SubTitle>
         <AuthorImg src={fixed.src} />
-        <ReadTime>{post.timeToRead} min czytania</ReadTime>
+        <ReadTime>{post.fields.timeToRead} min czytania</ReadTime>
       </SubTitle>
       <Preview
         width={width}
@@ -138,7 +138,9 @@ export default BlogPostShareImage
 export const pageQuery = graphql`
   query BlogPostShareImage($slug: String!) {
     post: mdx(frontmatter: { slug: { eq: $slug } }) {
-      timeToRead
+      fields {
+        timeToRead
+      }
       frontmatter {
         title
         cover {

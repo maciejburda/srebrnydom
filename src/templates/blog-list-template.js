@@ -14,7 +14,6 @@ class BlogList extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <SEO />
         <Wrapper>
           <PostsList posts={posts} />
         </Wrapper>
@@ -30,6 +29,9 @@ class BlogList extends React.Component {
 
 export default BlogList
 
+export const Head = () => <SEO />
+
+
 export const pageQuery = graphql`
   query blogListQuery($skip: Int!, $limit: Int!) {
     site {
@@ -39,9 +41,9 @@ export const pageQuery = graphql`
       }
     }
     posts: allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: {
-        fileAbsolutePath: { regex: "//content/posts//" }
+        internal: { contentFilePath: { regex: "//content/posts//" } }
         frontmatter: { published: { ne: false }, unlisted: { ne: true } }
       }
       limit: $limit
@@ -50,7 +52,9 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
-          timeToRead
+          fields {
+            timeToRead
+          }
           frontmatter {
             title
             tags

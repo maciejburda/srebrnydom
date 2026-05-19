@@ -1,4 +1,18 @@
+const fs = require('fs')
 const { createFilePath } = require('gatsby-source-filesystem')
+
+const WORDS_PER_MINUTE = 200
+
+const computeTimeToRead = filePath => {
+  try {
+    const raw = fs.readFileSync(filePath, 'utf8')
+    const body = raw.replace(/^---[\s\S]*?---\s*/m, '')
+    const words = body.match(/\S+/g) || []
+    return Math.max(1, Math.round(words.length / WORDS_PER_MINUTE))
+  } catch (err) {
+    return 0
+  }
+}
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -19,13 +33,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const allMarkdownQuery = await graphql(`
     {
       allMarkdown: allMdx(
-        sort: { fields: [frontmatter___date], order: ASC }
+        sort: { frontmatter: { date: ASC } }
         filter: { frontmatter: { published: { ne: false } } }
         limit: 1000
       ) {
         edges {
           node {
-            fileAbsolutePath
+            internal {
+              contentFilePath
+            }
+            fields {
+              timeToRead
+            }
             frontmatter {
               title
               slug
@@ -36,7 +55,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               }
               unlisted
             }
-            timeToRead
             excerpt
           }
         }
@@ -61,7 +79,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const markdownFiles = allMarkdownQuery.data.allMarkdown.edges
 
   const posts = markdownFiles.filter(item =>
-    item.node.fileAbsolutePath.includes('/content/posts/')
+    item.node.internal.contentFilePath.includes('/content/posts/')
   )
 
   const listedPosts = posts.filter(
@@ -92,7 +110,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     createPage({
       path: `/blog/${post.node.frontmatter.slug}`,
-      component: BlogPostTemplate,
+      component: `${BlogPostTemplate}?__contentFilePath=${post.node.internal.contentFilePath}`,
       context: {
         slug: post.node.frontmatter.slug,
         previous,
@@ -105,7 +123,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     if (process.env.gatsby_executing_command.includes('develop')) {
       createPage({
         path: `${post.node.frontmatter.slug}/image_share`,
-        component: BlogPostShareImage,
+        component: `${BlogPostShareImage}?__contentFilePath=${post.node.internal.contentFilePath}`,
         context: {
           slug: post.node.frontmatter.slug,
           width: 440,
@@ -117,11 +135,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // generate pages
   markdownFiles
-    .filter(item => item.node.fileAbsolutePath.includes('/content/pages/'))
+    .filter(item => item.node.internal.contentFilePath.includes('/content/pages/'))
     .forEach(page => {
       createPage({
         path: page.node.frontmatter.slug,
-        component: PageTemplate,
+        component: `${PageTemplate}?__contentFilePath=${page.node.internal.contentFilePath}`,
         context: {
           slug: page.node.frontmatter.slug,
         },
@@ -161,6 +179,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: `slug`,
       node,
       value,
+    })
+  }
+
+  if (node.internal.type === `Mdx` && node.internal.contentFilePath) {
+    createNodeField({
+      name: `timeToRead`,
+      node,
+      value: computeTimeToRead(node.internal.contentFilePath),
     })
   }
 }

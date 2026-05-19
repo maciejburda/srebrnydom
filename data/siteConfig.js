@@ -19,44 +19,44 @@ module.exports = {
   headerLinksIcon: 'logo.png',
   footerLinksIcon: 'logo-dark.png',
   trees: 'trees.png',
-  health24: 'circles/health24.png',
-  doctor: 'circles/doctor.png',
-  physio: 'circles/physio.png',
-  nature: 'circles/nature.png',
-  comfort: 'circles/comfort.png',
+  health24: 'circles/health24@3x.png',
+  doctor: 'circles/doctor@3x.png',
+  physio: 'circles/physio@3x.png',
+  nature: 'circles/nature@3x.png',
+  comfort: 'circles/comfort@3x.png',
   homepageImage: 'covers/index-cover.jpg',
   headerLinks: [
     {
       label: 'O nas',
-      url: '/o-nas',
+      url: '/o-nas/',
     },
     {
       label: 'Cennik',
-      url: '/cennik',
+      url: '/cennik/',
     },
     {
       label: 'Oferta',
-      url: '/oferta',
+      url: '/oferta/',
     },
     {
       label: 'Galeria',
-      url: '/galeria',
+      url: '/galeria/',
     },
     {
       label: 'Montessori',
-      url: '/montessori',
+      url: '/montessori/',
     },
     {
       label: 'Nasz Patron',
-      url: '/patron',
+      url: '/patron/',
     },
     {
       label: 'Blog',
-      url: '/blog',
+      url: '/blog/',
     },
     {
       label: 'Kontakt',
-      url: '/kontakt',
+      url: '/kontakt/',
     },
   ],
   websiteHost: {

@@ -14,26 +14,13 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <SEO
-          title={post.frontmatter.title}
-          description={post.excerpt}
-          cover={post.frontmatter.cover && post.frontmatter.cover.publicURL}
-          imageShare={
-            post.frontmatter.imageShare && post.frontmatter.imageShare.publicURL
-          }
-          lang={post.frontmatter.language}
-          translations={post.frontmatter.translations}
-          path={post.frontmatter.slug}
-          isBlogPost
-        />
-
         <Hero
           heroImg={post.frontmatter.cover && post.frontmatter.cover.publicURL}
           title={post.frontmatter.title}
         />
 
         <Wrapper>
-          <Article post={post} />
+          <Article post={post}>{this.props.children}</Article>
         </Wrapper>
 
         <PrevNextPost previous={previous} next={next} />
@@ -44,11 +31,28 @@ class BlogPostTemplate extends React.Component {
 
 export default BlogPostTemplate
 
+export const Head = ({ data }) => {
+  const post = data.post
+  return (
+    <SEO
+      title={post.frontmatter.title}
+      description={post.excerpt}
+      cover={post.frontmatter.cover && post.frontmatter.cover.publicURL}
+      imageShare={
+        post.frontmatter.imageShare && post.frontmatter.imageShare.publicURL
+      }
+      lang={post.frontmatter.language}
+      translations={post.frontmatter.translations}
+      path={`/blog/${post.frontmatter.slug}/`}
+      isBlogPost
+    />
+  )
+}
+
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     post: mdx(frontmatter: { slug: { eq: $slug } }) {
       excerpt
-      body
       frontmatter {
         title
         date
