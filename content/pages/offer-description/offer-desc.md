@@ -30,7 +30,7 @@ Osoby starsze, schorowane oraz z niepełnosprawnościami muszą nieustannie pozo
 
 ## Opieka fizjoterapeutyczna
 
-Seniorzy bardzo często zmagają się z różnymi chorobami układu ruchu, które utrudniają im codzienne funkcjonowanie i sprawiają, że nawet najprostsze czynności przychodzą z wysiłkiem. Gwarantowana przez naszą placówkę opieka fizjoterapeutyczna ma na celu pomóc w tym, by jesień życia stała się przyjemniejsza. Prowadzone zajęcia rehabilitacyjne dostosowane są do stanu zdrowia seniorów oraz wskazywanych przez nich problemów oraz potrzeb.
+Seniorzy bardzo często zmagają się z różnymi chorobami układu ruchu, które utrudniają im codzienne funkcjonowanie i sprawiają, że nawet najprostsze czynności przychodzą z wysiłkiem. Gwarantowana przez naszą placówkę opieka fizjoterapeutyczna ma na celu pomóc w tym, by jesień życia stała się przyjemniejsza. Prowadzone zajęcia rehabilitacyjne dostosowane są do stanu zdrowia seniorów oraz wskazywanych przez nich problemów oraz potrzeb. Uzupełnieniem programu rehabilitacyjnego jest [Metoda Montessori](/montessori/), którą stosujemy w codziennej aktywizacji mieszkańców.
 
 ## Komfortowe pomieszczenia
 
@@ -38,4 +38,4 @@ Prowadzony przez nas dom spokojnej starości dysponuje dziewięcioma pokojami, k
 
 ## Kaszuby - bliskość natury
 
-Jesień życia najlepiej spędzić w cichej i spokojnej okolicy, gdzie nie męczy hałas życia miejskiego. Z tego powodu nasz ośrodek opiekuńczy położony jest na Kaszubach - bliskość natury gwarantuje ubocze i pozbawienie obecności zabudowy mieszkaniowej oraz usługowej wokół. Położenie w okolicy Parku Narodowego “Bory Tucholskie” oraz Zaborskiego Parku Krajobrazowego daje możliwość spędzania czasu na świeżym powietrzu.
+Jesień życia najlepiej spędzić w cichej i spokojnej okolicy, gdzie nie męczy hałas życia miejskiego. Z tego powodu nasz ośrodek opiekuńczy położony jest na Kaszubach - bliskość natury gwarantuje ubocze i pozbawienie obecności zabudowy mieszkaniowej oraz usługowej wokół. Położenie w okolicy Parku Narodowego “Bory Tucholskie” oraz Zaborskiego Parku Krajobrazowego daje możliwość spędzania czasu na świeżym powietrzu. Szczegółowe informacje o kosztach pobytu znajdziesz w naszym [cenniku](/cennik/).
