@@ -93,10 +93,24 @@ const BurgerContent = styled.div`
 `
 
 const HeaderLink = styled(Link)`
+  position: relative;
+  padding-bottom: 4px;
+
   &.active {
     ${StyledText} {
       font-weight: ${typography.weights.bold};
     }
+  }
+
+  &.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: ${colors.textLightest};
+    border-radius: 2px;
   }
 `
 
