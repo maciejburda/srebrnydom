@@ -8,7 +8,7 @@ import Wrapper from '../components/Wrapper'
 import SEO from '../components/SEO'
 import Hero from '../components/Hero'
 
-const PageTitle = styled.h1`
+const PageTitle = styled.h2`
   padding-bottom: 10px;
 `
 
