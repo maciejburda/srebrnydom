@@ -19,7 +19,7 @@ banner exists but never communicates with gtag.
 | Consent tier | Advanced (cookieless pings before consent, modeled conversions if declined) |
 | Default state | All four signals `denied` with `wait_for_update: 500` |
 | Advanced-mode extras | `ads_data_redaction: true`, `url_passthrough: true` |
-| Re-open UX | "Zarządzaj plikami cookies" button on the privacy policy page only |
+| Re-open UX | "Aktualizuj ciasteczka" text link in the site-wide footer (side-by-side with the copyright) |
 | Region scoping | Global (Polish-only audience makes EEA scoping unnecessary) |
 | Existing gtag plugin | Keep `gatsby-plugin-google-gtag`; layer consent on top |
 | Language | Polish throughout |
@@ -30,11 +30,7 @@ banner exists but never communicates with gtag.
 |---|---|
 | `gatsby-ssr.js` | New `onPreRenderHTML` prepends inline consent-default script to `<head>` |
 | `src/components/CookieConsent.js` | Policy category `essential` → non-essential (`statistics`); rename id to `analytics-marketing`; push `gtag('consent','update',...)` on init (returning visitors) and on every `onPreferencesChanged` event |
-| `src/components/CookieSettingsButton.js` *(new)* | Button that dynamically imports `cookie-though` and calls `show()` |
-| `wrap-root-element.js` *(new)* | Wraps app in `MDXProvider` exposing `CookieSettingsButton` as a shortcode |
-| `gatsby-browser.js` | Re-export `wrapRootElement` from the new file |
-| `gatsby-ssr.js` | Re-export `wrapRootElement` from the new file |
-| `content/pages/terms/terms.md` | Insert `<CookieSettingsButton />` inside the "Cookies" section |
+| `src/components/Footer.js` | Add "Aktualizuj ciasteczka" button in `.footer-bottom`, side-by-side with the copyright. Click dynamic-imports `cookie-though` and calls `show()` |
 
 ## Architecture
 
@@ -74,12 +70,12 @@ guarantee this script is the **first** element in `<head>`, ahead of the
 `pushUpdate` maps the single `analytics-marketing` policy to all four
 consent signals: enabled → `granted`, disabled → `denied`.
 
-### Manage-cookies button
+### Manage-cookies link
 
-`CookieSettingsButton` is a small styled `<button>` that dynamic-imports
-`cookie-though` and calls `mod.show()`. Registered globally as an MDX
-shortcode via `MDXProvider` in `wrapRootElement` so it can be used directly
-in `terms.md` without an import statement.
+A small text-style `<button class="footer-cookie-link">` lives in the
+footer-bottom strip, side-by-side with the copyright. On click it
+dynamic-imports `cookie-though` and calls `mod.show()`. Site-wide because
+`Footer` is rendered by `Layout` on every page.
 
 ## Data flow
 
@@ -97,9 +93,9 @@ in `terms.md` without an import statement.
 2. cookie-though loads → `getPreferences()` → immediate `consent update`
    matching prior choice. No banner shown.
 
-**Re-open from privacy policy**:
+**Re-open from footer**:
 
-1. Click button → dynamic-import → `mod.show()`.
+1. Click "Aktualizuj ciasteczka" in the footer → dynamic-import → `mod.show()`.
 2. User changes choice → `consent update` fires.
 
 ## Edge cases
@@ -117,7 +113,7 @@ in `terms.md` without an import statement.
 ## Out of scope
 
 - Separate analytics-vs-marketing toggles (decided against: single toggle).
-- Footer link to manage cookies (decided against: privacy page only).
+- Dedicated privacy-policy-page button (replaced by site-wide footer link).
 - Region-specific consent defaults (decided against: global, Polish audience).
 - Replacing `gatsby-plugin-google-gtag` with a hand-rolled loader.
 - Migrating to GTM.
@@ -133,5 +129,4 @@ in `terms.md` without an import statement.
   `['consent','update',{...all granted...}]` to dataLayer.
 - Reload — banner doesn't re-appear; `consent update` matching prior choice
   still pushed.
-- Visit `/polityka-prywatnosci/` — click "Zarządzaj plikami cookies" — banner
-  re-opens.
+- On any page, click "Aktualizuj ciasteczka" in the footer — banner re-opens.

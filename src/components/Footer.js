@@ -83,10 +83,36 @@ const FooterWrapper = styled.footer`
     padding: 19px;
   }
 
-  .footer-bottom-title {
+  .footer-bottom-inner {
     max-width: 1100px;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+  }
+
+  .footer-bottom-title {
+    margin: 0;
     font-size: 0.83em;
+  }
+
+  .footer-cookie-link {
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    font-size: 0.83em;
+    color: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .footer-cookie-link:hover,
+  .footer-cookie-link:focus {
+    text-decoration: none;
   }
 
   @media (max-width: 564px) {
@@ -142,12 +168,26 @@ const Footer = () => {
     )
   }
 
+  const handleCookieSettings = () => {
+    if (typeof window === 'undefined') return
+    import('cookie-though').then(mod => mod.show())
+  }
+
   const FooterEnd = () => {
     return (
       <div className="footer-bottom">
-        <h3 className="footer-bottom-title">
-          © SREBRNYDOM.PL {new Date().getFullYear()} - WSZELKIE PRAWA ZASTRZEŻONE.
-        </h3>
+        <div className="footer-bottom-inner">
+          <h3 className="footer-bottom-title">
+            © SREBRNYDOM.PL {new Date().getFullYear()} - WSZELKIE PRAWA ZASTRZEŻONE.
+          </h3>
+          <button
+            type="button"
+            className="footer-cookie-link"
+            onClick={handleCookieSettings}
+          >
+            Aktualizuj ciasteczka
+          </button>
+        </div>
       </div>
     )
   }

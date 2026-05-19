@@ -59,5 +59,3 @@ exports.onPreRenderHTML = ({ getHeadComponents, replaceHeadComponents }) => {
   })
   replaceHeadComponents([consentScript, ...head])
 }
-
-exports.wrapRootElement = require('./wrap-root-element').wrapRootElement
