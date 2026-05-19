@@ -1,4 +1,3 @@
-const path = require('path')
 const config = require('./data/siteConfig')
 
 module.exports = {
@@ -15,14 +14,6 @@ module.exports = {
       options: {
         name: 'gallery',
         path: 'content/gallery',
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-177633808-1",
-        head: true,
-        anonymize: true,
       },
     },
     {
@@ -44,12 +35,6 @@ module.exports = {
       options: {
         name: 'images',
         path: 'content/images',
-      },
-    },
-    {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
-        path: path.join(__dirname, `src`, `pages`),
       },
     },
     {
@@ -122,13 +107,6 @@ module.exports = {
         theme_color: config.theme_color,
         display: config.display,
         icon: config.icon,
-      },
-    },
-    // https://www.gatsbyjs.org/docs/themes/converting-a-starter/#transpiling-your-theme-with-webpack
-    {
-      resolve: 'gatsby-plugin-compile-es6-packages',
-      options: {
-        modules: ['gatsby-starter-morning-dew'],
       },
     },
   ],
