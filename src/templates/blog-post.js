@@ -45,6 +45,8 @@ export const Head = ({ data }) => {
       translations={post.frontmatter.translations}
       path={`/blog/${post.frontmatter.slug}/`}
       isBlogPost
+      articleDate={post.frontmatter.date}
+      articleTags={post.frontmatter.tags || []}
     />
   )
 }

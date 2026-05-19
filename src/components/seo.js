@@ -119,8 +119,50 @@ const buildBreadcrumbSchema = (path, siteUrl, siteTitle) => {
   }
 }
 
+const buildArticleSchema = ({
+  title,
+  description,
+  imageUrl,
+  url,
+  datePublished,
+  tags,
+  business,
+  siteUrl,
+  siteTitle,
+}) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  image: imageUrl,
+  url,
+  datePublished,
+  author: {
+    '@type': 'Organization',
+    name: business?.legalName || siteTitle,
+    url: siteUrl,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: business?.legalName || siteTitle,
+    url: siteUrl,
+    logo: {
+      '@type': 'ImageObject',
+      url: imageUrl,
+    },
+  },
+  keywords: (tags || []).join(', '),
+  inLanguage: 'pl',
+})
+
 const SEO = props => {
-  const { isBlogPost, path = '', lang = 'pl' } = props
+  const {
+    isBlogPost,
+    path = '',
+    lang = 'pl',
+    articleDate,
+    articleTags,
+  } = props
   const {
     siteTitle,
     siteUrl,
@@ -187,6 +229,21 @@ const SEO = props => {
       {normalizedPath !== '/' && (
         <script type="application/ld+json">
           {JSON.stringify(buildBreadcrumbSchema(normalizedPath, formatedSiteUrl, siteTitle))}
+        </script>
+      )}
+      {isBlogPost && articleDate && (
+        <script type="application/ld+json">
+          {JSON.stringify(buildArticleSchema({
+            title,
+            description,
+            imageUrl: image,
+            url: formatedSiteUrl + withPrefix(normalizedPath),
+            datePublished: articleDate,
+            tags: articleTags,
+            business,
+            siteUrl: formatedSiteUrl,
+            siteTitle,
+          }))}
         </script>
       )}
     </>
