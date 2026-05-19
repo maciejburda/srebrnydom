@@ -149,7 +149,6 @@ const MobileHeader = ({ headerLinks, className }) => {
                   </HeaderLinkText>
                 </HeaderLink>
               ))}
-              }
             </MobileNav>
           </MobilePanelWrapper>
         </MobilePanel>
