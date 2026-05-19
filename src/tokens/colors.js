@@ -24,6 +24,7 @@ const colorTokens = {
   textLight: '#57595d',
   primary: '#243e50',
   primaryLight: `#eff5fa`,
+  accent: '#f6b3cd',
   text: "#243e50",
   background: '#ffffff',
   backgroundArticle: colors.white,

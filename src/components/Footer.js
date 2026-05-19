@@ -79,7 +79,7 @@ const FooterWrapper = styled.footer`
   }
 
   .footer-bottom {
-    background-color: #f6b3cd;
+    background-color: ${colors.accent};
     padding: 19px;
   }
 
