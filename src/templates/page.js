@@ -9,7 +9,7 @@ import SEO from '../components/SEO'
 import useSiteImages from '../hooks/use-site-images'
 import useSiteMetadata from "../hooks/use-site-config"
 
-export default props => {
+const PageTemplate = props => {
   const page = props.data.page
 
   const { trees } = useSiteMetadata()
@@ -32,17 +32,18 @@ export default props => {
 
       <Wrapper>
         <article>
-          <Content content={page.body} date={page.frontmatter.date} />
+          <Content date={page.frontmatter.date}>{props.children}</Content>
         </article>
       </Wrapper>
     </Layout>
   )
 }
 
+export default PageTemplate
+
 export const pageQuery = graphql`
   query($slug: String!) {
     page: mdx(frontmatter: { slug: { eq: $slug } }) {
-      body
       excerpt
       frontmatter {
         title

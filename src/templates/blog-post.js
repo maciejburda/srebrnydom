@@ -33,7 +33,7 @@ class BlogPostTemplate extends React.Component {
         />
 
         <Wrapper>
-          <Article post={post} />
+          <Article post={post}>{this.props.children}</Article>
         </Wrapper>
 
         <PrevNextPost previous={previous} next={next} />
@@ -48,7 +48,6 @@ export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     post: mdx(frontmatter: { slug: { eq: $slug } }) {
       excerpt
-      body
       frontmatter {
         title
         date

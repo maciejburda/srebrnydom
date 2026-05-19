@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Image from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import useSiteMetadata from '../hooks/use-site-config'
 import { colors, media } from '../tokens'
@@ -95,7 +95,7 @@ const FooterWrapper = styled.footer`
     }
   }
 `
-const LogoImage = styled(Image)`
+const LogoImage = styled(GatsbyImage)`
   height: 0px;
   width: 0px;
   @media ${media.medium} {
@@ -106,7 +106,7 @@ const LogoImage = styled(Image)`
 
 const Footer = () => {
   const { footerLinks, footerLinksIcon } = useSiteMetadata()
-  const iconSrc = useSiteImages(footerLinksIcon).fluid
+  const iconImage = useSiteImages(footerLinksIcon).gatsbyImageData
 
   const FooterItem = ({ item }) => {
     if (item.url.startsWith('/')) {
@@ -155,7 +155,7 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <nav>
-        <LogoImage fluid={iconSrc}/>
+        <LogoImage image={iconImage} alt="Srebrny Dom logo"/>
 
         {footerLinks.map((column, i) => {
           return <FooterColumn column={column} key={`footer-column-${i}`} />

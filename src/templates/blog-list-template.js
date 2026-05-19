@@ -39,9 +39,9 @@ export const pageQuery = graphql`
       }
     }
     posts: allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: {
-        fileAbsolutePath: { regex: "//content/posts//" }
+        internal: { contentFilePath: { regex: "//content/posts//" } }
         frontmatter: { published: { ne: false }, unlisted: { ne: true } }
       }
       limit: $limit
@@ -50,7 +50,6 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
-          timeToRead
           frontmatter {
             title
             tags

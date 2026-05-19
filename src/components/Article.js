@@ -12,17 +12,17 @@ const ArticleWrapper = styled.article`
 
 class Article extends React.Component {
   render() {
-    const { post } = this.props
+    const { post, children } = this.props
 
     return (
       <ArticleWrapper>
         <Content
-          content={post.body}
           date={post.frontmatter.date}
           tags={post.frontmatter.tags}
           translations={post.frontmatter.translations}
-        />
-        
+        >
+          {children}
+        </Content>
       </ArticleWrapper>
     )
   }
