@@ -59,6 +59,11 @@ export const pageQuery = graphql`
             tags
             language
             slug
+            cover {
+              childImageSharp {
+                gatsbyImageData(layout: CONSTRAINED, width: 280, placeholder: BLURRED)
+              }
+            }
           }
         }
       }
