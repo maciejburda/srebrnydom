@@ -10,6 +10,7 @@ class GalleryTemplate extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Wrapper>
+            <h1>Galeria Zdjęć</h1>
             <Gallery/>
         </Wrapper>
 

@@ -15,6 +15,7 @@ class BlogList extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Wrapper>
+          <h1>Blog</h1>
           <PostsList posts={posts} />
         </Wrapper>
 
