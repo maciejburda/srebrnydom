@@ -224,6 +224,13 @@ const SEO = props => {
           href={formatedSiteUrl + withPrefix(translation.link)}
         />
       ))}
+      {internalTranslations.length > 0 && lang !== 'en' && (
+        <link
+          rel="alternate"
+          hrefLang="x-default"
+          href={formatedSiteUrl + withPrefix(normalizedPath)}
+        />
+      )}
 
       <meta property="og:url" content={formatedSiteUrl + withPrefix(normalizedPath)} />
       <meta property="og:type" content={isBlogPost ? 'article' : 'website'} />

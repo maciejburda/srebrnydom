@@ -118,5 +118,6 @@ export const Head = () => (
   <SEO
     title="Dom seniora pomorskie – opieka całodobowa - Srebrny Dom"
     description="Luksusowy prywatny dom seniora na Kaszubach w pomorskim. Całodobowa opieka, rehabilitacja i metoda Montessori dla Twoich bliskich."
+    translations={[{ language: 'en', link: '/en/', hreflang: 'en' }]}
   />
 )

@@ -6,6 +6,10 @@ disqus: false
 language: en
 seoTitle: "Polish Nursing Home in Pomerania - Srebrny Dom"
 seoContent: "Family-run Polish-speaking nursing home in the Kashubian forest. EU-regulated 24-hour care, Polish cuisine, video calls for family abroad."
+translations:
+  - language: pl
+    link: /
+    hreflang: pl
 ---
 
 ## Polish-speaking care for your parents — in Poland's most beautiful forest

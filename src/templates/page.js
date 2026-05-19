@@ -48,6 +48,7 @@ export const Head = ({ data }) => {
       cover={page.frontmatter.cover && page.frontmatter.cover.publicURL}
       faq={page.frontmatter.faq}
       lang={page.frontmatter.language || 'pl'}
+      translations={page.frontmatter.translations}
     />
   )
 }
@@ -70,6 +71,11 @@ export const pageQuery = graphql`
         faq {
           q
           a
+        }
+        translations {
+          language
+          link
+          hreflang
         }
       }
     }
