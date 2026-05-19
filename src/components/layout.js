@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 import Header from './Header'
 import Footer from './Footer'
+import CookieConsent from './CookieConsent'
 import 'prismjs/themes/prism-tomorrow.css'
 import { GlobalStyle } from './Commons'
 import { media } from '../tokens'
@@ -32,6 +33,7 @@ class Template extends React.Component {
         <Header />
         <SiteContent>{children}</SiteContent>
         <Footer />
+        <CookieConsent />
       </>
     )
   }
