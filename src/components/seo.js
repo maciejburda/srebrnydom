@@ -2,6 +2,91 @@ import React from 'react'
 import { withPrefix } from 'gatsby'
 import useSiteMetadata from '../hooks/use-site-config'
 
+const buildLocalBusinessSchema = (business, siteUrl, siteTitle, imageUrl) => {
+  if (!business) return null
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'NursingHome',
+    '@id': `${siteUrl}#nursinghome`,
+    name: siteTitle,
+    legalName: business.legalName,
+    url: siteUrl,
+    image: imageUrl,
+    telephone: business.telephone,
+    email: business.email,
+    priceRange: business.priceRange,
+    foundingDate: business.foundingDate,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: business.streetAddress,
+      postalCode: business.postalCode,
+      addressLocality: business.addressLocality,
+      addressRegion: business.addressRegion,
+      addressCountry: business.addressCountry,
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: business.latitude,
+      longitude: business.longitude,
+    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: [
+          'Monday', 'Tuesday', 'Wednesday', 'Thursday',
+          'Friday', 'Saturday', 'Sunday',
+        ],
+        opens: '00:00',
+        closes: '23:59',
+      },
+    ],
+    sameAs: business.sameAs,
+    areaServed: (business.areaServed || []).map(a => ({
+      '@type': a.type,
+      name: a.name,
+    })),
+    hasCredential: {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'license',
+      identifier: business.licenseNumber,
+      recognizedBy: {
+        '@type': 'GovernmentOrganization',
+        name: business.licenseAuthority,
+      },
+    },
+  }
+}
+
+const buildOrganizationSchema = (business, siteUrl, siteTitle, imageUrl) => {
+  if (!business) return null
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': `${siteUrl}#organization`,
+    name: business.legalName || siteTitle,
+    url: siteUrl,
+    logo: imageUrl,
+    foundingDate: business.foundingDate,
+    sameAs: business.sameAs,
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: business.telephone,
+      contactType: 'reservations',
+      email: business.email,
+      availableLanguage: ['pl', 'en'],
+      hoursAvailable: {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: [
+          'Monday', 'Tuesday', 'Wednesday', 'Thursday',
+          'Friday', 'Saturday', 'Sunday',
+        ],
+        opens: '09:00',
+        closes: '17:00',
+      },
+    },
+  }
+}
+
 const SEO = props => {
   const { isBlogPost, path = '', lang = 'pl' } = props
   const {
@@ -10,6 +95,7 @@ const SEO = props => {
     siteCover,
     siteDescription,
     twitterUsername,
+    business,
   } = useSiteMetadata()
 
   const title = props.title
@@ -55,6 +141,17 @@ const SEO = props => {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+
+      {business && (
+        <script type="application/ld+json">
+          {JSON.stringify(buildLocalBusinessSchema(business, formatedSiteUrl, siteTitle, image))}
+        </script>
+      )}
+      {business && (
+        <script type="application/ld+json">
+          {JSON.stringify(buildOrganizationSchema(business, formatedSiteUrl, siteTitle, image))}
+        </script>
+      )}
     </>
   )
 }

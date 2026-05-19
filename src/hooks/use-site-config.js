@@ -41,6 +41,30 @@ const useSiteMetadata = () => {
               url
             }
           }
+          business {
+            legalName
+            streetAddress
+            postalCode
+            addressLocality
+            addressRegion
+            addressCountry
+            latitude
+            longitude
+            telephone
+            secondaryTelephone
+            email
+            priceRange
+            foundingDate
+            openingHours
+            bookingHours
+            licenseNumber
+            licenseAuthority
+            sameAs
+            areaServed {
+              name
+              type
+            }
+          }
         }
       }
     }
