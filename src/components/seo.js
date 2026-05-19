@@ -2,6 +2,11 @@ import React from 'react'
 import { withPrefix } from 'gatsby'
 import useSiteMetadata from '../hooks/use-site-config'
 
+const ALL_DAYS = [
+  'Monday', 'Tuesday', 'Wednesday', 'Thursday',
+  'Friday', 'Saturday', 'Sunday',
+]
+
 const buildLocalBusinessSchema = (business, siteUrl, siteTitle, imageUrl) => {
   if (!business) return null
   return {
@@ -32,15 +37,12 @@ const buildLocalBusinessSchema = (business, siteUrl, siteTitle, imageUrl) => {
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: [
-          'Monday', 'Tuesday', 'Wednesday', 'Thursday',
-          'Friday', 'Saturday', 'Sunday',
-        ],
+        dayOfWeek: ALL_DAYS,
         opens: '00:00',
         closes: '23:59',
       },
     ],
-    sameAs: business.sameAs,
+    sameAs: business.sameAs || [],
     areaServed: (business.areaServed || []).map(a => ({
       '@type': a.type,
       name: a.name,
@@ -67,7 +69,7 @@ const buildOrganizationSchema = (business, siteUrl, siteTitle, imageUrl) => {
     url: siteUrl,
     logo: imageUrl,
     foundingDate: business.foundingDate,
-    sameAs: business.sameAs,
+    sameAs: business.sameAs || [],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: business.telephone,
@@ -76,10 +78,7 @@ const buildOrganizationSchema = (business, siteUrl, siteTitle, imageUrl) => {
       availableLanguage: ['pl', 'en'],
       hoursAvailable: {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: [
-          'Monday', 'Tuesday', 'Wednesday', 'Thursday',
-          'Friday', 'Saturday', 'Sunday',
-        ],
+        dayOfWeek: ALL_DAYS,
         opens: '09:00',
         closes: '17:00',
       },

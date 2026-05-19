@@ -55,8 +55,6 @@ const useSiteMetadata = () => {
             email
             priceRange
             foundingDate
-            openingHours
-            bookingHours
             licenseNumber
             licenseAuthority
             sameAs
