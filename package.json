@@ -18,8 +18,6 @@
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js' 'data/siteConfig.js' 'gatsby-*.js' 'scripts/*.js'",
     "generatePostPreviewImages": "./scripts/generatePostPreviewImages.js",
-    "lh": "lighthousebot",
-    "semantic-release": "semantic-release",
     "start": "gatsby develop",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
@@ -51,7 +49,7 @@
     "gatsby-source-filesystem": "^5.16.0",
     "gatsby-transformer-remark": "^6.16.0",
     "gatsby-transformer-sharp": "^5.16.0",
-    "gh-pages": "^3.2.3",
+    "gh-pages": "^6.3.0",
     "polished": "^4.2.2",
     "prismjs": "^1.29.0",
     "react": "^18.0.0",
@@ -59,12 +57,10 @@
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
-    "lighthousebot": "https://github.com/GoogleChromeLabs/lighthousebot",
     "patch-package": "^8.0.1",
-    "prettier": "^2.0.5",
-    "puppeteer": "^1.17.0",
-    "semantic-release": "^15.13.18",
-    "yaml": "^1.6.0"
+    "prettier": "^2.8.8",
+    "puppeteer": "^25.0.4",
+    "yaml": "^2.9.0"
   },
   "peerDependencies": {
     "gatsby": "^5.0.0",
