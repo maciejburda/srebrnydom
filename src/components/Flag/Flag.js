@@ -14,7 +14,7 @@ class Flag extends React.Component {
     const img = language === 'en' ? ukFlag : frFlag
     const alt = language === 'en' ? 'english post' : 'post en francais'
 
-    return <FlagImage src={img} alt={alt} className="flag" />
+    return <FlagImage src={img} alt={alt} className="flag" loading="lazy" />
   }
 }
 

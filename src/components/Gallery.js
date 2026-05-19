@@ -149,7 +149,7 @@ const Gallery = () => {
       </Grid>
       {openIndex !== null && (
         <Overlay onClick={() => setOpenIndex(null)}>
-          <ModalImg src={images[openIndex].publicURL} alt={imageAlt(images[openIndex].name)} />
+          <ModalImg src={images[openIndex].publicURL} alt={imageAlt(images[openIndex].name)} loading="lazy" />
           {images.length > 1 && (
             <>
               <NavBtn
