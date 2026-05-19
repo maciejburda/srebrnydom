@@ -15,10 +15,36 @@ gtag('set', 'url_passthrough', true);`
 exports.onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
     React.createElement('link', {
-      key: 'lato-nunito-fonts',
-      href:
-        'https://fonts.googleapis.com/css?family=Lato:400,700|Nunito:400,700&display=swap',
-      rel: 'stylesheet',
+      key: 'preload-lato-regular-latin',
+      rel: 'preload',
+      href: '/fonts/lato-regular-latin.woff2',
+      as: 'font',
+      type: 'font/woff2',
+      crossOrigin: 'anonymous',
+    }),
+    React.createElement('link', {
+      key: 'preload-lato-regular-latin-ext',
+      rel: 'preload',
+      href: '/fonts/lato-regular-latin-ext.woff2',
+      as: 'font',
+      type: 'font/woff2',
+      crossOrigin: 'anonymous',
+    }),
+    React.createElement('link', {
+      key: 'preload-nunito-regular-latin',
+      rel: 'preload',
+      href: '/fonts/nunito-regular-latin.woff2',
+      as: 'font',
+      type: 'font/woff2',
+      crossOrigin: 'anonymous',
+    }),
+    React.createElement('link', {
+      key: 'preload-nunito-regular-latin-ext',
+      rel: 'preload',
+      href: '/fonts/nunito-regular-latin-ext.woff2',
+      as: 'font',
+      type: 'font/woff2',
+      crossOrigin: 'anonymous',
     }),
   ])
 }
