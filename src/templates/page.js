@@ -47,6 +47,7 @@ export const Head = ({ data }) => {
       path={`/${page.frontmatter.slug}/`}
       cover={page.frontmatter.cover && page.frontmatter.cover.publicURL}
       faq={page.frontmatter.faq}
+      lang={page.frontmatter.language || 'pl'}
     />
   )
 }
@@ -62,6 +63,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         disqus
+        language
         cover {
           publicURL
         }
