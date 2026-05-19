@@ -11,9 +11,10 @@ module.exports = {
   pathPrefix: config.pathPrefix,
   plugins: [
     {
-      resolve: `gatsby-gallery-simple`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        basePath: "/gallery",
+        name: 'gallery',
+        path: 'content/gallery',
       },
     },
     {

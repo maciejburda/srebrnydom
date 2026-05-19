@@ -170,22 +170,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 }
 
-const path = require('path')
-
-exports.onCreatePage = ({ page, actions }) => {
-  if (
-    page.path === '/' &&
-    typeof page.component === 'string' &&
-    page.component.includes('gatsby-gallery-simple')
-  ) {
-    actions.deletePage(page)
-    actions.createPage({
-      ...page,
-      component: path.resolve(__dirname, 'src/pages/index.js'),
-    })
-  }
-}
-
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
