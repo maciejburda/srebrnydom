@@ -27,35 +27,28 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-47c51a52d9968dc0215f.js"
+    "url": "webpack-runtime-3a3a7ba4f6ee5136cb02.js"
   },
   {
-    "url": "framework-a38040c4749cf445737f.js"
+    "url": "framework-5a08e9f363633585c8b9.js"
   },
   {
-    "url": "app-5c31c5a7ba1bf856a905.js"
+    "url": "app-097b2b7f8426168f9dde.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "abc820f0d99390c80dde800b48a9b9ee"
-  },
-  {
-    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-5a1ee105f05b3144b807.js"
-  },
-  {
-    "url": "polyfill-b4c19884e237349d4e5a.js"
+    "revision": "9d1ccfe472a7923b739b3d556d76dc1f"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "015e526dc2d0f097f059e5b3bc6b06c2"
+    "revision": "511efc6da35d3461b5d455da79d7bc74"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerRoute(/(\.js$|\.css$|static\/)/, new workbox.strategies.CacheFirst(), 'GET');
-workbox.routing.registerRoute(/^https?:.*\page-data\/.*\/page-data\.json/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
-workbox.routing.registerRoute(/^https?:.*\/page-data\/app-data\.json/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
-workbox.routing.registerRoute(/^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
+workbox.routing.registerRoute(/^https?:.*\/page-data\/.*\.json/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
+workbox.routing.registerRoute(/^https?:.*\.(png|jpg|jpeg|webp|avif|svg|gif|tiff|js|woff|woff2|json|css)$/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
 workbox.routing.registerRoute(/^https?:\/\/fonts\.googleapis\.com\/css/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
 
 /* global importScripts, workbox, idbKeyval */
@@ -74,6 +67,24 @@ const MessageAPI = {
 
   clearPathResources: event => {
     event.waitUntil(idbKeyval.clear())
+
+    // We detected compilation hash mismatch
+    // we should clear runtime cache as data
+    // files might be out of sync and we should
+    // do fresh fetches for them
+    event.waitUntil(
+      caches.keys().then(function (keyList) {
+        return Promise.all(
+          keyList.map(function (key) {
+            if (key && key.includes(`runtime`)) {
+              return caches.delete(key)
+            }
+
+            return Promise.resolve()
+          })
+        )
+      })
+    )
   },
 
   enableOfflineShell: () => {
@@ -140,7 +151,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-5c31c5a7ba1bf856a905.js`))) {
+  if (!resources || !(await caches.match(`/app-097b2b7f8426168f9dde.js`))) {
     return await fetch(event.request)
   }
 
