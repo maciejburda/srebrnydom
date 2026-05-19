@@ -17,6 +17,13 @@
 
 **Verification model:** Same as Phase 1 — no automated test suite. Verification is `gatsby build` + grep + Rich Results Test + Lighthouse re-measure where relevant.
 
+**⚠️ Important file-path note (verified during Task 4):** The MDX directory names do not match their URL slugs. Specifically:
+- `/cennik/` (the price-list page) is served from `content/pages/offer/offer.md` (slug=cennik).
+- `/oferta/` (the offer-description page) is served from `content/pages/offer-description/offer-desc.md` (slug=oferta).
+- All other pages have matching directory and slug names.
+
+Task 5, Task 7, and Task 8 instructions reference "cennik" and "oferta" pages by URL — always resolve to the file paths above, not the literal "cennik/" or "oferta/" directories (which don't exist).
+
 ---
 
 ### Task 1: Commit GSC raw export + write a one-pager summary
@@ -413,8 +420,8 @@ git commit -m "Align page seoTitle/seoContent with Phase 2 keyword map"
 The frontmatter-driven design (added in Task 6) means each MDX page can declare its FAQ once and both render it in the page body AND emit `FAQPage` JSON-LD automatically.
 
 **Files:**
-- Modify: `content/pages/cennik/cennik.md`
-- Modify: `content/pages/offer/offer.md` (URL slug: `/oferta/`)
+- Modify: `content/pages/offer/offer.md` (URL: `/cennik/` — slug=cennik)
+- Modify: `content/pages/offer-description/offer-desc.md` (URL: `/oferta/` — slug=oferta)
 - Modify: `content/pages/montessori/montessori.md`
 
 - [ ] **Step 1: Add `faq` frontmatter to each of the three pages**
@@ -431,7 +438,7 @@ faq:
 
 Suggested topic clusters per page (adapt as you write):
 
-**`cennik.md`** — cost/payment questions:
+**`content/pages/offer/offer.md`** (→ `/cennik/`) — cost/payment questions:
 - Ile kosztuje miesięczny pobyt?
 - Co jest wliczone w cenę?
 - Czy są pokoje 1- i 2-osobowe? Czym się różni cena?
@@ -439,7 +446,7 @@ Suggested topic clusters per page (adapt as you write):
 - Czy są zniżki dla dłuższego pobytu?
 - Jak wygląda umowa i okres wypowiedzenia?
 
-**`offer.md`** (renders at `/oferta/`) — service scope:
+**`content/pages/offer-description/offer-desc.md`** (→ `/oferta/`) — service scope:
 - Jakie usługi medyczne oferujecie?
 - Czy macie rehabilitację?
 - Ile osób przebywa w jednym pokoju?
@@ -467,7 +474,7 @@ If frontmatter YAML is malformed, the build will fail on MDX processing. Fix any
 - [ ] **Step 4: Commit**
 
 ```bash
-git add content/pages/cennik content/pages/offer content/pages/montessori
+git add content/pages/offer content/pages/offer-description content/pages/montessori
 git commit -m "Add FAQ frontmatter to cennik, oferta, montessori pages"
 ```
 
