@@ -13,7 +13,7 @@ const PostsList = ({ posts }) => {
           title: post.node.frontmatter.title,
           excerpt: post.node.excerpt,
           slug: post.node.frontmatter.slug,
-          timeToRead: post.node.timeToRead,
+          timeToRead: post.node.fields && post.node.fields.timeToRead,
           language: post.node.frontmatter.language || defaultLang,
           tags: post.node.frontmatter.tags || [],
         }

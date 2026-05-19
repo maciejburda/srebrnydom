@@ -50,6 +50,9 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
+          fields {
+            timeToRead
+          }
           frontmatter {
             title
             tags

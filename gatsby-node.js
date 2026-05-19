@@ -1,4 +1,18 @@
+const fs = require('fs')
 const { createFilePath } = require('gatsby-source-filesystem')
+
+const WORDS_PER_MINUTE = 200
+
+const computeTimeToRead = filePath => {
+  try {
+    const raw = fs.readFileSync(filePath, 'utf8')
+    const body = raw.replace(/^---[\s\S]*?---\s*/m, '')
+    const words = body.match(/\S+/g) || []
+    return Math.max(1, Math.round(words.length / WORDS_PER_MINUTE))
+  } catch (err) {
+    return 0
+  }
+}
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -27,6 +41,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           node {
             internal {
               contentFilePath
+            }
+            fields {
+              timeToRead
             }
             frontmatter {
               title
@@ -180,6 +197,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: `slug`,
       node,
       value,
+    })
+  }
+
+  if (node.internal.type === `Mdx` && node.internal.contentFilePath) {
+    createNodeField({
+      name: `timeToRead`,
+      node,
+      value: computeTimeToRead(node.internal.contentFilePath),
     })
   }
 }
