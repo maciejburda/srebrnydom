@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import Content from '../components/Content'
+import FaqList from '../components/FaqList'
 import Wrapper from '../components/Wrapper'
 import Hero from '../components/Hero'
 import SEO from '../components/SEO'
@@ -26,6 +27,7 @@ const PageTemplate = props => {
       <Wrapper>
         <article>
           <Content date={page.frontmatter.date}>{props.children}</Content>
+          <FaqList items={page.frontmatter.faq} />
         </article>
       </Wrapper>
     </Layout>
@@ -42,6 +44,7 @@ export const Head = ({ data }) => {
       description={page.frontmatter.seoContent}
       path={`/${page.frontmatter.slug}/`}
       cover={page.frontmatter.cover && page.frontmatter.cover.publicURL}
+      faq={page.frontmatter.faq}
     />
   )
 }
@@ -59,6 +62,10 @@ export const pageQuery = graphql`
         disqus
         cover {
           publicURL
+        }
+        faq {
+          q
+          a
         }
       }
     }

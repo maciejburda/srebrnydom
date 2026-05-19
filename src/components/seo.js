@@ -157,6 +157,22 @@ const buildArticleSchema = ({
   inLanguage: lang,
 })
 
+const buildFaqSchema = (faq) => {
+  if (!faq || faq.length === 0) return null
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map(item => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a,
+      },
+    })),
+  }
+}
+
 const SEO = props => {
   const {
     isBlogPost,
@@ -165,6 +181,7 @@ const SEO = props => {
     articleDate,
     articleTags,
     noindex = false,
+    faq,
   } = props
   const {
     siteTitle,
@@ -250,6 +267,11 @@ const SEO = props => {
             siteTitle,
             lang,
           }))}
+        </script>
+      )}
+      {faq && faq.length > 0 && (
+        <script type="application/ld+json">
+          {JSON.stringify(buildFaqSchema(faq))}
         </script>
       )}
     </>
