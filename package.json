@@ -11,7 +11,6 @@
   ],
   "license": "MIT",
   "author": "Maxence Poutord <maxence.poutord@gmail.com>",
-  "main": "n/a",
   "scripts": {
     "build": "gatsby build",
     "deploy": "gatsby build && gh-pages -d public -b master",
