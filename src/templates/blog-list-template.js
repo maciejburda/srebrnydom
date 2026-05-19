@@ -29,7 +29,12 @@ class BlogList extends React.Component {
 
 export default BlogList
 
-export const Head = () => <SEO />
+export const Head = ({ pageContext }) => {
+  const path = pageContext.currentPage === 1
+    ? '/'
+    : `/pages/${pageContext.currentPage}/`
+  return <SEO path={path} />
+}
 
 
 export const pageQuery = graphql`
