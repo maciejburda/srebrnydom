@@ -41,3 +41,5 @@ export const onClientEntry = () => {
   if (typeof document === 'undefined') return
   document.addEventListener('click', handleClick, { capture: true })
 }
+
+export { wrapRootElement } from './wrap-root-element'
