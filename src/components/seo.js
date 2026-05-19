@@ -164,6 +164,7 @@ const SEO = props => {
     lang = 'pl',
     articleDate,
     articleTags,
+    noindex = false,
   } = props
   const {
     siteTitle,
@@ -194,6 +195,7 @@ const SEO = props => {
     <>
       <html lang={lang} />
       <title>{title}</title>
+      {noindex && <meta name="robots" content="noindex,nofollow" />}
       <meta name="description" content={description} />
       <link rel="canonical" href={formatedSiteUrl + withPrefix(normalizedPath)} />
 

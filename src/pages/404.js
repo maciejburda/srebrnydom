@@ -79,4 +79,4 @@ const NotFoundPage = props => {
 
 export default NotFoundPage
 
-export const Head = () => <SEO title="Page Not Found" />
+export const Head = () => <SEO title="Page Not Found" noindex />
