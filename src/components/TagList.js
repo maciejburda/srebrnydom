@@ -45,9 +45,9 @@ class TagList extends React.Component {
           return (
             <Fragment key={`tag-list-${i}`}>
               {!noLink && (
-                <TagListItemLink to={`/tags/${tag}`}>{tag}</TagListItemLink>
+                <TagListItemLink to={`/tags/${tag}/`}>{tag}</TagListItemLink>
               )}
-              {noLink && <TagListItem to={`/tags/${tag}`}>{tag}</TagListItem>}
+              {noLink && <TagListItem to={`/tags/${tag}/`}>{tag}</TagListItem>}
               {i < tags.length - 1 ? ', ' : ''}
             </Fragment>
           )

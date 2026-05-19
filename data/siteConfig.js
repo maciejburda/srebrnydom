@@ -28,35 +28,35 @@ module.exports = {
   headerLinks: [
     {
       label: 'O nas',
-      url: '/o-nas',
+      url: '/o-nas/',
     },
     {
       label: 'Cennik',
-      url: '/cennik',
+      url: '/cennik/',
     },
     {
       label: 'Oferta',
-      url: '/oferta',
+      url: '/oferta/',
     },
     {
       label: 'Galeria',
-      url: '/galeria',
+      url: '/galeria/',
     },
     {
       label: 'Montessori',
-      url: '/montessori',
+      url: '/montessori/',
     },
     {
       label: 'Nasz Patron',
-      url: '/patron',
+      url: '/patron/',
     },
     {
       label: 'Blog',
-      url: '/blog',
+      url: '/blog/',
     },
     {
       label: 'Kontakt',
-      url: '/kontakt',
+      url: '/kontakt/',
     },
   ],
   websiteHost: {

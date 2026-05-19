@@ -23,7 +23,7 @@ class BlogPostTemplate extends React.Component {
           }
           lang={post.frontmatter.language}
           translations={post.frontmatter.translations}
-          path={post.frontmatter.slug}
+          path={`/blog/${post.frontmatter.slug}/`}
           isBlogPost
         />
 
