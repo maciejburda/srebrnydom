@@ -5,7 +5,7 @@ import Wrapper from '../components/Wrapper'
 import Hero from '../components/Hero'
 import Article from '../components/Article'
 import PrevNextPost from '../components/PrevNextPost'
-import SEO from '../components/SEO'
+import Seo from '../components/SEO'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -34,7 +34,7 @@ export default BlogPostTemplate
 export const Head = ({ data }) => {
   const post = data.post
   return (
-    <SEO
+    <Seo
       title={post.frontmatter.title}
       description={post.excerpt}
       cover={post.frontmatter.cover && post.frontmatter.cover.publicURL}

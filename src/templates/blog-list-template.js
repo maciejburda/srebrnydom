@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 import Wrapper from '../components/Wrapper'
 import PostsList from '../components/PostsList'
 import Pagination from '../components/Pagination'
-import SEO from '../components/SEO'
+import Seo from '../components/SEO'
 
 class BlogList extends React.Component {
   render() {
@@ -34,7 +34,7 @@ export const Head = ({ pageContext }) => {
   const path = pageContext.currentPage === 1
     ? '/'
     : `/pages/${pageContext.currentPage}/`
-  return <SEO path={path} />
+  return <Seo path={path} />
 }
 
 

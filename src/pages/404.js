@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 import Layout from '../components/layout'
 import Wrapper from '../components/Wrapper'
-import SEO from '../components/SEO'
+import Seo from '../components/SEO'
 import RelatedPosts from '../components/RelatedPosts'
 import { Text } from '../components/Commons'
 
@@ -79,4 +79,4 @@ const NotFoundPage = props => {
 
 export default NotFoundPage
 
-export const Head = () => <SEO title="Page Not Found" noindex />
+export const Head = () => <Seo title="Page Not Found" noindex />

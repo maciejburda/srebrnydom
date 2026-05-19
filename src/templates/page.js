@@ -7,7 +7,7 @@ import FaqList from '../components/FaqList'
 import RelatedPages from '../components/RelatedPages'
 import Wrapper from '../components/Wrapper'
 import Hero from '../components/Hero'
-import SEO from '../components/SEO'
+import Seo from '../components/SEO'
 import useSiteImages from '../hooks/use-site-images'
 import useSiteMetadata from "../hooks/use-site-config"
 
@@ -41,7 +41,7 @@ export default PageTemplate
 export const Head = ({ data }) => {
   const page = data.page
   return (
-    <SEO
+    <Seo
       title={page.frontmatter.seoTitle}
       description={page.frontmatter.seoContent}
       path={`/${page.frontmatter.slug}/`}

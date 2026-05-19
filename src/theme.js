@@ -18,4 +18,5 @@
  *
  * For a full list of tokens, see the `src/tokens/` directory in this theme.
  */
-export default {}
+const theme = {}
+export default theme

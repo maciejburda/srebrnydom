@@ -17,7 +17,7 @@ const colors = {
   lightBlue: '#697980',
 }
 
-export default {
+const colorTokens = {
   ...colors,
   textLightest: colors.white,
   textLightestHover: colors.grey200,
@@ -37,3 +37,5 @@ export default {
   socialMediaCardFilter: '#437abf', // #8f43bf
   postMetadata: colors.lightBlue,
 }
+
+export default colorTokens

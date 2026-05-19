@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
@@ -118,9 +118,14 @@ const Gallery = () => {
   const images = data.allFile.nodes.filter(n => n.childImageSharp)
   const [openIndex, setOpenIndex] = useState(null)
 
-  const goPrev = () =>
-    setOpenIndex(i => (i - 1 + images.length) % images.length)
-  const goNext = () => setOpenIndex(i => (i + 1) % images.length)
+  const goPrev = useCallback(
+    () => setOpenIndex(i => (i - 1 + images.length) % images.length),
+    [images.length]
+  )
+  const goNext = useCallback(
+    () => setOpenIndex(i => (i + 1) % images.length),
+    [images.length]
+  )
 
   useEffect(() => {
     if (openIndex === null) return
@@ -131,7 +136,7 @@ const Gallery = () => {
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [openIndex])
+  }, [openIndex, goPrev, goNext])
 
   return (
     <>

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 import PostsList from '../components/PostsList'
 import Wrapper from '../components/Wrapper'
-import SEO from '../components/SEO'
+import Seo from '../components/SEO'
 import Hero from '../components/Hero'
 
 const PageTitle = styled.h2`
@@ -33,7 +33,7 @@ class Tags extends React.Component {
 export default Tags
 
 export const Head = ({ pageContext }) => (
-  <SEO title={`Top blog posts on ${pageContext.tag}`} />
+  <Seo title={`Top blog posts on ${pageContext.tag}`} />
 )
 
 export const pageQuery = graphql`

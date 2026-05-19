@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import Layout from '../components/layout'
 import Wrapper from '../components/Wrapper'
-import SEO from '../components/SEO'
+import Seo from '../components/SEO'
 import useSiteImages from '../hooks/use-site-images'
 import Hero from '../components/Hero'
 import useSiteMetadata from "../hooks/use-site-config"
@@ -115,7 +115,7 @@ const NotFoundPage = props => {
 export default NotFoundPage
 
 export const Head = () => (
-  <SEO
+  <Seo
     title="Dom seniora pomorskie – opieka całodobowa - Srebrny Dom"
     description="Luksusowy prywatny dom seniora na Kaszubach w pomorskim. Całodobowa opieka, rehabilitacja i metoda Montessori dla Twoich bliskich."
     translations={[{ language: 'en', link: '/en/', hreflang: 'en' }]}

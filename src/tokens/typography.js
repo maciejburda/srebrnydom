@@ -1,4 +1,4 @@
-export default {
+const typography = {
   fonts: {
     default: "Lato, sans-serif",
     secondary: "Nunito, sans-serif",
@@ -8,3 +8,5 @@ export default {
     bold: 700,
   },
 }
+
+export default typography
