@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import Wrapper from '../components/Wrapper'
 import SEO from '../components/SEO'
 import Gallery from '../components/Gallery'
+import RelatedPages from '../components/RelatedPages'
 
 class GalleryTemplate extends React.Component {
   render() {
@@ -12,6 +13,7 @@ class GalleryTemplate extends React.Component {
         <Wrapper>
             <h1>Galeria Zdjęć</h1>
             <Gallery/>
+            <RelatedPages slug="galeria" />
         </Wrapper>
 
       </Layout>
