@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { colors } from '../tokens'
 import useSiteMetadata from '../hooks/use-site-config'
-import { MapPin, Phone, Mail } from './Icons'
+import { MapPin, Phone, Mail, Calendar } from './Icons'
 
 const Wrapper = styled.div`
   display: flex;
@@ -73,7 +73,7 @@ const ContactInfo = () => {
       </Row>
 
       <Row>
-        <IconCircle><Phone size={16} /></IconCircle>
+        <IconCircle><Calendar size={16} /></IconCircle>
         <Body>
           <Label>Rezerwacja pobytu (9:00–17:00)</Label>
           <Value>

@@ -8,26 +8,39 @@ seoContent: "Skontaktuj się z naszym domem seniora w województwie pomorskim."
 ---
 
 import ContactInfo from '../../../src/components/ContactInfo'
+import FactCard from '../../../src/components/FactCard'
+import Callout from '../../../src/components/Callout'
+import CtaCard from '../../../src/components/CtaCard'
+import { User } from '../../../src/components/Icons'
 
-### Usługi opiekuńcze i rehabilitacyjne Srebrny Dom
-
-<br/>
-
-**NIP** 555 12 32 594
-
-**REGON** 384334284
-
-<br/>
+Skontaktuj się z nami, aby umówić wizytę, zapytać o dostępność pokoi lub po prostu porozmawiać o potrzebach Twojego bliskiego. Jesteśmy dostępni codziennie i chętnie pomożemy.
 
 <ContactInfo />
 
-<br/>
+<FactCard
+  eyebrow="Dane firmy"
+  title="Usługi Opiekuńcze i Rehabilitacyjne Srebrny Dom"
+  items={[
+    { label: 'NIP', value: '555 12 32 594' },
+    { label: 'REGON', value: '384334284' },
+    { label: 'Zezwolenie', value: 'Nr 114, Wojewoda Pomorski' },
+  ]}
+/>
 
-**Szukasz pracy?**
+<Callout tone="accent" icon={User} eyebrow="Dołącz do zespołu" title="Szukasz pracy?">
+Poszukujemy opiekunów i opiekunek osób starszych. Prosimy o przesyłanie CV na adres [kontakt@srebrnydom.pl](mailto:kontakt@srebrnydom.pl) lub o kontakt telefoniczny.
+</Callout>
 
-Poszukujemy opiekunów / opiekunek osób starszych.
-Prosimy o przesyłanie CV na nasz adres e-mail lub o kontakt telefoniczny.
+### Jak do nas trafić
 
-### Mapa
-<br/>
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9410.103678313948!2d17.4946838!3d53.8690776!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf227301449af310d!2sSrebrny%20Dom%20Us%C5%82ugi%20Rehabilitacyjne%20i%20Opieku%C5%84cze!5e0!3m2!1spl!2spl!4v1623739565013!5m2!1spl!2spl" title="Mapa - Srebrny Dom" width="100%" height="450" style={{ border: 0, width: '100%', display: 'block' }} allowFullScreen loading="lazy"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9410.103678313948!2d17.4946838!3d53.8690776!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf227301449af310d!2sSrebrny%20Dom%20Us%C5%82ugi%20Rehabilitacyjne%20i%20Opieku%C5%84cze!5e0!3m2!1spl!2spl!4v1623739565013!5m2!1spl!2spl" title="Mapa - Srebrny Dom" width="100%" height="450" style={{ border: 0, width: '100%', display: 'block', borderRadius: '12px' }} allowFullScreen loading="lazy"></iframe>
+
+<CtaCard
+  eyebrow="Następny krok"
+  title="Poznaj naszą ofertę i cennik"
+  sub="Zanim do nas zadzwonisz, możesz w spokoju zapoznać się z zakresem opieki i pakietami cenowymi."
+  primaryLabel="Zobacz cennik"
+  primaryHref="/cennik/"
+  secondaryLabel="Sprawdź ofertę"
+  secondaryHref="/oferta/"
+/>

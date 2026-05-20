@@ -7,7 +7,24 @@ language: pl
 seoTitle: "Jan Kosno - patron domu opieki - Srebrny Dom"
 seoContent: "Srebrny Dom zdobią obrazy malarza Jana Kosno, patrona naszego domu seniora na Kaszubach."
 ---
-[Srebrny Dom](/o-nas/) został uświetniony obrazami wybinego malarza Jana Kosno. W korytarzach oraz pokojach pensjonariuszy mona zaleźć owoce jego twórczości. Każdemu z pensjonariuszy przysługuje możliwość wyboru obrazu, który zostanie zawieszony w jego pokoju. Dodatkowo w przypadku większego zainteresowania twórczością Jana Kosno istnieje możliwość zakupu poszczególnych dzieł z dodatkowym rabatem dla pensjonariuszy. Pełną listę obrazów można znaleźć [*tutaj*.](https://www.dropbox.com/sh/khjy701309n5c17/AABGZZK1e6m_NYNO_W4-Km2ba?dl=0)
+
+import FactCard from '../../../src/components/FactCard'
+import CtaCard from '../../../src/components/CtaCard'
+
+<FactCard
+  eyebrow="Karta artysty"
+  title="Jan Kosno (1913–1996)"
+  items={[
+    { label: 'Urodzony', value: '14 czerwca 1913 r., rodzina górnicza' },
+    { label: 'Wykształcenie', value: 'Akademia Sztuk Pięknych w Krakowie, dyplom 1955 (pracownie W. Jarockiego i Z. Pronaszki)' },
+    { label: 'Członkostwo', value: 'Związek Polskich Artystów Plastyków od 1956 r.' },
+    { label: 'Pobyt twórczy', value: 'Paryż 1968–1971 – stypendium Ministerstwa Kultury i Sztuki' },
+    { label: 'Nagrody', value: 'Brązowy medal „Prix Lutetia”, Galérie de Sèvres, Paryż 1971' },
+    { label: 'Zbiory', value: 'Muzeum w Katowicach, Ministerstwo Kultury oraz kolekcje prywatne w Polsce, Francji, USA i Japonii' },
+  ]}
+/>
+
+[Srebrny Dom](/o-nas/) został uświetniony obrazami wybitnego malarza Jana Kosno. W korytarzach oraz pokojach pensjonariuszy można znaleźć owoce jego twórczości. Każdemu z pensjonariuszy przysługuje możliwość wyboru obrazu, który zostanie zawieszony w jego pokoju. Dodatkowo w przypadku większego zainteresowania twórczością Jana Kosno istnieje możliwość zakupu poszczególnych dzieł z dodatkowym rabatem dla pensjonariuszy.
 
 Jan Kosno przyszedł na świat w rodzinie górniczej 14 czerwca 1913 roku i choć rysunek, i malarstwo pasjonują go od najmłodszych lat, dopiero po wojnie studiuje w Akademii Sztuk Pięknych w Krakowie uzyskując dyplom w 1955 roku. Poszukując nauczycieli rysunku przyjeżdża do Krakowa już w latach trzydziestych, jednak w latach okupacji  dzieli los wielu innych rodaków. Aresztowany przez gestapo i więziony na Montelupich, a następnie w obozie w Płaszowie walczyć  będzie długo z powikłaniami chorobowymi nabytymi w obozie.
 
@@ -21,4 +38,14 @@ Po powrocie do kraju nadal mieszka i tworzy w Warszawie aż do chwili śmierci, 
 
 Jan Kosno zaliczany jest do awangardy polskich malarzy. Jego prace noszą ślady nauk jego wielkich nauczycieli, lecz są też ciągłym poszukiwaniem własnego stylu, stąd tak wiele podejmowanych tematów i technik. Ten skromny z natury skryty i cichy artysta urzekał swoimi pejzażami syntezując impresję z abstrakcją, dodając w każdym obrazie liczne treści liryki młodopolskiej. Wiele jego prac cechują nastroje wypowiedziane w ciepłym kolorycie i architektonicznej kompozycji. Nie obce są w jego dziełach zmagania z realnością, często przedstawiane za pomocą „złowieszczych symboli” to w tle obrazu, to w jego centrum, które mimo tych apokaliptycznych elementów skłaniają uwagę raczej ku odkryciom wielorakości treści obrazu pozostawiając jednak ostrzeżenie w percepcji odbiorcy.
 
-Po latach wznowiono sprzeda obrazów. Pierwszy z nich sprzedał się w Sopockim Domu Aukcyjnym w 2021.
+Po latach wznowiono sprzedaż obrazów. Pierwszy z nich sprzedał się w Sopockim Domu Aukcyjnym w 2021 roku.
+
+<CtaCard
+  eyebrow="Twórczość Jana Kosno"
+  title="Zobacz pełną kolekcję obrazów"
+  sub="Pensjonariusze Srebrnego Domu mogą wybrać obraz do swojego pokoju, a w razie zainteresowania – kupić wybrane dzieła z dodatkowym rabatem."
+  primaryLabel="Zobacz galerię"
+  primaryHref="https://www.dropbox.com/sh/khjy701309n5c17/AABGZZK1e6m_NYNO_W4-Km2ba?dl=0"
+  secondaryLabel="Skontaktuj się"
+  secondaryHref="/kontakt/"
+/>

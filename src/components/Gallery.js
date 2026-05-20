@@ -19,6 +19,9 @@ const Tile = styled.button`
   cursor: pointer;
   overflow: hidden;
   background: transparent;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px -8px rgba(36, 62, 80, 0.35);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
 
   & .gatsby-image-wrapper {
     position: absolute !important;
@@ -28,9 +31,14 @@ const Tile = styled.button`
     transition: transform 0.5s, filter 0.25s;
   }
 
+  &:hover {
+    box-shadow: 0 16px 30px -16px rgba(36, 62, 80, 0.4);
+    transform: translateY(-2px);
+  }
+
   &:hover .gatsby-image-wrapper {
-    transform: scale(1.1);
-    filter: saturate(1.3);
+    transform: scale(1.08);
+    filter: saturate(1.2);
   }
 `
 

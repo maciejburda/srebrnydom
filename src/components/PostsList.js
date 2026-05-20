@@ -1,13 +1,26 @@
-import React, { Fragment } from 'react'
+import React from 'react'
+import styled from 'styled-components'
 
 import PostsListItem from './PostsListItem'
 import useSiteMetadata from '../hooks/use-site-config'
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  margin: 0.5rem 0 1.5rem;
+
+  @media (min-width: 720px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+`
 
 const PostsList = ({ posts }) => {
   const { defaultLang } = useSiteMetadata()
 
   return (
-    <Fragment>
+    <Grid>
       {posts.map(post => {
         const props = {
           title: post.node.frontmatter.title,
@@ -20,7 +33,8 @@ const PostsList = ({ posts }) => {
         }
         return <PostsListItem key={props.slug} {...props} />
       })}
-    </Fragment>
+    </Grid>
   )
 }
+
 export default PostsList
