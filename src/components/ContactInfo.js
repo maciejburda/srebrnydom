@@ -55,7 +55,7 @@ const Value = styled.span`
 
 const ContactInfo = () => {
   const { business } = useSiteMetadata()
-  const mapsUrl = `https://www.google.com/maps/place/${business.latitude},${business.longitude}`
+  const mapsUrl = 'https://maps.app.goo.gl/92mjiE2YNLs842D87'
 
   return (
     <Wrapper>

@@ -135,5 +135,5 @@ export const ReadingTime = props => {
     text-transform: uppercase;
     color: ${colors.postMetadata};
   `
-  return <ReadingTimeContainer>{props.min} min read</ReadingTimeContainer>
+  return <ReadingTimeContainer>{props.min} min czytania</ReadingTimeContainer>
 }

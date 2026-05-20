@@ -76,6 +76,48 @@ export const ChevronDown = ({ size, ...rest }) => (
   </svg>
 )
 
+export const Heart = ({ size, ...rest }) => (
+  <svg {...baseProps(size, rest)}>
+    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+  </svg>
+)
+
+export const Stethoscope = ({ size, ...rest }) => (
+  <svg {...baseProps(size, rest)}>
+    <path d="M6 3v6a4 4 0 0 0 8 0V3" />
+    <path d="M6 3h2" />
+    <path d="M12 3h2" />
+    <path d="M10 13v4a4 4 0 0 0 8 0v-1" />
+    <circle cx="18" cy="14" r="2" />
+  </svg>
+)
+
+export const Activity = ({ size, ...rest }) => (
+  <svg {...baseProps(size, rest)}>
+    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+  </svg>
+)
+
+export const Home = ({ size, ...rest }) => (
+  <svg {...baseProps(size, rest)}>
+    <path d="M3 9.5 12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-7h-6v7H4a1 1 0 0 1-1-1z" />
+  </svg>
+)
+
+export const Leaf = ({ size, ...rest }) => (
+  <svg {...baseProps(size, rest)}>
+    <path d="M11 20A7 7 0 0 1 4 13c0-5 4-9 9-10 1-.2 2 .2 2 1 0 8-4 16-4 16z" />
+    <path d="M4 20 14 10" />
+  </svg>
+)
+
+export const PineTree = ({ size, ...rest }) => (
+  <svg {...baseProps(size, rest)}>
+    <path d="M12 3 7 10h3l-4 6h4l-4 5h12l-4-5h4l-4-6h3z" />
+    <path d="M12 21v2" />
+  </svg>
+)
+
 export const Facebook = ({ size, ...rest }) => (
   <svg {...brandProps(size, rest)}>
     <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" />

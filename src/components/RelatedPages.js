@@ -11,7 +11,7 @@ const Wrapper = styled.section`
 `
 
 const Heading = styled.h2`
-  margin: 0 0 0.9em 0;
+  margin: 0 0 1.6em 0;
   font-size: 0.85em;
   font-weight: 800;
   text-transform: uppercase;

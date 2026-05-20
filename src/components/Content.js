@@ -5,7 +5,8 @@ import { colors } from '../tokens'
 
 const ContentBody = styled.div`
   line-height: 1.65;
-  text-align: left;
+  text-align: justify;
+  hyphens: auto;
 
   & > h2 {
     padding-top: 3rem;

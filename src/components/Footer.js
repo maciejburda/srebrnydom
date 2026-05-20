@@ -147,7 +147,7 @@ const Footer = () => {
   const iconFor = item => {
     if (item.url.startsWith('tel:')) return <Phone size={14} />
     if (item.url.startsWith('mailto:')) return <Mail size={14} />
-    if (item.url.includes('google.com/maps')) return <MapPin size={14} />
+    if (item.url.includes('google.com/maps') || item.url.includes('maps.app.goo.gl')) return <MapPin size={14} />
     if (item.label === 'Facebook') return <Facebook size={14} />
     if (item.label === 'LinkedIn') return <Linkedin size={14} />
     if (item.label === 'Twitter') return <Twitter size={14} />

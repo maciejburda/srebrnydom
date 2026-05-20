@@ -8,6 +8,7 @@ import Seo from '../components/SEO'
 import useSiteImages from '../hooks/use-site-images'
 import Hero from '../components/Hero'
 import useSiteMetadata from "../hooks/use-site-config"
+import { colors } from '../tokens'
 
 const Content = styled.span`
   display: block;
@@ -16,19 +17,39 @@ const Content = styled.span`
   margin-bottom: 16px;
 `
 
+const SectionHeading = styled.h2`
+  margin: 2.25em 0 0.6em;
+  font-size: 0.95em;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: ${colors.textLight};
+  text-align: center;
+`
+
 const CircleWrapper = styled.div`
   margin: 0 auto;
   max-width: 900px;
   margin-top: 16px;
-  padding-bottom: 60px;
+  padding: 0 16px 60px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  gap: 24px;
+
+  @media (max-width: 564px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
 `
 
 const Cell = styled.div`
-  display: table-cell;
   text-align: center;
+
+  @media (max-width: 564px) {
+    width: 100%;
+  }
 `
 
 const Circle = styled.div`
@@ -70,15 +91,11 @@ const NotFoundPage = props => {
         <Content>
           Zajmowanie się rodzicami, babciami oraz dziadkami (zwłaszcza tymi potrzebującymi wsparcia w wykonywaniu codziennych czynności) to dla wielu osób spore wyzwanie. Dzieci czy wnuki często mieszkają w sporej odległości od najbliższych, a dodatkowo są przytłoczone obowiązkami zawodowymi oraz zobowiązaniami rodzinnymi, przez co nie są w stanie sprawować całodobowej opieki. Rozwiązanie takiej trudnej sytuacji stanowi zdecydowanie się na profesjonalną luksusową placówkę opiekuńczą - taką, jak prowadzony przez nas dom seniora na Kaszubach. Posiadamy zezwolenie nr 114 w rejestrze placówek zapewniających całodobową opiekę osobom niepełnosprawnym, przewlekle chorym lub osobom w starszym wieku Wojewody Pomorskiego.
         </Content>
-        <Content>
-          Luksusowy dom opieki dla seniorów na Kaszubach.
-        </Content>
+        <SectionHeading>Luksusowy dom opieki dla seniorów na Kaszubach</SectionHeading>
         <Content>
           Prowadzony przez nas na terenie województwa pomorskiego dom seniora zapewni starszym i schorowanym osobom nie tylko komfortowe warunki pobytu ze stała opieką medyczno - rehabilitacyjną, ale również pomoc w wykonywaniu codziennych czynności. Kładziemy nacisk na tworzenie bezpiecznych oraz przyjaznych warunków życia, by żaden senior nie czuł się u nas nieswojo. Pomieszczenia dostosowaliśmy do potrzeb osób starszych oraz niepełnosprawnych, co zapewnia komfortowy wypoczynek. Oferowana przez naszą luksusową placówkę opieka obejmuje również troskę o zdrowie – dbamy o pielęgnację pensjonariuszy i dysponujemy kadrą świadczącą pomoc medyczną.
         </Content>
-        <Content>
-          Kaszuby - bliskość natury
-        </Content>
+        <SectionHeading>Kaszuby – bliskość natury</SectionHeading>
         <Content>
           Prowadzony przez nas luksusowy dom spokojnej starości znajduje się w środku lasu, nieopodal miejscowości Swornegacie w gminie Chojnice. Jest położony w centrum ogromnej działki leśnej, spokój i możliwość wypoczynku w komfortowych warunkach gwarantuje brak zabudowy mieszkaniowej oraz usługowej wokół. Bezpośrednie położenie w sąsiedztwie Parku Narodowego „Bory Tucholskie” w Zaborskim Parku Krajobrazowym powoduje, że prowadzony przez nas dom seniora cieszy się wyjątkowymi walorami przyrodniczymi i zdrowotnymi.
         </Content>

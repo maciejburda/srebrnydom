@@ -137,12 +137,8 @@ module.exports = {
       sectionName: 'KONTAKT',
       links: [
         {
-          label: 'ul. Jałowcowa 8',
-          url: "https://www.google.com/maps/place/53°52'08.8%22N+17°29'41.1%22E/@53.8691142,17.4925622,694m/data=!3m2!1e3!4b1!4m9!1m2!2m1!1sJałowcowa+8+Swornegacie!3m5!1s0x0:0x0!7e2!8m2!3d53.8691161!4d17.494753",
-        },
-        {
-          label: '89-608 Swornegacie',
-          url: "https://www.google.com/maps/place/53°52'08.8%22N+17°29'41.1%22E/@53.8691142,17.4925622,694m/data=!3m2!1e3!4b1!4m9!1m2!2m1!1sJałowcowa+8+Swornegacie!3m5!1s0x0:0x0!7e2!8m2!3d53.8691161!4d17.494753",
+          label: 'ul. Jałowcowa 8, 89-608 Swornegacie',
+          url: 'https://maps.app.goo.gl/92mjiE2YNLs842D87',
         },
         {
           label: 'kontakt@srebrnydom.pl',
