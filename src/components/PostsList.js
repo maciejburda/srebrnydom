@@ -16,6 +16,7 @@ const PostsList = ({ posts }) => {
           timeToRead: post.node.fields && post.node.fields.timeToRead,
           language: post.node.frontmatter.language || defaultLang,
           tags: post.node.frontmatter.tags || [],
+          cover: post.node.frontmatter.cover,
         }
         return <PostsListItem key={props.slug} {...props} />
       })}

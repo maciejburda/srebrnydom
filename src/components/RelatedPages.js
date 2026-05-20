@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import { colors } from '../tokens'
 import config from '../../data/siteConfig'
 
 const Wrapper = styled.section`
@@ -10,8 +11,12 @@ const Wrapper = styled.section`
 `
 
 const Heading = styled.h2`
-  margin-bottom: 0.5em;
-  font-size: 1.2em;
+  margin: 0 0 1.6em 0;
+  font-size: 0.85em;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: ${colors.textLight};
 `
 
 const List = styled.ul`
@@ -20,11 +25,24 @@ const List = styled.ul`
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 1em;
+  gap: 0.6em;
 `
 
-const Item = styled.li`
-  margin: 0;
+const Pill = styled(Link)`
+  background: ${colors.primaryLight};
+  color: ${colors.primary};
+  padding: 0.5em 1em;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.92em;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: background 0.15s, border-color 0.15s;
+
+  &:hover {
+    background: #fff;
+    border-color: ${colors.primary};
+  }
 `
 
 const RelatedPages = ({ slug }) => {
@@ -35,9 +53,9 @@ const RelatedPages = ({ slug }) => {
       <Heading>Sprawdź też</Heading>
       <List>
         {items.map(item => (
-          <Item key={item.url}>
-            <Link to={item.url}>{item.label}</Link>
-          </Item>
+          <li key={item.url}>
+            <Pill to={item.url}>{item.label}</Pill>
+          </li>
         ))}
       </List>
     </Wrapper>

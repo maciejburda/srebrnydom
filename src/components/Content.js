@@ -4,60 +4,42 @@ import ContentHeader from './ContentHeader'
 import { colors } from '../tokens'
 
 const ContentBody = styled.div`
-  line-height: 1.6;
+  line-height: 1.65;
   text-align: justify;
+  hyphens: auto;
 
   & > h2 {
     padding-top: 3rem;
     margin-top: 3rem;
     border-top: 1px solid #ececec;
+    font-weight: 800;
+    line-height: 1.2;
+    font-size: 1.7em;
   }
 
   & > h3 {
-    padding-top: 3rem;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    font-size: 0.85em;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: ${colors.textLight};
   }
 
   & > p {
     margin: 1em 0 0 0;
+    font-size: 1.02em;
   }
 
   & a {
-    box-shadow: 0 2px 0 0 ${colors.links};
-
     &:hover {
-      filter: brightness(150%);
-      box-shadow: none;
+      text-decoration: underline;
     }
 
-    &.anchor,
-    &.gatsby-resp-image-link {
-      box-shadow: none;
+    &.gatsby-resp-image-link:hover {
+      text-decoration: none;
     }
-  }
-
-  h1 .anchor svg,
-  h2 .anchor svg,
-  h3 .anchor svg,
-  h4 .anchor svg,
-  h5 .anchor svg,
-  h6 .anchor svg {
-    visibility: hidden;
-    margin-left: -16px;
-  }
-
-  h1:hover .anchor svg,
-  h2:hover .anchor svg,
-  h3:hover .anchor svg,
-  h4:hover .anchor svg,
-  h5:hover .anchor svg,
-  h6:hover .anchor svg,
-  h1 .anchor:focus svg,
-  h2 .anchor:focus svg,
-  h3 .anchor:focus svg,
-  h4 .anchor:focus svg,
-  h5 .anchor:focus svg,
-  h6 .anchor:focus svg {
-    visibility: visible;
   }
 
   & > blockquote {

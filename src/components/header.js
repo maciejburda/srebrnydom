@@ -9,7 +9,7 @@ import { colors, media, typography } from "../tokens"
 import useSiteImages from "../hooks/use-site-images"
 import { ms } from "../styles/helpers"
 
-import Text, { TextStyle, StyledText } from "./Text"
+import Text, { TextStyle } from "./Text"
 import MobileHeader from "./MobileHeader"
 
 const HeaderWrapper = styled.header`
@@ -64,10 +64,18 @@ const LinkItem = styled.li`
 `
 
 const HeaderLink = styled(Link)`
-  &.active {
-    ${StyledText} {
-      font-weight: ${typography.weights.bold};
-    }
+  position: relative;
+  padding-bottom: 4px;
+
+  &.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: ${colors.primary};
+    border-radius: 2px;
   }
 `
 

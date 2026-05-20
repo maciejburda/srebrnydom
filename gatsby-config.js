@@ -54,7 +54,6 @@ module.exports = {
           { resolve: 'gatsby-remark-responsive-iframe' },
           { resolve: 'gatsby-remark-copy-linked-files' },
           { resolve: 'gatsby-remark-smartypants' },
-          { resolve: 'gatsby-remark-autolink-headers' },
         ],
       },
     },

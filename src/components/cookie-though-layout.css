@@ -74,3 +74,19 @@
     /* The z-index you want the root container to have */
     --ct-z-index: 9999;
   }
+
+  /*
+   * Force the consent modal to stay scrollable when its expanded "Analityka i marketing"
+   * section is taller than the viewport on small phones.
+   */
+  .cookie-though {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+
+  @media only screen and (max-width: 480px) {
+    .cookie-though {
+      max-height: calc(100vh - 1rem) !important;
+    }
+  }

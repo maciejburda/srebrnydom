@@ -7,6 +7,7 @@ import useSiteImages from '../hooks/use-site-images'
 import TagList from './TagList'
 import Flag from './Flag/Flag'
 import { ReadingTime, Bull } from './Commons'
+import { ChevronLeft, ChevronRight } from './Icons'
 
 const PreviewContainer = styled.aside`
   display: flex;
@@ -69,6 +70,21 @@ const PreviewContent = styled.div`
   }
 `
 
+const Eyebrow = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: ${colors.textLight};
+  padding: 0 0 0.5em 0;
+
+  &.next {
+    justify-content: flex-end;
+  }
+`
+
 const PrevNextPost = props => {
   const { previous, next } = props
   const articles = [previous, next].filter(i => i).map(item => ({ node: item }))
@@ -89,14 +105,20 @@ const PrevNextPost = props => {
             language,
           } = article.node.frontmatter
           const heroImg = (cover && cover.publicURL) || fluid.src
+          const isNext = next && article.node === next
 
           return (
             <Preview key={`prev-next-${i}`}>
               <Link to={`/blog/${slug}/`} aria-label={`View ${title} article`}>
-                <PreviewCover
-                  style={{ backgroundImage: `url("${heroImg}")` }}
-                />
+                <PreviewCover style={{ backgroundImage: `url("${heroImg}")` }} />
                 <PreviewContent>
+                  <Eyebrow className={isNext ? 'next' : ''}>
+                    {isNext ? (
+                      <>Następny post <ChevronRight size={14} /></>
+                    ) : (
+                      <><ChevronLeft size={14} /> Poprzedni post</>
+                    )}
+                  </Eyebrow>
                   <header>
                     <h2>
                       {defaultLang !== language && <Flag language={language} />}

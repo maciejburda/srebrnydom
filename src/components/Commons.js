@@ -110,11 +110,8 @@ ol {
 }
 `
 export const StyledLink = styled(Link)`
-  box-shadow: 0 2px 0 0 ${colors.links};
-
   &:hover {
-    filter: brightness(150%);
-    box-shadow: none;
+    text-decoration: underline;
   }
 `
 
@@ -138,5 +135,5 @@ export const ReadingTime = props => {
     text-transform: uppercase;
     color: ${colors.postMetadata};
   `
-  return <ReadingTimeContainer>{props.min} min read</ReadingTimeContainer>
+  return <ReadingTimeContainer>{props.min} min czytania</ReadingTimeContainer>
 }
