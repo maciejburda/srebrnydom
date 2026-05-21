@@ -9,22 +9,53 @@ const ContentBody = styled.div`
   hyphens: auto;
 
   & > h2 {
-    padding-top: 3rem;
-    margin-top: 3rem;
-    border-top: 1px solid #ececec;
-    font-weight: 800;
-    line-height: 1.2;
-    font-size: 1.7em;
-  }
-
-  & > h3 {
-    margin-top: 2em;
-    margin-bottom: 0.5em;
-    font-size: 0.85em;
+    display: flex;
+    align-items: stretch;
+    gap: 12px;
+    margin: 3em 0 1.6em;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: ${colors.textLight};
+    text-align: left;
+    line-height: 1.4;
+  }
+
+  & > h2::before {
+    content: '';
+    flex-shrink: 0;
+    width: 3px;
+    background: ${colors.accent};
+    border-radius: 2px;
+    margin: 2px 0;
+  }
+
+  & > h3 {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    margin: 2.4em 0 1.2em;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9em;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: ${colors.textLight};
+    text-align: left;
+    line-height: 1.4;
+  }
+
+  & > h3::before {
+    content: '';
+    flex-shrink: 0;
+    width: 2px;
+    background: ${colors.accent};
+    border-radius: 2px;
+    margin: 2px 0;
   }
 
   & > p {
@@ -33,10 +64,20 @@ const ContentBody = styled.div`
   }
 
   & a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: ${colors.accent};
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    transition: text-decoration-color 200ms ease,
+      text-decoration-thickness 200ms ease;
+
     &:hover {
-      text-decoration: underline;
+      text-decoration-color: ${colors.primary};
+      text-decoration-thickness: 3px;
     }
 
+    &.gatsby-resp-image-link,
     &.gatsby-resp-image-link:hover {
       text-decoration: none;
     }

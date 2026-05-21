@@ -252,7 +252,7 @@ const PricingCards = () => (
       <Divider />
       <Highlights>
         <HighlightItem>
-          Komfortowy pokój 2- lub 3-osobowy z prywatną łazienką
+          Komfortowy pokój 2-, 3- lub 4-osobowy z prywatną łazienką
         </HighlightItem>
         <HighlightItem>
           Cztery posiłki dziennie z możliwością wyboru diety

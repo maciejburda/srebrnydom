@@ -6,18 +6,8 @@ import useSiteImages from '../hooks/use-site-images'
 
 const Section = styled.section`
   max-width: 960px;
-  margin: 10px auto 48px;
+  margin: 40px auto;
   padding: 0 16px;
-`
-
-const Eyebrow = styled.div`
-  text-align: center;
-  font-size: 0.78em;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  color: ${colors.textLight};
-  margin-bottom: 28px;
 `
 
 const Grid = styled.div`
@@ -133,7 +123,6 @@ const HomeFeatures = () => {
 
   return (
     <Section>
-      <Eyebrow>Co u nas znajdziesz</Eyebrow>
       <Grid>
         {features.map((f, i) => (
           <Item key={i}>

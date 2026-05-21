@@ -8,13 +8,29 @@ const Section = styled.section`
   hyphens: none;
 `
 
-const Eyebrow = styled.div`
-  font-size: 0.72em;
+const Eyebrow = styled.h3`
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  margin: 0 0 1.2em;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9em;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.08em;
   color: ${colors.textLight};
-  margin-bottom: 12px;
+  text-align: left;
+  line-height: 1.4;
+
+  &::before {
+    content: '';
+    flex-shrink: 0;
+    width: 2px;
+    background: ${colors.accent};
+    border-radius: 2px;
+    margin: 2px 0;
+  }
 `
 
 const List = styled.ul`

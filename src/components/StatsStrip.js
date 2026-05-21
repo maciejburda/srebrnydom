@@ -4,7 +4,7 @@ import { colors } from '../tokens'
 
 const Section = styled.section`
   max-width: 900px;
-  margin: 3rem auto 44px;
+  margin: 40px auto;
   padding: 0 16px;
   text-align: left;
   hyphens: none;

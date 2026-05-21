@@ -1,8 +1,7 @@
-import React from 'react'
 import styled from 'styled-components'
 import { colors } from '../tokens'
 
-const Heading = styled.h2`
+const SectionEyebrow = styled.h2`
   display: flex;
   align-items: stretch;
   gap: 12px;
@@ -27,6 +26,4 @@ const Heading = styled.h2`
   }
 `
 
-const IconHeading = ({ children }) => <Heading>{children}</Heading>
-
-export default IconHeading
+export default SectionEyebrow

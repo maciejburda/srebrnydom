@@ -110,7 +110,7 @@ const groups = [
     icon: Home,
     title: 'Komfort i wyżywienie',
     items: [
-      'Komfortowe zakwaterowanie w 2- lub 3-osobowych pokojach z prywatną łazienką',
+      'Komfortowe zakwaterowanie w 2-, 3- lub 4-osobowych pokojach z prywatną łazienką',
       'Pełne wyżywienie z 4 posiłkami dziennie i możliwością wyboru diety',
       'Nieograniczony dostęp do napojów zimnych i ciepłych',
       'Telewizja satelitarna w przestrzeniach wspólnych',

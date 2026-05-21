@@ -20,22 +20,29 @@ const YearSection = styled.section`
   }
 `
 
-const YearEyebrow = styled.div`
-  font-size: 0.78em;
+const YearHeading = styled.h3`
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  margin: 0 0 1.2em;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9em;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.08em;
   color: ${colors.textLight};
-  margin: 0 0 6px;
-`
+  text-align: left;
+  line-height: 1.4;
 
-const YearHeading = styled.h2`
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.5em;
-  font-weight: 700;
-  color: ${colors.primary};
-  margin: 0 0 0.75rem;
-  line-height: 1.15;
+  &::before {
+    content: '';
+    flex-shrink: 0;
+    width: 2px;
+    background: ${colors.accent};
+    border-radius: 2px;
+    margin: 2px 0;
+  }
 `
 
 const Tile = styled.button`
@@ -127,9 +134,16 @@ const imageAlt = name => {
     .replace(/^(.)/, c => c.toUpperCase())
 }
 
-// Boundary: names < 'image_w' → 2020; names >= 'image_w' → 2019.
+// Boundaries baked into filenames:
+//   names >= 'image_y' → 2025
+//   'image_w' <= names < 'image_y' → 2019
+//   names < 'image_w' → 2020
 // New batches require extending this helper with an additional boundary.
-const imageYear = name => (name >= 'image_w' ? 2019 : 2020)
+const imageYear = name => {
+  if (name >= 'image_y') return 2025
+  if (name >= 'image_w') return 2019
+  return 2020
+}
 
 const Gallery = () => {
   const data = useStaticQuery(graphql`
@@ -190,8 +204,7 @@ const Gallery = () => {
     <>
       {groups.map(group => (
         <YearSection key={group.year} aria-labelledby={`year-heading-${group.year}`}>
-          <YearEyebrow>Rok</YearEyebrow>
-          <YearHeading id={`year-heading-${group.year}`}>{group.year}</YearHeading>
+          <YearHeading id={`year-heading-${group.year}`}>Rok {group.year}</YearHeading>
           <Grid>
             {group.images.map(image => {
               const flatIndex = images.indexOf(image)

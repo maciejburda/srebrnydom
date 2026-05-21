@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Heading styles — site-wide directions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@400;700;800;900&family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-navy: #243e50;
+      --brand-pink: #f6b3cd;
+      --brand-pink-soft: #fbe1ec;
+      --brand-yellow: #ffdc4e;
+      --primary-light: #eff5fa;
+      --ink: #243e50;
+      --ink-muted: #57595d;
+      --paper: #f5f3ee;
+      --hairline: rgba(36, 62, 80, 0.14);
+      --hairline-soft: rgba(36, 62, 80, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Lato, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 56px 24px 96px;
+    }
+
+    .page-head {
+      margin-bottom: 56px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .page-head h1 {
+      font-family: Nunito, sans-serif;
+      font-weight: 900;
+      font-size: 28px;
+      letter-spacing: -0.01em;
+      color: var(--brand-navy);
+      margin: 0 0 6px;
+    }
+
+    .page-head p {
+      margin: 0;
+      color: var(--ink-muted);
+      font-size: 14px;
+    }
+
+    .variant {
+      margin: 0 0 80px;
+      padding: 36px;
+      background: #ffffff;
+      border: 1px solid var(--hairline-soft);
+      border-radius: 16px;
+    }
+
+    .variant > .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--brand-pink);
+      margin-bottom: 8px;
+    }
+
+    .variant > .tag::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: var(--brand-pink);
+    }
+
+    .variant > h2.title {
+      font-family: Nunito, sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      color: var(--brand-navy);
+      margin: 0 0 6px;
+      letter-spacing: -0.005em;
+    }
+
+    .variant > .desc {
+      color: var(--ink-muted);
+      font-size: 14px;
+      margin: 0 0 28px;
+    }
+
+    .context-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    @media (max-width: 760px) {
+      .context-row { grid-template-columns: 1fr; }
+    }
+
+    .ctx {
+      background: #ffffff;
+      border: 1px dashed var(--hairline-soft);
+      border-radius: 10px;
+      padding: 22px 22px 26px;
+    }
+
+    .ctx-label {
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      color: var(--ink-muted);
+      margin-bottom: 14px;
+    }
+
+    .body-text {
+      font-family: Lato, sans-serif;
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: var(--ink);
+      text-align: justify;
+      margin: 0;
+      max-width: 56ch;
+    }
+
+    .body-text + .body-text {
+      margin-top: 0.8em;
+    }
+
+    .fake-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .fake-grid div {
+      height: 56px;
+      background: linear-gradient(135deg, #f8fafc 0%, #fff5f8 100%);
+      border: 1px solid var(--hairline-soft);
+      border-radius: 10px;
+    }
+
+    .subsection-row {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px dashed var(--hairline-soft);
+    }
+
+    .subsection-row .ctx-label {
+      margin-bottom: 10px;
+    }
+
+    /* ================================================================
+       Shared icon glyph (a small heart-style svg-ish unicode for demos)
+       ================================================================ */
+    .glyph {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 14px;
+      height: 14px;
+      color: var(--brand-navy);
+      flex-shrink: 0;
+    }
+
+    /* ================================================================
+       OPTION A — Pink left bar + sentence case
+       ================================================================ */
+    .a-heading {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin: 0 0 14px;
+      padding: 0;
+      font-family: Nunito, sans-serif;
+      font-size: 1.1em;
+      font-weight: 800;
+      color: var(--brand-navy);
+      letter-spacing: -0.005em;
+      line-height: 1.3;
+    }
+
+    .a-heading::before {
+      content: '';
+      flex-shrink: 0;
+      width: 3px;
+      align-self: stretch;
+      background: var(--brand-pink);
+      border-radius: 2px;
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+
+    .a-heading .glyph {
+      margin-top: 4px;
+      color: var(--brand-navy);
+    }
+
+    .a-sub {
+      font-size: 0.98em;
+      font-weight: 800;
+      color: var(--ink-muted);
+    }
+
+    .a-sub::before { width: 2px; background: var(--brand-pink); }
+
+    /* ================================================================
+       OPTION B — Pink dot + thin rule
+       ================================================================ */
+    .b-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 14px;
+      padding: 0;
+      font-family: Nunito, sans-serif;
+      font-size: 1.05em;
+      font-weight: 800;
+      color: var(--brand-navy);
+      letter-spacing: -0.003em;
+      line-height: 1.35;
+    }
+
+    .b-heading .lead {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .b-heading .lead::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--brand-pink);
+    }
+
+    .b-heading .lead::after {
+      content: '';
+      width: 18px;
+      height: 1px;
+      background: var(--brand-navy);
+      opacity: 0.55;
+    }
+
+    .b-heading.with-icon .lead::before {
+      width: auto;
+      height: auto;
+      border-radius: 0;
+      background: transparent;
+    }
+
+    .b-sub {
+      font-size: 0.95em;
+    }
+
+    .b-sub .lead::after { width: 12px; }
+
+    /* ================================================================
+       OPTION C — Refined uppercase, LEFT-aligned
+       ================================================================ */
+    .c-heading {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 18px;
+      padding: 0;
+      font-family: Lato, sans-serif;
+      font-size: 0.82em;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--brand-navy);
+      line-height: 1.4;
+    }
+
+    .c-sub {
+      font-size: 0.74em;
+      color: var(--ink-muted);
+      letter-spacing: 0.18em;
+    }
+
+    /* ================================================================
+       OPTION D — Serif italic kicker
+       ================================================================ */
+    .d-kicker {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 0.78em;
+      color: var(--brand-pink);
+      margin: 0 0 2px;
+      letter-spacing: 0.02em;
+    }
+
+    .d-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: Nunito, sans-serif;
+      font-size: 1.1em;
+      font-weight: 800;
+      color: var(--brand-navy);
+      letter-spacing: -0.005em;
+      line-height: 1.3;
+      margin: 0 0 14px;
+    }
+
+    .d-title .ornament {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 500;
+      color: var(--brand-pink);
+      font-size: 1.05em;
+    }
+
+    .d-sub-title { font-size: 1em; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="page-head">
+      <h1>Heading styles — site-wide directions</h1>
+      <p>Each direction shown on a text page (left) and a card-grid page (right), with and without icon, plus a smaller subsection variant.</p>
+    </header>
+
+    <!-- =============================================================
+         A — Pink left bar
+         ============================================================= -->
+    <section class="variant">
+      <div class="tag">Direction A</div>
+      <h2 class="title">Pink left bar + sentence case</h2>
+      <p class="desc">3px soft-pink vertical bar to the left of a Nunito 700/800 navy heading at 1.1em, sentence case. Icons inline, no circle.</p>
+
+      <div class="context-row">
+        <div class="ctx">
+          <div class="ctx-label">Text page · Oferta / Montessori</div>
+          <h2 class="a-heading with-icon">
+            <span class="glyph">♥</span>
+            <span>Komfortowe pomieszczenia</span>
+          </h2>
+          <p class="body-text">Prowadzony przez nas dom spokojnej starości dysponuje dziesięcioma pokojami przeznaczonymi dla dwóch, trzech lub czterech osób. Świadomie nie oferujemy pokoi jednoosobowych – z naszego doświadczenia wynika, że pensjonariusze znacznie lepiej czują się w towarzystwie innych.</p>
+        </div>
+        <div class="ctx">
+          <div class="ctx-label">Visual page · Cennik / About</div>
+          <h2 class="a-heading">
+            <span>Ile kosztuje miesięczny pobyt w Srebrnym Domu?</span>
+          </h2>
+          <p class="body-text">Krótki opis (na żywej stronie pod spodem jest siatka kart cenowych).</p>
+          <div class="fake-grid"><div></div><div></div></div>
+        </div>
+      </div>
+
+      <div class="subsection-row">
+        <div class="ctx-label">Subsection variant (Montessori, Contact)</div>
+        <h3 class="a-heading a-sub">
+          <span>Indywidualny plan rozwoju osobistego</span>
+        </h3>
+        <p class="body-text">Nasza praca jest skoncentrowana na osobie. Opiera się na identyfikacji, ocenie i wykorzystaniu zachowanych umiejętności…</p>
+      </div>
+    </section>
+
+    <!-- =============================================================
+         B — Pink dot + thin rule
+         ============================================================= -->
+    <section class="variant">
+      <div class="tag">Direction B</div>
+      <h2 class="title">Pink dot + thin rule</h2>
+      <p class="desc">Tiny pink dot, short navy hairline, then heading. Sentence case Nunito 700/800 navy 1.05em. Icon swaps in for the dot.</p>
+
+      <div class="context-row">
+        <div class="ctx">
+          <div class="ctx-label">Text page · Oferta / Montessori</div>
+          <h2 class="b-heading with-icon">
+            <span class="lead"><span class="glyph">♥</span></span>
+            <span>Komfortowe pomieszczenia</span>
+          </h2>
+          <p class="body-text">Prowadzony przez nas dom spokojnej starości dysponuje dziesięcioma pokojami przeznaczonymi dla dwóch, trzech lub czterech osób. Świadomie nie oferujemy pokoi jednoosobowych – z naszego doświadczenia wynika, że pensjonariusze znacznie lepiej czują się w towarzystwie innych.</p>
+        </div>
+        <div class="ctx">
+          <div class="ctx-label">Visual page · Cennik / About</div>
+          <h2 class="b-heading">
+            <span class="lead"></span>
+            <span>Ile kosztuje miesięczny pobyt w Srebrnym Domu?</span>
+          </h2>
+          <p class="body-text">Krótki opis (na żywej stronie pod spodem jest siatka kart cenowych).</p>
+          <div class="fake-grid"><div></div><div></div></div>
+        </div>
+      </div>
+
+      <div class="subsection-row">
+        <div class="ctx-label">Subsection variant (Montessori, Contact)</div>
+        <h3 class="b-heading b-sub">
+          <span class="lead"></span>
+          <span>Indywidualny plan rozwoju osobistego</span>
+        </h3>
+        <p class="body-text">Nasza praca jest skoncentrowana na osobie. Opiera się na identyfikacji, ocenie i wykorzystaniu zachowanych umiejętności…</p>
+      </div>
+    </section>
+
+    <!-- =============================================================
+         C — Refined uppercase, LEFT-aligned
+         ============================================================= -->
+    <section class="variant">
+      <div class="tag">Direction C</div>
+      <h2 class="title">Refined uppercase, left-aligned</h2>
+      <p class="desc">The SectionEyebrow look you've already seen — but left-aligned, smaller, and without the icon circle on Oferta. Closest to current.</p>
+
+      <div class="context-row">
+        <div class="ctx">
+          <div class="ctx-label">Text page · Oferta / Montessori</div>
+          <h2 class="c-heading">
+            <span class="glyph">♥</span>
+            <span>Komfortowe pomieszczenia</span>
+          </h2>
+          <p class="body-text">Prowadzony przez nas dom spokojnej starości dysponuje dziesięcioma pokojami przeznaczonymi dla dwóch, trzech lub czterech osób. Świadomie nie oferujemy pokoi jednoosobowych – z naszego doświadczenia wynika, że pensjonariusze znacznie lepiej czują się w towarzystwie innych.</p>
+        </div>
+        <div class="ctx">
+          <div class="ctx-label">Visual page · Cennik / About</div>
+          <h2 class="c-heading">
+            <span>Ile kosztuje miesięczny pobyt w Srebrnym Domu?</span>
+          </h2>
+          <p class="body-text">Krótki opis (na żywej stronie pod spodem jest siatka kart cenowych).</p>
+          <div class="fake-grid"><div></div><div></div></div>
+        </div>
+      </div>
+
+      <div class="subsection-row">
+        <div class="ctx-label">Subsection variant (Montessori, Contact)</div>
+        <h3 class="c-heading c-sub">
+          <span>Indywidualny plan rozwoju osobistego</span>
+        </h3>
+        <p class="body-text">Nasza praca jest skoncentrowana na osobie. Opiera się na identyfikacji, ocenie i wykorzystaniu zachowanych umiejętności…</p>
+      </div>
+    </section>
+
+    <!-- =============================================================
+         D — Serif italic kicker
+         ============================================================= -->
+    <section class="variant">
+      <div class="tag">Direction D</div>
+      <h2 class="title">Serif italic kicker over title</h2>
+      <p class="desc">A small Cormorant Garamond italic word above the title (e.g. „sekcja"). Below: Nunito 800 navy 1.1em sentence case. Most editorial; ties into the Montessori quote.</p>
+
+      <div class="context-row">
+        <div class="ctx">
+          <div class="ctx-label">Text page · Oferta / Montessori</div>
+          <div class="d-kicker">sekcja</div>
+          <h2 class="d-title">
+            <span class="ornament">❦</span>
+            <span>Komfortowe pomieszczenia</span>
+          </h2>
+          <p class="body-text">Prowadzony przez nas dom spokojnej starości dysponuje dziesięcioma pokojami przeznaczonymi dla dwóch, trzech lub czterech osób. Świadomie nie oferujemy pokoi jednoosobowych – z naszego doświadczenia wynika, że pensjonariusze znacznie lepiej czują się w towarzystwie innych.</p>
+        </div>
+        <div class="ctx">
+          <div class="ctx-label">Visual page · Cennik / About</div>
+          <div class="d-kicker">sekcja</div>
+          <h2 class="d-title">
+            <span>Ile kosztuje miesięczny pobyt w Srebrnym Domu?</span>
+          </h2>
+          <p class="body-text">Krótki opis (na żywej stronie pod spodem jest siatka kart cenowych).</p>
+          <div class="fake-grid"><div></div><div></div></div>
+        </div>
+      </div>
+
+      <div class="subsection-row">
+        <div class="ctx-label">Subsection variant (Montessori, Contact)</div>
+        <div class="d-kicker">krok</div>
+        <h3 class="d-title d-sub-title">
+          <span>Indywidualny plan rozwoju osobistego</span>
+        </h3>
+        <p class="body-text">Nasza praca jest skoncentrowana na osobie. Opiera się na identyfikacji, ocenie i wykorzystaniu zachowanych umiejętności…</p>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

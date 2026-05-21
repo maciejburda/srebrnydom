@@ -4,6 +4,8 @@ import styled from 'styled-components'
 
 import Layout from '../components/layout'
 import Wrapper from '../components/Wrapper'
+import TextColumn from '../components/TextColumn'
+import SectionEyebrow from '../components/SectionEyebrow'
 import Seo from '../components/SEO'
 import useSiteImages from '../hooks/use-site-images'
 import Hero from '../components/Hero'
@@ -11,30 +13,28 @@ import useSiteMetadata from '../hooks/use-site-config'
 import HomeFeatures from '../components/HomeFeatures'
 import StatsStrip from '../components/StatsStrip'
 import CtaCard from '../components/CtaCard'
-import { colors } from '../tokens'
 
-const Content = styled.span`
-  display: block;
+const Content = styled.p`
   line-height: 1.5;
   text-align: justify;
-  margin-bottom: 16px;
+  margin: 0 0 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 `
 
-const SectionHeading = styled.h2`
-  margin: 2.25em 0 0.6em;
-  font-size: 0.95em;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: ${colors.textLight};
-  text-align: center;
+const IntroWrapper = styled(Wrapper)`
+  padding-bottom: 24px;
 `
+
+const yearsOfExperience = new Date().getFullYear() - 2019
 
 const homeStats = [
   { value: '114', label: 'Zezwolenie Wojewody Pomorskiego' },
-  { value: '10', label: 'Komfortowych pokoi' },
-  { value: '24/7', label: 'Opieka i wsparcie' },
-  { value: '27', label: 'Miejsc' },
+  { value: '1,2 ha', label: 'Ogrodzonej leśnej działki' },
+  { value: '600 m²', label: 'Powierzchni domu' },
+  { value: yearsOfExperience, label: 'Lat doświadczenia' },
 ]
 
 const NotFoundPage = props => {
@@ -49,7 +49,7 @@ const NotFoundPage = props => {
         treesImg={treesImage}
         title="Dom Opieki nad seniorami - Srebrny Dom"
       />
-      <Wrapper>
+      <IntroWrapper>
         <Content>
           Zajmowanie się rodzicami, babciami oraz dziadkami (zwłaszcza tymi
           potrzebującymi wsparcia w wykonywaniu codziennych czynności) to dla
@@ -63,14 +63,17 @@ const NotFoundPage = props => {
           całodobową opiekę osobom niepełnosprawnym, przewlekle chorym lub
           osobom w starszym wieku Wojewody Pomorskiego.
         </Content>
-        <SectionHeading>
+      </IntroWrapper>
+      <HomeFeatures />
+      <TextColumn>
+        <SectionEyebrow>
           Luksusowy dom opieki dla seniorów na Kaszubach
-        </SectionHeading>
+        </SectionEyebrow>
         <Content>
           Prowadzony przez nas na terenie województwa pomorskiego dom seniora
           zapewni starszym i schorowanym osobom nie tylko komfortowe warunki
-          pobytu ze stała opieką medyczno - rehabilitacyjną, ale również pomoc w
-          wykonywaniu codziennych czynności. Kładziemy nacisk na tworzenie
+          pobytu ze stała opieką medyczno - rehabilitacyjną, ale również pomoc
+          w wykonywaniu codziennych czynności. Kładziemy nacisk na tworzenie
           bezpiecznych oraz przyjaznych warunków życia, by żaden senior nie
           czuł się u nas nieswojo. Pomieszczenia dostosowaliśmy do potrzeb osób
           starszych oraz niepełnosprawnych, co zapewnia komfortowy wypoczynek.
@@ -78,7 +81,10 @@ const NotFoundPage = props => {
           troskę o zdrowie – dbamy o pielęgnację pensjonariuszy i dysponujemy
           kadrą świadczącą pomoc medyczną.
         </Content>
-        <SectionHeading>Kaszuby – bliskość natury</SectionHeading>
+      </TextColumn>
+      <StatsStrip items={homeStats} />
+      <TextColumn>
+        <SectionEyebrow>Kaszuby – bliskość natury</SectionEyebrow>
         <Content>
           Prowadzony przez nas luksusowy dom spokojnej starości znajduje się w
           środku lasu, nieopodal miejscowości Swornegacie w gminie Chojnice.
@@ -94,9 +100,7 @@ const NotFoundPage = props => {
           starsza, schorowana czy niepełnosprawna wymagające opieki poczują się
           jak we własnym domu.
         </Content>
-      </Wrapper>
-      <HomeFeatures />
-      <StatsStrip items={homeStats} />
+      </TextColumn>
       <CtaCard
         eyebrow="Porozmawiajmy"
         title="Sprawdź, jak możemy zadbać o Twojego bliskiego"

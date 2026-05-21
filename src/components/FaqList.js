@@ -2,13 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import { colors } from '../tokens'
 import { ChevronDown } from './Icons'
+import SectionEyebrow from './SectionEyebrow'
 
 const Wrapper = styled.section`
   margin: 3em 0 1em;
 `
 
-const Heading = styled.h2`
-  margin-bottom: 1em;
+const Heading = styled(SectionEyebrow)`
+  margin-top: 0;
 `
 
 const Item = styled.div`
@@ -23,16 +24,15 @@ const Question = styled.h3`
   gap: 0.6em;
 `
 
-const QuestionBadge = styled.span`
+const QuestionChevron = styled.span`
   display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-  background: ${colors.accent};
-  border-radius: 50%;
-  color: ${colors.primary};
+  width: 14px;
+  height: 14px;
+  color: ${colors.accent};
+  transform: translateY(1px);
 `
 
 const Answer = styled.p`
@@ -48,9 +48,9 @@ const FaqList = ({ items, heading = 'Najczęściej zadawane pytania' }) => {
       {items.map((item, i) => (
         <Item key={i}>
           <Question>
-            <QuestionBadge>
+            <QuestionChevron aria-hidden="true">
               <ChevronDown size={14} />
-            </QuestionBadge>
+            </QuestionChevron>
             {item.q}
           </Question>
           <Answer>{item.a}</Answer>
