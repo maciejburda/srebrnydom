@@ -156,6 +156,15 @@ const Gallery = () => {
   `)
 
   const images = data.allFile.nodes.filter(n => n.childImageSharp)
+  const groups = images
+    .reduce((acc, image) => {
+      const year = imageYear(image.name)
+      const bucket = acc.find(g => g.year === year)
+      if (bucket) bucket.images.push(image)
+      else acc.push({ year, images: [image] })
+      return acc
+    }, [])
+    .sort((a, b) => b.year - a.year)
   const [openIndex, setOpenIndex] = useState(null)
 
   const goPrev = useCallback(
@@ -180,18 +189,27 @@ const Gallery = () => {
 
   return (
     <>
-      <Grid>
-        {images.map((image, index) => (
-          <Tile
-            key={image.id}
-            type="button"
-            onClick={() => setOpenIndex(index)}
-            aria-label={`Pokaż zdjęcie: ${imageAlt(image.name)}`}
-          >
-            <GatsbyImage image={getImage(image)} alt={imageAlt(image.name)} />
-          </Tile>
-        ))}
-      </Grid>
+      {groups.map(group => (
+        <YearSection key={group.year}>
+          <YearEyebrow>Rok</YearEyebrow>
+          <YearHeading>{group.year}</YearHeading>
+          <Grid>
+            {group.images.map(image => {
+              const flatIndex = images.indexOf(image)
+              return (
+                <Tile
+                  key={image.id}
+                  type="button"
+                  onClick={() => setOpenIndex(flatIndex)}
+                  aria-label={`Pokaż zdjęcie: ${imageAlt(image.name)}`}
+                >
+                  <GatsbyImage image={getImage(image)} alt={imageAlt(image.name)} />
+                </Tile>
+              )
+            })}
+          </Grid>
+        </YearSection>
+      ))}
       {openIndex !== null && (
         <Overlay onClick={() => setOpenIndex(null)}>
           <ModalImg src={images[openIndex].publicURL} alt={imageAlt(images[openIndex].name)} loading="lazy" />
