@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
+import { colors } from '../tokens'
 
 const Grid = styled.div`
   display: grid;
@@ -9,6 +10,32 @@ const Grid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   grid-auto-rows: 10rem;
   grid-gap: 0.5rem;
+`
+
+const YearSection = styled.section`
+  margin-bottom: 2.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+`
+
+const YearEyebrow = styled.div`
+  font-size: 0.78em;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: ${colors.textLight};
+  margin: 0 0 6px;
+`
+
+const YearHeading = styled.h2`
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: ${colors.primary};
+  margin: 0 0 0.75rem;
+  line-height: 1.15;
 `
 
 const Tile = styled.button`
