@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ question marker — lighter options</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;800&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-navy: #243e50;
+      --brand-pink: #f6b3cd;
+      --brand-pink-soft: #fbe1ec;
+      --primary-light: #eff5fa;
+      --ink: #243e50;
+      --ink-muted: #57595d;
+      --paper: #f5f3ee;
+      --hairline: rgba(36, 62, 80, 0.14);
+      --hairline-soft: rgba(36, 62, 80, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Lato, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .page {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 56px 24px 96px;
+    }
+
+    .page-head {
+      margin-bottom: 48px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .page-head h1 {
+      font-family: Nunito, sans-serif;
+      font-weight: 900;
+      font-size: 28px;
+      letter-spacing: -0.01em;
+      color: var(--brand-navy);
+      margin: 0 0 6px;
+    }
+
+    .page-head p {
+      margin: 0;
+      color: var(--ink-muted);
+      font-size: 14px;
+      max-width: 60ch;
+    }
+
+    /* SectionEyebrow — the section heading style used site-wide */
+    .section-eyebrow {
+      display: flex;
+      align-items: stretch;
+      gap: 12px;
+      margin: 0 0 1.6em;
+      padding: 0;
+      font-family: Lato, sans-serif;
+      font-size: 1em;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+      text-align: left;
+      line-height: 1.4;
+    }
+
+    .section-eyebrow::before {
+      content: '';
+      flex-shrink: 0;
+      width: 3px;
+      background: var(--brand-pink);
+      border-radius: 2px;
+      margin: 2px 0;
+    }
+
+    .variant {
+      margin: 0 0 56px;
+      padding: 36px 36px 32px;
+      background: #ffffff;
+      border: 1px solid var(--hairline-soft);
+      border-radius: 16px;
+    }
+
+    .variant.current {
+      border-color: rgba(36, 62, 80, 0.2);
+      background: #fbfaf6;
+    }
+
+    .variant .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--brand-pink);
+      margin-bottom: 8px;
+    }
+
+    .variant.current .tag {
+      color: var(--ink-muted);
+    }
+
+    .variant .tag::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .variant h2.title {
+      font-family: Nunito, sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      color: var(--brand-navy);
+      margin: 0 0 6px;
+      letter-spacing: -0.005em;
+    }
+
+    .variant .desc {
+      color: var(--ink-muted);
+      font-size: 14px;
+      margin: 0 0 24px;
+      max-width: 60ch;
+    }
+
+    /* Shared FAQ section layout */
+    .faq {
+      margin-top: 8px;
+    }
+
+    .faq .item + .faq .item {
+      margin-top: 1.5em;
+    }
+
+    .faq .item {
+      margin-bottom: 1.5em;
+    }
+
+    .faq .item:last-child {
+      margin-bottom: 0;
+    }
+
+    .question {
+      font-family: Nunito, sans-serif;
+      font-size: 1.1em;
+      font-weight: 700;
+      color: var(--brand-navy);
+      margin: 0 0 0.5em;
+      display: flex;
+      align-items: center;
+      gap: 0.6em;
+      line-height: 1.35;
+    }
+
+    .answer {
+      margin: 0;
+      line-height: 1.6;
+      color: var(--ink);
+      font-size: 0.98em;
+      max-width: 64ch;
+    }
+
+    /* ============================================================
+       CURRENT — solid accent circle + chevron
+       ============================================================ */
+    .cur-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      background: var(--brand-pink);
+      border-radius: 50%;
+      color: var(--brand-navy);
+    }
+
+    /* ============================================================
+       OPTION A — Accent bar
+       ============================================================ */
+    .a-question {
+      padding-left: 14px;
+      position: relative;
+    }
+
+    .a-question::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.2em;
+      bottom: 0.2em;
+      width: 3px;
+      background: var(--brand-pink);
+      border-radius: 2px;
+    }
+
+    /* ============================================================
+       OPTION B — Outlined circle + chevron
+       ============================================================ */
+    .b-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      background: transparent;
+      border: 1.5px solid var(--brand-pink);
+      border-radius: 50%;
+      color: var(--brand-pink);
+    }
+
+    /* ============================================================
+       OPTION C — Just a chevron (no badge)
+       ============================================================ */
+    .c-chev {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 14px;
+      height: 14px;
+      color: var(--brand-pink);
+      transform: translateY(1px);
+    }
+
+    /* ============================================================
+       OPTION D — No icon, typographic only
+       ============================================================ */
+    .d-question {
+      /* nothing — just typography */
+    }
+
+    /* ============================================================
+       OPTION E — "Q." typographic prefix (bonus)
+       ============================================================ */
+    .e-question::before {
+      content: 'Q.';
+      font-family: Nunito, sans-serif;
+      font-weight: 800;
+      font-size: 0.85em;
+      letter-spacing: 0.04em;
+      color: var(--brand-pink);
+      margin-right: 0.55em;
+      transform: translateY(-1px);
+    }
+
+    .e-answer::before {
+      content: 'A.';
+      font-family: Nunito, sans-serif;
+      font-weight: 800;
+      font-size: 0.85em;
+      letter-spacing: 0.04em;
+      color: var(--ink-muted);
+      margin-right: 0.55em;
+    }
+
+    .footer-note {
+      margin-top: 64px;
+      padding-top: 18px;
+      border-top: 1px dashed var(--hairline-soft);
+      color: var(--ink-muted);
+      font-size: 13px;
+      max-width: 60ch;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header class="page-head">
+      <h1>FAQ — question marker</h1>
+      <p>Comparing the current accent-circle badge with lighter alternatives. Same content in every block so the difference is purely the marker treatment.</p>
+    </header>
+
+    <!-- ================= CURRENT ================= -->
+    <section class="variant current">
+      <div class="tag">Current</div>
+      <h2 class="title">Solid accent circle + chevron</h2>
+      <p class="desc">A 24×24 pink-filled circle with a navy chevron-down sits before each question. The strongest contrast — and the heaviest visually.</p>
+
+      <h3 class="section-eyebrow">Najczęściej zadawane pytania</h3>
+
+      <div class="faq">
+        <div class="item">
+          <p class="question">
+            <span class="cur-badge" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+            Czy zapewniacie opiekę medyczną?
+          </p>
+          <p class="answer">Tak — nasi opiekunowie mają wykształcenie medyczne, a w razie potrzeby współpracujemy z lokalnymi placówkami zdrowia.</p>
+        </div>
+        <div class="item">
+          <p class="question">
+            <span class="cur-badge" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+            Czy mogę odwiedzić bliskich w dowolnym terminie?
+          </p>
+          <p class="answer">Tak, odwiedziny są możliwe codziennie, w godzinach uzgodnionych z koordynatorem.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OPTION A ================= -->
+    <section class="variant">
+      <div class="tag">Option A</div>
+      <h2 class="title">Accent bar</h2>
+      <p class="desc">Drops the badge. A thin pink bar runs alongside the question text — visually consistent with the section eyebrow above and the rest of the site.</p>
+
+      <h3 class="section-eyebrow">Najczęściej zadawane pytania</h3>
+
+      <div class="faq">
+        <div class="item">
+          <p class="question a-question">Czy zapewniacie opiekę medyczną?</p>
+          <p class="answer">Tak — nasi opiekunowie mają wykształcenie medyczne, a w razie potrzeby współpracujemy z lokalnymi placówkami zdrowia.</p>
+        </div>
+        <div class="item">
+          <p class="question a-question">Czy mogę odwiedzić bliskich w dowolnym terminie?</p>
+          <p class="answer">Tak, odwiedziny są możliwe codziennie, w godzinach uzgodnionych z koordynatorem.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OPTION B ================= -->
+    <section class="variant">
+      <div class="tag">Option B</div>
+      <h2 class="title">Outlined circle + chevron</h2>
+      <p class="desc">Keeps the badge shape but removes the fill. Thin pink outline with a pink chevron — same affordance, much lighter weight.</p>
+
+      <h3 class="section-eyebrow">Najczęściej zadawane pytania</h3>
+
+      <div class="faq">
+        <div class="item">
+          <p class="question">
+            <span class="b-badge" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+            Czy zapewniacie opiekę medyczną?
+          </p>
+          <p class="answer">Tak — nasi opiekunowie mają wykształcenie medyczne, a w razie potrzeby współpracujemy z lokalnymi placówkami zdrowia.</p>
+        </div>
+        <div class="item">
+          <p class="question">
+            <span class="b-badge" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+            Czy mogę odwiedzić bliskich w dowolnym terminie?
+          </p>
+          <p class="answer">Tak, odwiedziny są możliwe codziennie, w godzinach uzgodnionych z koordynatorem.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OPTION C ================= -->
+    <section class="variant">
+      <div class="tag">Option C</div>
+      <h2 class="title">Just a chevron</h2>
+      <p class="desc">No badge at all — a small pink chevron sits next to the question text. Hints at expandability without adding a shape.</p>
+
+      <h3 class="section-eyebrow">Najczęściej zadawane pytania</h3>
+
+      <div class="faq">
+        <div class="item">
+          <p class="question">
+            <span class="c-chev" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+            Czy zapewniacie opiekę medyczną?
+          </p>
+          <p class="answer">Tak — nasi opiekunowie mają wykształcenie medyczne, a w razie potrzeby współpracujemy z lokalnymi placówkami zdrowia.</p>
+        </div>
+        <div class="item">
+          <p class="question">
+            <span class="c-chev" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+            Czy mogę odwiedzić bliskich w dowolnym terminie?
+          </p>
+          <p class="answer">Tak, odwiedziny są możliwe codziennie, w godzinach uzgodnionych z koordynatorem.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OPTION D ================= -->
+    <section class="variant">
+      <div class="tag">Option D</div>
+      <h2 class="title">Pure typography</h2>
+      <p class="desc">No icon, no marker. Pure type hierarchy — bold navy question, regular body answer. The lightest option; relies entirely on weight and spacing.</p>
+
+      <h3 class="section-eyebrow">Najczęściej zadawane pytania</h3>
+
+      <div class="faq">
+        <div class="item">
+          <p class="question d-question">Czy zapewniacie opiekę medyczną?</p>
+          <p class="answer">Tak — nasi opiekunowie mają wykształcenie medyczne, a w razie potrzeby współpracujemy z lokalnymi placówkami zdrowia.</p>
+        </div>
+        <div class="item">
+          <p class="question d-question">Czy mogę odwiedzić bliskich w dowolnym terminie?</p>
+          <p class="answer">Tak, odwiedziny są możliwe codziennie, w godzinach uzgodnionych z koordynatorem.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OPTION E ================= -->
+    <section class="variant">
+      <div class="tag">Option E</div>
+      <h2 class="title">Q / A typographic prefix</h2>
+      <p class="desc">A small pink "Q." in front of every question, muted "A." in front of every answer. Editorial feel — no shapes, just a typographic tell.</p>
+
+      <h3 class="section-eyebrow">Najczęściej zadawane pytania</h3>
+
+      <div class="faq">
+        <div class="item">
+          <p class="question e-question">Czy zapewniacie opiekę medyczną?</p>
+          <p class="answer e-answer">Tak — nasi opiekunowie mają wykształcenie medyczne, a w razie potrzeby współpracujemy z lokalnymi placówkami zdrowia.</p>
+        </div>
+        <div class="item">
+          <p class="question e-question">Czy mogę odwiedzić bliskich w dowolnym terminie?</p>
+          <p class="answer e-answer">Tak, odwiedziny są możliwe codziennie, w godzinach uzgodnionych z koordynatorem.</p>
+        </div>
+      </div>
+    </section>
+
+    <p class="footer-note">Each block above re-uses the section-eyebrow above the FAQ list (same as the rest of the site), then differs only in how individual questions are marked.</p>
+
+  </div>
+</body>
+</html>

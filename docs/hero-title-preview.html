@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hero title — visibility preview (A vs B)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-navy: #243e50;
+      --brand-pink: #f6b3cd;
+      --brand-yellow: #ffdc4e;
+      --ink: #25262b;
+      --paper: #f5f3ee;
+      --muted: #78797e;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Lato, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    header.page-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+      border-bottom: 1px solid rgba(36, 62, 80, 0.18);
+      padding-bottom: 20px;
+      margin-bottom: 32px;
+    }
+
+    h1.page-title {
+      font-family: Nunito, sans-serif;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      margin: 0;
+      color: var(--brand-navy);
+    }
+
+    .page-sub {
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 36ch;
+      line-height: 1.5;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+      align-items: center;
+    }
+
+    .controls .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-right: 4px;
+    }
+
+    .controls button {
+      appearance: none;
+      border: 1px solid rgba(36, 62, 80, 0.25);
+      background: transparent;
+      color: var(--brand-navy);
+      font-family: Lato, sans-serif;
+      font-size: 0.85rem;
+      padding: 8px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 120ms ease, color 120ms ease, border-color 120ms ease;
+    }
+    .controls button:hover { border-color: var(--brand-navy); }
+    .controls button[aria-pressed="true"] {
+      background: var(--brand-navy);
+      color: #fff;
+      border-color: var(--brand-navy);
+    }
+
+    section.variant {
+      margin-bottom: 56px;
+    }
+
+    .variant-head {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .variant-tag {
+      font-family: Nunito, sans-serif;
+      font-weight: 900;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brand-navy);
+      background: var(--brand-yellow);
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+    .variant-name {
+      font-family: Nunito, sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--ink);
+      margin: 0;
+    }
+    .variant-note {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin: 6px 0 0;
+      line-height: 1.55;
+    }
+
+    /* ---------- Hero shell ---------- */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      background-color: var(--brand-navy);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius: 6px;
+    }
+
+    .trees {
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 500px;
+      background-image: url("../content/images/trees.png");
+      background-repeat: repeat-x;
+      background-position: center bottom;
+      background-size: cover;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .title-wrap {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      text-align: center;
+      padding-bottom: 32px;
+      z-index: 2;
+    }
+
+    /* ---------- CURRENT (baseline) ---------- */
+    .hero--current .title {
+      font-family: Lato, sans-serif;
+      font-weight: 700;
+      color: #fff;
+      margin: 10px 50px;
+      /* note: production has the `32sp` bug; this preview replicates the
+         fallback (no font-size rule applied), so we use the browser default h1 sizing */
+      text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.85);
+    }
+    .hero--current .title h1 {
+      margin: 0;
+      font-weight: 700;
+    }
+
+    /* ---------- VARIANT A — scrim + typography ---------- */
+    .hero--a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 60%;
+      background: linear-gradient(
+        to top,
+        rgba(36, 62, 80, 0.78) 0%,
+        rgba(36, 62, 80, 0.55) 28%,
+        rgba(36, 62, 80, 0.18) 65%,
+        rgba(36, 62, 80, 0) 100%
+      );
+      z-index: 1;
+      pointer-events: none;
+    }
+    .hero--a .title-wrap { padding-bottom: 40px; }
+    .hero--a .title {
+      font-family: Nunito, sans-serif;
+      font-weight: 800;
+      color: #fff;
+      margin: 0 24px;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      letter-spacing: 0.01em;
+      line-height: 1.15;
+      text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.45),
+        0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+    .hero--a .title-rule {
+      display: block;
+      width: 56px;
+      height: 3px;
+      background: var(--brand-pink);
+      border-radius: 2px;
+      margin: 14px auto 0;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    }
+
+    /* ---------- VARIANT B — frosted-glass plaque ---------- */
+    .hero--b .title-wrap { padding-bottom: 36px; }
+    .hero--b .plaque {
+      display: inline-block;
+      padding: 14px 28px 16px;
+      background: rgba(36, 62, 80, 0.28);
+      backdrop-filter: blur(14px) saturate(140%);
+      -webkit-backdrop-filter: blur(14px) saturate(140%);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 4px;
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.12) inset,
+        0 12px 32px rgba(0, 0, 0, 0.25);
+    }
+    .hero--b .title {
+      font-family: Nunito, sans-serif;
+      font-weight: 800;
+      color: #fff;
+      margin: 0;
+      font-size: clamp(1.6rem, 3.6vw, 2.25rem);
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+    }
+
+    /* ---------- shared title h1 reset ---------- */
+    .title h1 {
+      margin: 0;
+      font: inherit;
+      color: inherit;
+    }
+
+    /* ---------- footer notes ---------- */
+    footer.foot {
+      margin-top: 64px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.6;
+      border-top: 1px solid rgba(36, 62, 80, 0.18);
+      padding-top: 20px;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      background: rgba(36, 62, 80, 0.08);
+      padding: 1px 6px;
+      border-radius: 3px;
+      font-size: 0.8em;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="page-head">
+      <div>
+        <h1 class="page-title">Hero title — visibility preview</h1>
+        <p class="page-sub">Comparing the current treatment against variants A (scrim + typography) and B (frosted-glass plaque). Swap photos below to stress-test against bright/busy images.</p>
+      </div>
+    </header>
+
+    <div class="controls" role="group" aria-label="Background image">
+      <span class="label">Background</span>
+      <button type="button" data-img="../content/images/covers/index-cover.jpg" aria-pressed="true">Homepage cover</button>
+      <button type="button" data-img="../content/gallery/image_w46.JPG" aria-pressed="false">Winter — bright</button>
+      <button type="button" data-img="../content/gallery/image_f7.jpg" aria-pressed="false">Field</button>
+      <button type="button" data-img="../content/gallery/image_a1.jpg" aria-pressed="false">Indoor — warm</button>
+      <button type="button" data-img="../content/gallery/image_t20.jpg" aria-pressed="false">Tree</button>
+      <button type="button" data-img="../content/gallery/image_h9.jpg" aria-pressed="false">House</button>
+    </div>
+
+    <!-- CURRENT -->
+    <section class="variant">
+      <div class="variant-head">
+        <span class="variant-tag">Current</span>
+        <h2 class="variant-name">Plain shadow on white text</h2>
+      </div>
+      <p class="variant-note">Today's production state. White Lato 700 with a single soft text-shadow. Also note the <code>font-size: 32sp</code> bug — <code>sp</code> isn't a valid CSS unit, so the rule is invalid and the title falls back to the browser's default h1 size.</p>
+      <div class="hero hero--current js-hero">
+        <div class="trees" aria-hidden="true"></div>
+        <div class="title-wrap">
+          <div class="title"><h1>Dom Opieki nad seniorami — Srebrny Dom</h1></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VARIANT A -->
+    <section class="variant">
+      <div class="variant-head">
+        <span class="variant-tag">Variant A</span>
+        <h2 class="variant-name">Bottom scrim + tightened typography</h2>
+      </div>
+      <p class="variant-note">Soft navy-tinted gradient anchors the bottom 60% of the hero. Nunito 800 with fluid sizing, a layered shadow, and a small brand-pink rule under the title for editorial polish.</p>
+      <div class="hero hero--a js-hero">
+        <div class="trees" aria-hidden="true"></div>
+        <div class="title-wrap">
+          <div class="title">
+            <h1>Dom Opieki nad seniorami — Srebrny Dom</h1>
+            <span class="title-rule" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VARIANT B -->
+    <section class="variant">
+      <div class="variant-head">
+        <span class="variant-tag">Variant B</span>
+        <h2 class="variant-name">Frosted-glass plaque</h2>
+      </div>
+      <p class="variant-note">Title sits inside a translucent navy plaque with backdrop-blur and a hairline highlight. Always-legible against any background — feels a touch more product-like, less editorial.</p>
+      <div class="hero hero--b js-hero">
+        <div class="trees" aria-hidden="true"></div>
+        <div class="title-wrap">
+          <span class="plaque">
+            <div class="title"><h1>Dom Opieki nad seniorami — Srebrny Dom</h1></div>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      Open this file directly in a browser. Background swap is client-side only — no build needed.
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const buttons = document.querySelectorAll('.controls button');
+      const heroes = document.querySelectorAll('.js-hero');
+
+      function setBackground(src) {
+        heroes.forEach((el) => {
+          el.style.backgroundImage = `url("${src}")`;
+        });
+      }
+
+      // initial
+      const initial = document.querySelector('.controls button[aria-pressed="true"]');
+      if (initial) setBackground(initial.dataset.img);
+
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          buttons.forEach((b) => b.setAttribute('aria-pressed', 'false'));
+          btn.setAttribute('aria-pressed', 'true');
+          setBackground(btn.dataset.img);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

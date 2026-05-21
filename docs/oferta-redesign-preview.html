@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oferta — redesign directions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@400;700;800;900&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-navy: #243e50;
+      --brand-navy-soft: #3d5b71;
+      --brand-pink: #f6b3cd;
+      --brand-pink-soft: #fbe1ec;
+      --brand-pink-wash: #fff5f8;
+      --brand-yellow: #ffdc4e;
+      --primary-light: #eff5fa;
+      --ink: #243e50;
+      --ink-muted: #57595d;
+      --paper: #f5f3ee;
+      --paper-cream: #fbf7f2;
+      --hairline: rgba(36, 62, 80, 0.14);
+      --hairline-soft: rgba(36, 62, 80, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0; padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Lato, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 56px 24px 96px;
+    }
+
+    .page-head {
+      margin-bottom: 56px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .page-head h1 {
+      font-family: Nunito, sans-serif;
+      font-weight: 900;
+      font-size: 28px;
+      letter-spacing: -0.01em;
+      color: var(--brand-navy);
+      margin: 0 0 6px;
+    }
+
+    .page-head p {
+      margin: 0;
+      color: var(--ink-muted);
+      font-size: 14px;
+    }
+
+    .variant {
+      margin: 0 0 96px;
+    }
+
+    .variant > .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--brand-pink);
+      margin-bottom: 14px;
+    }
+
+    .variant > .tag::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: var(--brand-pink);
+    }
+
+    .variant > h2.vtitle {
+      font-family: Nunito, sans-serif;
+      font-weight: 800;
+      font-size: 26px;
+      color: var(--brand-navy);
+      margin: 0 0 6px;
+      letter-spacing: -0.005em;
+    }
+
+    .variant > .vdesc {
+      color: var(--ink-muted);
+      font-size: 14px;
+      margin: 0 0 36px;
+      max-width: 68ch;
+      line-height: 1.55;
+    }
+
+    /* Eyebrow consistent with the new site style */
+    .section-eyebrow {
+      display: flex;
+      align-items: stretch;
+      gap: 12px;
+      margin: 0 0 28px;
+      padding: 0;
+      font-family: Lato, sans-serif;
+      font-size: 1em;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+      line-height: 1.4;
+    }
+
+    .section-eyebrow::before {
+      content: '';
+      flex-shrink: 0;
+      width: 3px;
+      background: var(--brand-pink);
+      border-radius: 2px;
+      margin: 2px 0;
+    }
+
+    /* ===========================================
+       Shared icon glyph SVG styling
+       =========================================== */
+    .icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon svg {
+      width: 100%;
+      height: 100%;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ===========================================
+       DIRECTION A — Feature Cards Grid
+       =========================================== */
+    .a-stage {
+      background: #fff;
+      border: 1px solid var(--hairline-soft);
+      border-radius: 18px;
+      padding: 36px 28px 40px;
+    }
+
+    .a-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 920px) {
+      .a-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .a-grid { grid-template-columns: 1fr; }
+    }
+
+    .a-card {
+      position: relative;
+      background:
+        radial-gradient(circle at 100% 0%, rgba(246,179,205,0.18), transparent 55%),
+        #ffffff;
+      border: 1px solid rgba(36, 62, 80, 0.08);
+      border-radius: 16px;
+      padding: 26px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease;
+      overflow: hidden;
+    }
+
+    .a-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(246, 179, 205, 0.55);
+      box-shadow: 0 22px 40px -26px rgba(36, 62, 80, 0.22);
+    }
+
+    .a-card .icon-wrap {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--brand-pink-soft) 0%, var(--brand-pink-wash) 100%);
+      box-shadow: inset 0 0 0 1px rgba(246, 179, 205, 0.45);
+      color: var(--brand-navy);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .a-card .icon-wrap svg { width: 26px; height: 26px; }
+
+    .a-card h3 {
+      font-family: Nunito, sans-serif;
+      font-weight: 800;
+      font-size: 1.05em;
+      color: var(--brand-navy);
+      margin: 0 0 8px;
+      line-height: 1.3;
+      letter-spacing: -0.003em;
+    }
+
+    .a-card p {
+      font-size: 0.92em;
+      line-height: 1.55;
+      color: var(--ink);
+      margin: 0;
+    }
+
+    /* ===========================================
+       DIRECTION B — Editorial Numbered Strips
+       =========================================== */
+    .b-stage {
+      background: #fff;
+      border: 1px solid var(--hairline-soft);
+      border-radius: 18px;
+      padding: 36px 28px 16px;
+    }
+
+    .b-row {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 28px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--hairline-soft);
+      align-items: start;
+    }
+
+    .b-row:last-child { border-bottom: 0; }
+
+    @media (max-width: 560px) {
+      .b-row {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+    }
+
+    .b-lead {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .b-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 44px;
+      color: var(--brand-pink);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .b-icon {
+      width: 44px;
+      height: 44px;
+      color: var(--brand-navy);
+      opacity: 0.7;
+    }
+
+    .b-body h3 {
+      font-family: Nunito, sans-serif;
+      font-weight: 800;
+      font-size: 1.18em;
+      color: var(--brand-navy);
+      margin: 0 0 8px;
+      line-height: 1.3;
+      letter-spacing: -0.005em;
+    }
+
+    .b-body p {
+      font-size: 0.96em;
+      line-height: 1.6;
+      color: var(--ink);
+      margin: 0;
+      max-width: 62ch;
+    }
+
+    /* ===========================================
+       DIRECTION C — Top tiles + detail below
+       =========================================== */
+    .c-stage {
+      background: #fff;
+      border: 1px solid var(--hairline-soft);
+      border-radius: 18px;
+      padding: 36px 28px 40px;
+    }
+
+    .c-tiles {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 760px) {
+      .c-tiles { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .c-tiles { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .c-tile {
+      background: var(--paper-cream);
+      border: 1px solid var(--hairline-soft);
+      border-radius: 14px;
+      padding: 18px 14px 16px;
+      text-align: center;
+      transition: transform 240ms ease, border-color 240ms ease;
+      cursor: pointer;
+    }
+
+    .c-tile:hover {
+      transform: translateY(-2px);
+      border-color: rgba(246, 179, 205, 0.6);
+    }
+
+    .c-tile .icon-wrap {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--brand-pink-soft);
+      color: var(--brand-navy);
+      margin: 0 auto 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .c-tile .icon-wrap svg { width: 20px; height: 20px; }
+
+    .c-tile .label {
+      font-family: Nunito, sans-serif;
+      font-weight: 700;
+      font-size: 0.82em;
+      color: var(--brand-navy);
+      line-height: 1.3;
+    }
+
+    .c-detail {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px 36px;
+    }
+
+    @media (max-width: 720px) {
+      .c-detail { grid-template-columns: 1fr; }
+    }
+
+    .c-block {
+      padding: 0;
+    }
+
+    .c-block h3 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: Nunito, sans-serif;
+      font-weight: 800;
+      font-size: 1.05em;
+      color: var(--brand-navy);
+      margin: 0 0 10px;
+      letter-spacing: -0.003em;
+    }
+
+    .c-block h3 .num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.4em;
+      color: var(--brand-pink);
+      line-height: 1;
+    }
+
+    .c-block p {
+      font-size: 0.92em;
+      line-height: 1.6;
+      color: var(--ink);
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="page-head">
+      <h1>Oferta — redesign directions</h1>
+      <p>Same five offers, presented in three different layouts. Pick whichever feels right and we'll wire it into the live page.</p>
+    </header>
+
+    <!-- ============== DIRECTION A ============== -->
+    <section class="variant">
+      <div class="tag">Direction A</div>
+      <h2 class="vtitle">Feature cards — compact, scannable</h2>
+      <p class="vdesc">Five cards in a responsive grid. Each gets a soft-pink rounded icon tile, a tight title and 2-line body. Hover lifts the card. Best for fast scanning by busy adult children.</p>
+
+      <div class="a-stage">
+        <div class="section-eyebrow">Co obejmuje pobyt</div>
+        <div class="a-grid">
+          <article class="a-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+            <h3>Całodobowa opieka</h3>
+            <p>24/7 wsparcie w codziennych czynnościach – od porannej toalety po wieczorny odpoczynek.</p>
+          </article>
+
+          <article class="a-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M9 2v6a3 3 0 0 0 6 0V2"/><path d="M12 11v4"/><circle cx="12" cy="18" r="3"/></svg></div>
+            <h3>Regularne wizyty lekarskie</h3>
+            <p>Stała kontrola stanu zdrowia, dostosowana do indywidualnych potrzeb pensjonariusza.</p>
+          </article>
+
+          <article class="a-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+            <h3>Opieka fizjoterapeutyczna</h3>
+            <p>Grupowe i indywidualne zajęcia rehabilitacyjne wspierane metodą Montessori.</p>
+          </article>
+
+          <article class="a-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+            <h3>Komfortowe pokoje</h3>
+            <p>10 pokoi 2-, 3- i 4-osobowych z prywatną łazienką. Świadomie bez jedynek.</p>
+          </article>
+
+          <article class="a-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M12 2 4 22h16z"/><path d="M12 8v14"/></svg></div>
+            <h3>Bliskość natury Kaszub</h3>
+            <p>W środku lasu, w sąsiedztwie Parku Narodowego „Bory Tucholskie".</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== DIRECTION B ============== -->
+    <section class="variant">
+      <div class="tag">Direction B</div>
+      <h2 class="vtitle">Editorial numbered strips</h2>
+      <p class="vdesc">Each offer is a full-width row with a serif italic number + icon on the left and a longer paragraph on the right. Storytelling feel; respects the existing prose-heavy content. Closer in spirit to the Montessori page.</p>
+
+      <div class="b-stage">
+        <div class="section-eyebrow">Co obejmuje pobyt</div>
+
+        <article class="b-row">
+          <div class="b-lead">
+            <div class="b-num">01</div>
+            <div class="icon b-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+          </div>
+          <div class="b-body">
+            <h3>Całodobowa opieka i wsparcie w codziennym funkcjonowaniu</h3>
+            <p>Wiemy, jak ważne dla osób starszych jest poczucie bezpieczeństwa i obecność kogoś, kto pomoże o każdej porze. W naszej placówce obowiązuje całodobowa opieka opiekuńczo-pielęgnacyjna oraz wsparcie w codziennych czynnościach – od porannej toalety i posiłków, przez ubieranie się i przyjmowanie leków, po spacery i wieczorny odpoczynek.</p>
+          </div>
+        </article>
+
+        <article class="b-row">
+          <div class="b-lead">
+            <div class="b-num">02</div>
+            <div class="icon b-icon"><svg viewBox="0 0 24 24"><path d="M9 2v6a3 3 0 0 0 6 0V2"/><path d="M12 11v4"/><circle cx="12" cy="18" r="3"/></svg></div>
+          </div>
+          <div class="b-body">
+            <h3>Regularne wizyty lekarskie</h3>
+            <p>Osoby starsze muszą nieustannie pozostawać w kontakcie z medykiem, który będzie kontrolował ich stan zdrowia. W naszej placówce odbywają się regularne wizyty lekarskie, w trakcie których pensjonariusze są badani pod każdym względem.</p>
+          </div>
+        </article>
+
+        <article class="b-row">
+          <div class="b-lead">
+            <div class="b-num">03</div>
+            <div class="icon b-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          </div>
+          <div class="b-body">
+            <h3>Opieka fizjoterapeutyczna</h3>
+            <p>Seniorzy bardzo często zmagają się z różnymi chorobami układu ruchu. Gwarantowana przez naszą placówkę opieka fizjoterapeutyczna pomaga w tym, by jesień życia stała się przyjemniejsza. Program ćwiczeń jest dostosowany do stanu zdrowia i potrzeb seniora.</p>
+          </div>
+        </article>
+
+        <article class="b-row">
+          <div class="b-lead">
+            <div class="b-num">04</div>
+            <div class="icon b-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+          </div>
+          <div class="b-body">
+            <h3>Komfortowe pomieszczenia</h3>
+            <p>Dom dysponuje dziesięcioma pokojami przeznaczonymi dla dwóch, trzech lub czterech osób. Świadomie nie oferujemy pokoi jednoosobowych – z naszego doświadczenia wynika, że pensjonariusze znacznie lepiej czują się w towarzystwie innych mieszkańców.</p>
+          </div>
+        </article>
+
+        <article class="b-row">
+          <div class="b-lead">
+            <div class="b-num">05</div>
+            <div class="icon b-icon"><svg viewBox="0 0 24 24"><path d="M12 2 4 22h16z"/><path d="M12 8v14"/></svg></div>
+          </div>
+          <div class="b-body">
+            <h3>Kaszuby – bliskość natury</h3>
+            <p>Jesień życia najlepiej spędzić w cichej i spokojnej okolicy. Nasz ośrodek położony jest na Kaszubach – w sąsiedztwie Parku Narodowego „Bory Tucholskie" oraz Zaborskiego Parku Krajobrazowego.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============== DIRECTION C ============== -->
+    <section class="variant">
+      <div class="tag">Direction C</div>
+      <h2 class="vtitle">Tiles at a glance + numbered detail</h2>
+      <p class="vdesc">Best of both worlds. A row of 5 compact tiles communicates the offer in 3 seconds for skimmers. Below, two-column numbered sections give the depth for considered readers. Most "sales page" of the three.</p>
+
+      <div class="c-stage">
+        <div class="section-eyebrow">W pakiecie podstawowym</div>
+
+        <div class="c-tiles">
+          <div class="c-tile">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+            <div class="label">Opieka 24/7</div>
+          </div>
+          <div class="c-tile">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M9 2v6a3 3 0 0 0 6 0V2"/><path d="M12 11v4"/><circle cx="12" cy="18" r="3"/></svg></div>
+            <div class="label">Wizyty lekarskie</div>
+          </div>
+          <div class="c-tile">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+            <div class="label">Fizjoterapia</div>
+          </div>
+          <div class="c-tile">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+            <div class="label">Komfortowe pokoje</div>
+          </div>
+          <div class="c-tile">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24"><path d="M12 2 4 22h16z"/><path d="M12 8v14"/></svg></div>
+            <div class="label">Las Kaszubski</div>
+          </div>
+        </div>
+
+        <div class="c-detail">
+          <div class="c-block">
+            <h3><span class="num">01</span> Całodobowa opieka</h3>
+            <p>Personel jest dostępny 24/7. Wsparcie w codziennych czynnościach – od porannej toalety po wieczorny odpoczynek – w razie potrzeby o każdej porze dnia i nocy.</p>
+          </div>
+          <div class="c-block">
+            <h3><span class="num">02</span> Wizyty lekarskie</h3>
+            <p>Regularne kontrole stanu zdrowia. Pensjonariusze badani pod każdym względem przez lekarza odwiedzającego ośrodek.</p>
+          </div>
+          <div class="c-block">
+            <h3><span class="num">03</span> Fizjoterapia</h3>
+            <p>Grupowe i indywidualne zajęcia rehabilitacyjne. Program dostosowany do stanu zdrowia i potrzeb, uzupełniony elementami metody Montessori.</p>
+          </div>
+          <div class="c-block">
+            <h3><span class="num">04</span> Komfortowe pomieszczenia</h3>
+            <p>10 pokoi 2-, 3- i 4-osobowych z prywatną łazienką. Świadomie bez jedynek – seniorzy lepiej czują się w towarzystwie innych.</p>
+          </div>
+          <div class="c-block" style="grid-column: 1 / -1;">
+            <h3><span class="num">05</span> Bliskość natury Kaszub</h3>
+            <p>Nasz dom znajduje się w środku lasu, w sąsiedztwie Parku Narodowego „Bory Tucholskie" oraz Zaborskiego Parku Krajobrazowego – cisza i świeże powietrze sprzyjają codziennej regeneracji.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

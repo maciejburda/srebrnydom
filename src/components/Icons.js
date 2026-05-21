@@ -111,6 +111,31 @@ export const Leaf = ({ size, ...rest }) => (
   </svg>
 )
 
+export const User = ({ size, ...rest }) => (
+  <svg {...baseProps(size, rest)}>
+    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+    <circle cx="12" cy="7" r="4" />
+  </svg>
+)
+
+export const Calendar = ({ size, ...rest }) => (
+  <svg {...baseProps(size, rest)}>
+    <rect x="3" y="4" width="18" height="18" rx="2" />
+    <path d="M16 2v4" />
+    <path d="M8 2v4" />
+    <path d="M3 10h18" />
+  </svg>
+)
+
+export const Armchair = ({ size, ...rest }) => (
+  <svg {...baseProps(size, rest)}>
+    <path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3" />
+    <path d="M3 11v5a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H7v-2a2 2 0 0 0-4 0Z" />
+    <path d="M5 18v2" />
+    <path d="M19 18v2" />
+  </svg>
+)
+
 export const PineTree = ({ size, ...rest }) => (
   <svg {...baseProps(size, rest)}>
     <path d="M12 3 7 10h3l-4 6h4l-4 5h12l-4-5h4l-4-6h3z" />

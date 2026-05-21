@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
+import { colors } from '../tokens'
 
 const Grid = styled.div`
   display: grid;
@@ -9,6 +10,39 @@ const Grid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   grid-auto-rows: 10rem;
   grid-gap: 0.5rem;
+`
+
+const YearSection = styled.section`
+  margin-bottom: 2.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+`
+
+const YearHeading = styled.h3`
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  margin: 0 0 1.2em;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9em;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: ${colors.textLight};
+  text-align: left;
+  line-height: 1.4;
+
+  &::before {
+    content: '';
+    flex-shrink: 0;
+    width: 2px;
+    background: ${colors.accent};
+    border-radius: 2px;
+    margin: 2px 0;
+  }
 `
 
 const Tile = styled.button`
@@ -19,6 +53,9 @@ const Tile = styled.button`
   cursor: pointer;
   overflow: hidden;
   background: transparent;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px -8px rgba(36, 62, 80, 0.35);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
 
   & .gatsby-image-wrapper {
     position: absolute !important;
@@ -28,9 +65,14 @@ const Tile = styled.button`
     transition: transform 0.5s, filter 0.25s;
   }
 
+  &:hover {
+    box-shadow: 0 16px 30px -16px rgba(36, 62, 80, 0.4);
+    transform: translateY(-2px);
+  }
+
   &:hover .gatsby-image-wrapper {
-    transform: scale(1.1);
-    filter: saturate(1.3);
+    transform: scale(1.08);
+    filter: saturate(1.2);
   }
 `
 
@@ -92,6 +134,17 @@ const imageAlt = name => {
     .replace(/^(.)/, c => c.toUpperCase())
 }
 
+// Boundaries baked into filenames:
+//   names >= 'image_y' → 2025
+//   'image_w' <= names < 'image_y' → 2019
+//   names < 'image_w' → 2020
+// New batches require extending this helper with an additional boundary.
+const imageYear = name => {
+  if (name >= 'image_y') return 2025
+  if (name >= 'image_w') return 2019
+  return 2020
+}
+
 const Gallery = () => {
   const data = useStaticQuery(graphql`
     query GalleryImages {
@@ -116,6 +169,15 @@ const Gallery = () => {
   `)
 
   const images = data.allFile.nodes.filter(n => n.childImageSharp)
+  const groups = images
+    .reduce((acc, image) => {
+      const year = imageYear(image.name)
+      const bucket = acc.find(g => g.year === year)
+      if (bucket) bucket.images.push(image)
+      else acc.push({ year, images: [image] })
+      return acc
+    }, [])
+    .sort((a, b) => b.year - a.year)
   const [openIndex, setOpenIndex] = useState(null)
 
   const goPrev = useCallback(
@@ -140,18 +202,26 @@ const Gallery = () => {
 
   return (
     <>
-      <Grid>
-        {images.map((image, index) => (
-          <Tile
-            key={image.id}
-            type="button"
-            onClick={() => setOpenIndex(index)}
-            aria-label={`Pokaż zdjęcie: ${imageAlt(image.name)}`}
-          >
-            <GatsbyImage image={getImage(image)} alt={imageAlt(image.name)} />
-          </Tile>
-        ))}
-      </Grid>
+      {groups.map(group => (
+        <YearSection key={group.year} aria-labelledby={`year-heading-${group.year}`}>
+          <YearHeading id={`year-heading-${group.year}`}>Rok {group.year}</YearHeading>
+          <Grid>
+            {group.images.map(image => {
+              const flatIndex = images.indexOf(image)
+              return (
+                <Tile
+                  key={image.id}
+                  type="button"
+                  onClick={() => setOpenIndex(flatIndex)}
+                  aria-label={`Pokaż zdjęcie: ${imageAlt(image.name)}`}
+                >
+                  <GatsbyImage image={getImage(image)} alt={imageAlt(image.name)} />
+                </Tile>
+              )
+            })}
+          </Grid>
+        </YearSection>
+      ))}
       {openIndex !== null && (
         <Overlay onClick={() => setOpenIndex(null)}>
           <ModalImg src={images[openIndex].publicURL} alt={imageAlt(images[openIndex].name)} loading="lazy" />

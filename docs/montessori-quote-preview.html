@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Montessori quote — box variants</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-navy: #243e50;
+      --brand-navy-soft: #3d5b71;
+      --brand-pink: #f6b3cd;
+      --brand-pink-soft: #fbe1ec;
+      --brand-yellow: #ffdc4e;
+      --primary-light: #eff5fa;
+      --ink: #243e50;
+      --ink-muted: #57595d;
+      --paper: #f5f3ee;
+      --paper-cream: #fbf7f2;
+      --paper-warm: #fafbfc;
+      --hairline: rgba(36, 62, 80, 0.14);
+      --hairline-soft: rgba(36, 62, 80, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Lato, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 96px;
+    }
+
+    header.page-head {
+      margin-bottom: 56px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    header.page-head h1 {
+      font-family: Nunito, sans-serif;
+      font-weight: 900;
+      font-size: 28px;
+      letter-spacing: -0.01em;
+      color: var(--brand-navy);
+      margin: 0 0 6px;
+    }
+
+    header.page-head p {
+      margin: 0;
+      color: var(--ink-muted);
+      font-size: 14px;
+    }
+
+    .variant {
+      margin: 0 0 64px;
+    }
+
+    .variant > .label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--ink-muted);
+      margin-bottom: 18px;
+    }
+
+    .variant > .label::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: var(--ink-muted);
+    }
+
+    /* Fake article context so spacing reads like the real page */
+    .context {
+      font-family: Lato, sans-serif;
+      color: var(--ink);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    .context p {
+      margin: 0 0 1em;
+    }
+
+    .context h3 {
+      font-family: Nunito, sans-serif;
+      color: var(--brand-navy);
+      font-size: 19px;
+      margin: 1.6em 0 0.5em;
+    }
+
+    /* ============================================
+       Variant A — Editorial drop-quote
+       ============================================ */
+    .quote-a {
+      position: relative;
+      margin: 28px 0 12px;
+      padding: 44px 40px 32px;
+      background: var(--paper-cream);
+      border: 1px solid var(--hairline-soft);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .quote-a::before {
+      content: '\201C';
+      position: absolute;
+      top: -28px;
+      left: 14px;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 500;
+      font-size: 220px;
+      line-height: 1;
+      color: var(--brand-navy);
+      opacity: 0.10;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .quote-a blockquote {
+      margin: 0;
+      padding: 0;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 1.45;
+      color: var(--brand-navy);
+      letter-spacing: 0.005em;
+    }
+
+    .quote-a .attribution {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 28px;
+      font-family: Lato, sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      color: var(--brand-navy);
+    }
+
+    .quote-a .attribution::before {
+      content: '';
+      width: 32px;
+      height: 1px;
+      background: var(--brand-navy);
+    }
+
+    .quote-a .attribution span {
+      color: var(--ink-muted);
+      font-weight: 700;
+      letter-spacing: 0.18em;
+    }
+
+    /* ============================================
+       Variant B — Pink accent band
+       ============================================ */
+    .quote-b {
+      display: flex;
+      gap: 0;
+      margin: 28px 0 12px;
+      background: var(--paper-warm);
+      border: 1px solid var(--hairline-soft);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .quote-b .band {
+      flex-shrink: 0;
+      width: 64px;
+      background:
+        radial-gradient(circle at 50% 18%, rgba(255,255,255,0.65) 0 6px, transparent 7px),
+        linear-gradient(180deg, var(--brand-pink) 0%, #f4c8d9 100%);
+      position: relative;
+    }
+
+    .quote-b .band::after {
+      content: '\201D';
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      font-size: 46px;
+      line-height: 1;
+      color: var(--brand-navy);
+    }
+
+    .quote-b .body {
+      padding: 30px 32px 26px;
+    }
+
+    .quote-b blockquote {
+      margin: 0;
+      padding: 0;
+      font-family: Nunito, sans-serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--brand-navy);
+    }
+
+    .quote-b .attribution {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 22px;
+      padding: 7px 14px 7px 10px;
+      background: var(--primary-light);
+      border: 1px solid rgba(36, 62, 80, 0.08);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: var(--brand-navy);
+    }
+
+    .quote-b .attribution::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--brand-pink);
+    }
+
+    .quote-b .attribution em {
+      font-style: normal;
+      font-weight: 600;
+      color: var(--ink-muted);
+      letter-spacing: 0.02em;
+    }
+
+    /* ============================================
+       Variant C — Heritage frame
+       ============================================ */
+    .quote-c {
+      position: relative;
+      margin: 28px 0 12px;
+      padding: 48px 44px 40px;
+      background: var(--paper-cream);
+      border: 1px solid var(--brand-navy);
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .quote-c::before,
+    .quote-c::after {
+      content: '';
+      position: absolute;
+      left: 8px;
+      right: 8px;
+      height: 1px;
+      background: var(--brand-navy);
+      opacity: 0.55;
+    }
+
+    .quote-c::before { top: 8px; }
+    .quote-c::after  { bottom: 8px; }
+
+    .quote-c .ornament {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 22px;
+      color: var(--brand-pink);
+      line-height: 1;
+      margin-bottom: 22px;
+    }
+
+    .quote-c blockquote {
+      margin: 0 auto;
+      padding: 0;
+      max-width: 52ch;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 1.5;
+      color: var(--brand-navy);
+    }
+
+    .quote-c .attribution {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 28px;
+      font-family: Lato, sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.36em;
+      color: var(--brand-navy);
+    }
+
+    .quote-c .attribution::before,
+    .quote-c .attribution::after {
+      content: '';
+      width: 28px;
+      height: 1px;
+      background: var(--brand-navy);
+      opacity: 0.5;
+    }
+
+    @media (max-width: 600px) {
+      .page { padding: 32px 16px 64px; }
+      .quote-a { padding: 36px 24px 24px; }
+      .quote-a::before { font-size: 160px; top: -22px; }
+      .quote-a blockquote { font-size: 19px; }
+      .quote-b .band { width: 48px; }
+      .quote-b .band::after { font-size: 36px; top: 10px; }
+      .quote-b .body { padding: 24px 22px 22px; }
+      .quote-b blockquote { font-size: 17px; }
+      .quote-c { padding: 36px 24px 32px; }
+      .quote-c blockquote { font-size: 19px; }
+      .quote-c .attribution { letter-spacing: 0.24em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="page-head">
+      <h1>Montessori quote — three box variants</h1>
+      <p>Same quote, same width, real site colors &amp; fonts. Each variant sits between the PillRow above and the article body below.</p>
+    </header>
+
+    <!-- Variant A -->
+    <section class="variant">
+      <div class="label">Variant A &middot; Editorial drop-quote</div>
+
+      <div class="quote-a">
+        <blockquote>
+          Kto jest obsługiwany, a nie wspomagany, jest w pewien sposób ograniczony w swojej niezależności. Dla godności ludzkiej pojęcie to jest fundamentalne: Nie chcę być obsługiwany, ponieważ nie jestem bezradny, ale musimy sobie pomagać, ponieważ jesteśmy istotami społecznymi – oto co należy zrozumieć, by móc poczuć się naprawdę wolnym.
+        </blockquote>
+        <div class="attribution">
+          Maria Montessori <span>&middot; 1870–1952</span>
+        </div>
+      </div>
+
+      <div class="context">
+        <h3>Indywidualny plan rozwoju osobistego</h3>
+        <p>Nasza praca jest skoncentrowana na osobie. Opiera się na identyfikacji, ocenie i wykorzystaniu zachowanych umiejętności…</p>
+      </div>
+    </section>
+
+    <!-- Variant B -->
+    <section class="variant">
+      <div class="label">Variant B &middot; Pink accent band</div>
+
+      <div class="quote-b">
+        <div class="band" aria-hidden="true"></div>
+        <div class="body">
+          <blockquote>
+            Kto jest obsługiwany, a nie wspomagany, jest w pewien sposób ograniczony w swojej niezależności. Dla godności ludzkiej pojęcie to jest fundamentalne: Nie chcę być obsługiwany, ponieważ nie jestem bezradny, ale musimy sobie pomagać, ponieważ jesteśmy istotami społecznymi – oto co należy zrozumieć, by móc poczuć się naprawdę wolnym.
+          </blockquote>
+          <div class="attribution">
+            Maria Montessori <em>&nbsp;· 1870–1952</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="context">
+        <h3>Indywidualny plan rozwoju osobistego</h3>
+        <p>Nasza praca jest skoncentrowana na osobie. Opiera się na identyfikacji, ocenie i wykorzystaniu zachowanych umiejętności…</p>
+      </div>
+    </section>
+
+    <!-- Variant C -->
+    <section class="variant">
+      <div class="label">Variant C &middot; Heritage frame</div>
+
+      <div class="quote-c">
+        <div class="ornament">❦</div>
+        <blockquote>
+          Kto jest obsługiwany, a nie wspomagany, jest w pewien sposób ograniczony w swojej niezależności. Dla godności ludzkiej pojęcie to jest fundamentalne: Nie chcę być obsługiwany, ponieważ nie jestem bezradny, ale musimy sobie pomagać, ponieważ jesteśmy istotami społecznymi – oto co należy zrozumieć, by móc poczuć się naprawdę wolnym.
+        </blockquote>
+        <div class="attribution">Maria Montessori</div>
+      </div>
+
+      <div class="context">
+        <h3>Indywidualny plan rozwoju osobistego</h3>
+        <p>Nasza praca jest skoncentrowana na osobie. Opiera się na identyfikacji, ocenie i wykorzystaniu zachowanych umiejętności…</p>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

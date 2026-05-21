@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { colors } from '../tokens'
 import config from '../../data/siteConfig'
+import SectionEyebrow from './SectionEyebrow'
 
 const Wrapper = styled.section`
   margin: 3em 0 1em;
@@ -10,13 +11,8 @@ const Wrapper = styled.section`
   border-top: 1px solid #ececec;
 `
 
-const Heading = styled.h2`
-  margin: 0 0 1.6em 0;
-  font-size: 0.85em;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: ${colors.textLight};
+const Heading = styled(SectionEyebrow)`
+  margin-top: 0;
 `
 
 const List = styled.ul`

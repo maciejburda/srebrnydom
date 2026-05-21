@@ -26,11 +26,6 @@ module.exports = {
   comfort: 'circles/comfort@3x.png',
   homepageImage: 'covers/index-cover.jpg',
   relatedPages: {
-    'o-nas': [
-      { label: 'Cennik', url: '/cennik/' },
-      { label: 'Oferta', url: '/oferta/' },
-      { label: 'Montessori', url: '/montessori/' },
-    ],
     'cennik': [
       { label: 'Oferta', url: '/oferta/' },
       { label: 'O nas', url: '/o-nas/' },
@@ -46,17 +41,9 @@ module.exports = {
       { label: 'Cennik', url: '/cennik/' },
       { label: 'Galeria', url: '/galeria/' },
     ],
-    'galeria': [
-      { label: 'Oferta', url: '/oferta/' },
-      { label: 'O nas', url: '/o-nas/' },
-    ],
     'patron': [
       { label: 'O nas', url: '/o-nas/' },
       { label: 'Montessori', url: '/montessori/' },
-    ],
-    'kontakt': [
-      { label: 'Cennik', url: '/cennik/' },
-      { label: 'Oferta', url: '/oferta/' },
     ],
     'covid-19': [
       { label: 'Oferta', url: '/oferta/' },

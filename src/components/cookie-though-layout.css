@@ -23,8 +23,8 @@
     --ct-policy-essential: var(--ct-primary-100);
   
     /* The colors used to style the sliders */
-    --ct-slider-primary: var(--gray-400);
-    --ct-slider-secondary: var(--gray-300);
+    --ct-slider-primary: var(--ct-text);
+    --ct-slider-secondary: #d1d5db;
     --ct-slider-enabled-primary: #4c4cff;
     --ct-slider-enabled-secondary: #b3b3ff;
   

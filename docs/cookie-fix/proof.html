@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cookie banner slider fix — proof</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card: #ffffff;
+    --text: #243e50;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --bad: #b91c1c;
+    --good: #047857;
+    --bad-bg: #fef2f2;
+    --good-bg: #ecfdf5;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Cascadia Mono", monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 1100px; margin: 0 auto; padding: 48px 24px 96px; }
+  h1 { margin: 0 0 .5rem; font-size: 2rem; letter-spacing: -0.01em; }
+  h2 { margin: 3rem 0 1rem; font-size: 1.35rem; }
+  h3 { margin: 0 0 .25rem; font-size: 1rem; }
+  p.lede { color: var(--muted); margin: 0 0 2rem; max-width: 70ch; }
+  code { font-family: var(--mono); font-size: 0.92em; background: #f0f1f3; padding: 1px 5px; border-radius: 4px; }
+  pre {
+    background: #0f172a; color: #e2e8f0; border-radius: 8px; padding: 16px 18px;
+    overflow-x: auto; font-family: var(--mono); font-size: 13px; line-height: 1.55;
+  }
+  pre .ins { color: #86efac; }
+  pre .del { color: #fca5a5; }
+  pre .com { color: #94a3b8; font-style: italic; }
+
+  .grid {
+    display: grid; gap: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 16px; display: flex; flex-direction: column;
+  }
+  .card.before { border-color: #fecaca; background: var(--bad-bg); }
+  .card.after  { border-color: #a7f3d0; background: var(--good-bg); }
+  .card .tag {
+    display: inline-block; align-self: flex-start;
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 999px; margin-bottom: 10px;
+  }
+  .card.before .tag { background: #fecaca; color: var(--bad); }
+  .card.after  .tag { background: #a7f3d0; color: var(--good); }
+  .card .cap { color: var(--muted); font-size: 0.9rem; margin-top: 8px; }
+  .card img {
+    width: 100%; height: auto; display: block;
+    border: 1px solid var(--border); border-radius: 8px; background: #fff;
+  }
+
+  .arrow-row {
+    display: grid; gap: 14px;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center; margin-top: 14px;
+  }
+  .arrow-row .arrow {
+    font-size: 28px; color: var(--muted); text-align: center;
+  }
+  .zoom { background: #f3f4f6; padding: 12px; border-radius: 8px; }
+  .zoom img { background: transparent; }
+
+  .verdict {
+    margin: 1.5rem 0; padding: 14px 18px; border-radius: 10px;
+    background: var(--good-bg); border: 1px solid #a7f3d0; color: var(--good);
+    font-weight: 600;
+  }
+
+  .meta {
+    display: flex; flex-wrap: wrap; gap: 10px 22px;
+    color: var(--muted); font-size: 0.9rem; margin: 0 0 2rem;
+  }
+  .meta b { color: var(--text); font-weight: 600; }
+
+  details {
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 12px 16px; margin: 1rem 0;
+  }
+  details summary { cursor: pointer; font-weight: 600; }
+
+  @media (max-width: 720px) {
+    .grid, .arrow-row { grid-template-columns: 1fr; }
+    .arrow-row .arrow { transform: rotate(90deg); margin: 0 auto; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Cookie banner slider — fix proof</h1>
+<p class="lede">
+  The analytics toggle in the cookie consent modal was invisible in its disabled state
+  (clickable, but the slider track and knob rendered transparent). Below is the
+  evidence: the bug reproduced and the fix verified, both captured live from the
+  running dev site.
+</p>
+
+<div class="meta">
+  <span><b>File:</b> <code>src/components/cookie-though-layout.css</code></span>
+  <span><b>Source:</b> live Gatsby dev server at <code>localhost:8765</code></span>
+  <span><b>Tool:</b> Playwright (Chromium)</span>
+</div>
+
+<div class="verdict">Verdict: PASS — disabled slider is now visible; enabled slider unchanged.</div>
+
+<h2>Root cause</h2>
+<p>
+  <code>cookie-though</code> renders inside a Shadow DOM and styles its slider via
+  CSS custom properties. The project's override file pointed
+  <code>--ct-slider-primary</code> and <code>--ct-slider-secondary</code> at
+  <code>--gray-400</code> / <code>--gray-300</code> — variables that are not defined
+  anywhere in the codebase. CSS resolves an unset <code>var()</code> to the
+  property's initial value, so the slider's <code>background</code> resolved to
+  <em>transparent</em>. The <code>--ct-slider-enabled-*</code> variables had real
+  hex values, which is why the slider only appeared once toggled on.
+</p>
+
+<h2>The change</h2>
+<pre><span class="com">/* src/components/cookie-though-layout.css */</span>
+/* The colors used to style the sliders */
+<span class="del">--ct-slider-primary:   var(--gray-400);   /* undefined → transparent */</span>
+<span class="del">--ct-slider-secondary: var(--gray-300);   /* undefined → transparent */</span>
+<span class="ins">--ct-slider-primary:   var(--ct-text);    /* defined: #6b7280 */</span>
+<span class="ins">--ct-slider-secondary: #d1d5db;           /* light gray track */</span>
+--ct-slider-enabled-primary:   #4c4cff;
+--ct-slider-enabled-secondary: #b3b3ff;
+</pre>
+
+<h2>State 1 — disabled toggle (the bug)</h2>
+<div class="grid">
+  <div class="card before">
+    <span class="tag">Before · disabled</span>
+    <h3>Slider invisible</h3>
+    <img src="img/04-before-expanded-disabled.png" alt="Cookie modal expanded, before fix, toggle disabled — slider not rendered">
+    <div class="cap">Track and knob both transparent. The hit area is still clickable.</div>
+  </div>
+  <div class="card after">
+    <span class="tag">After · disabled</span>
+    <h3>Slider visible</h3>
+    <img src="img/02-after-expanded-disabled.png" alt="Cookie modal expanded, after fix, toggle disabled — gray slider visible">
+    <div class="cap">Light-gray track with darker gray knob at the left edge.</div>
+  </div>
+</div>
+<div class="arrow-row">
+  <div class="card before zoom">
+    <span class="tag">Before · zoom</span>
+    <img src="img/04b-before-slider-disabled-zoom.png" alt="Zoomed view of disabled slider before the fix — nothing visible">
+  </div>
+  <div class="arrow">→</div>
+  <div class="card after zoom">
+    <span class="tag">After · zoom</span>
+    <img src="img/02b-after-slider-disabled-zoom.png" alt="Zoomed view of disabled slider after the fix — gray track and knob">
+  </div>
+</div>
+
+<h2>State 2 — enabled toggle (regression check)</h2>
+<div class="grid">
+  <div class="card before">
+    <span class="tag">Before · enabled</span>
+    <h3>Already worked</h3>
+    <img src="img/05-before-expanded-enabled.png" alt="Cookie modal expanded, before fix, toggle enabled — blue slider visible">
+    <div class="cap">Enabled state used different variables that <em>were</em> defined, so it always rendered.</div>
+  </div>
+  <div class="card after">
+    <span class="tag">After · enabled</span>
+    <h3>Still works</h3>
+    <img src="img/03-after-expanded-enabled.png" alt="Cookie modal expanded, after fix, toggle enabled — blue slider unchanged">
+    <div class="cap">Unchanged — confirms the fix did not regress the enabled appearance.</div>
+  </div>
+</div>
+<div class="arrow-row">
+  <div class="card before zoom">
+    <span class="tag">Before · zoom</span>
+    <img src="img/05b-before-slider-enabled-zoom.png" alt="Zoomed enabled slider before the fix — blue">
+  </div>
+  <div class="arrow">→</div>
+  <div class="card after zoom">
+    <span class="tag">After · zoom</span>
+    <img src="img/03b-after-slider-enabled-zoom.png" alt="Zoomed enabled slider after the fix — same blue">
+  </div>
+</div>
+
+<h2>Banner — collapsed entry state</h2>
+<div class="card after" style="max-width: 460px;">
+  <span class="tag">After · banner</span>
+  <img src="img/01-after-banner.png" alt="Default cookie banner before expansion">
+  <div class="cap">Default banner before the user clicks the expand chevron — included for context.</div>
+</div>
+
+<details>
+  <summary>How the &quot;before&quot; screenshots were produced</summary>
+  <p>
+    To compare states cleanly in a single browser session, the &quot;before&quot;
+    screenshots were captured by re-pointing the two slider CSS variables back to
+    the broken <code>var(--gray-400)</code> / <code>var(--gray-300)</code> values
+    on the live host element, then re-toggling. This is the exact same defect
+    the fix removed — no other styles were touched.
+  </p>
+</details>
+
+</main>
+</body>
+</html>

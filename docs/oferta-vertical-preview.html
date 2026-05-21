@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oferta — vertical strips preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-navy: #243e50;
+      --brand-pink: #f6b3cd;
+      --brand-pink-soft: #fbe1ec;
+      --brand-pink-wash: #fff5f8;
+      --ink: #243e50;
+      --ink-muted: #57595d;
+      --paper: #f5f3ee;
+      --hairline: rgba(36, 62, 80, 0.14);
+      --hairline-soft: rgba(36, 62, 80, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0; padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Lato, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 96px;
+    }
+
+    .page-head {
+      margin-bottom: 48px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .page-head h1 {
+      font-family: Nunito, sans-serif;
+      font-weight: 900;
+      font-size: 28px;
+      letter-spacing: -0.01em;
+      color: var(--brand-navy);
+      margin: 0 0 6px;
+    }
+
+    .page-head p {
+      margin: 0;
+      color: var(--ink-muted);
+      font-size: 14px;
+    }
+
+    /* Section eyebrow consistent with the new site style */
+    .section-eyebrow {
+      display: flex;
+      align-items: stretch;
+      gap: 12px;
+      margin: 0 0 24px;
+      padding: 0;
+      font-family: Lato, sans-serif;
+      font-size: 1em;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+      line-height: 1.4;
+    }
+
+    .section-eyebrow::before {
+      content: '';
+      flex-shrink: 0;
+      width: 3px;
+      background: var(--brand-pink);
+      border-radius: 2px;
+      margin: 2px 0;
+    }
+
+    /* ===========================================
+       Icon — Cennik style (40-48px solid pink circle, navy icon)
+       =========================================== */
+    .icon-circle {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      background: var(--brand-pink);
+      color: var(--brand-navy);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon-circle svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ===========================================
+       Strip rows — vertical sections, no numbers
+       =========================================== */
+    .strips {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .strip {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 22px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--hairline-soft);
+      align-items: start;
+      transition: background 220ms ease, padding 220ms ease;
+    }
+
+    .strip:last-child { border-bottom: 0; }
+
+    .strip:hover {
+      background: linear-gradient(90deg, var(--brand-pink-wash) 0%, transparent 100%);
+    }
+
+    @media (max-width: 560px) {
+      .strip {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 24px 0;
+      }
+    }
+
+    .strip h2 {
+      font-family: Nunito, sans-serif;
+      font-weight: 800;
+      font-size: 1.2em;
+      color: var(--brand-navy);
+      margin: 0 0 10px;
+      line-height: 1.3;
+      letter-spacing: -0.005em;
+      /* Optical-align: nudge title to match icon center */
+      padding-top: 8px;
+    }
+
+    @media (max-width: 560px) {
+      .strip h2 { padding-top: 0; }
+    }
+
+    .strip p {
+      font-size: 0.96em;
+      line-height: 1.6;
+      color: var(--ink);
+      margin: 0;
+      max-width: 62ch;
+    }
+
+    .strip p + p { margin-top: 0.7em; }
+
+    /* Optional alternate-stripes background variant */
+    .alt .strip:nth-child(even) {
+      background: rgba(246, 179, 205, 0.06);
+      padding-left: 16px;
+      padding-right: 16px;
+      border-radius: 14px;
+      border-bottom: 0;
+    }
+
+    .alt .strip { border-bottom: 0; }
+
+    .alt .strip:hover { background: rgba(246, 179, 205, 0.14); }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="page-head">
+      <h1>Oferta — vertical strips, no numbers, Cennik-style icons</h1>
+      <p>Full-width rows. Solid pink 48px icon circle with navy line-art glyph. Heading + paragraph alongside. Thin divider between rows; soft pink-wash hover.</p>
+    </header>
+
+    <div class="section-eyebrow">Co obejmuje pobyt</div>
+
+    <div class="strips">
+
+      <article class="strip">
+        <span class="icon-circle">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </span>
+        <div>
+          <h2>Całodobowa opieka i wsparcie w codziennym funkcjonowaniu</h2>
+          <p>Wiemy, jak ważne dla osób starszych, schorowanych oraz z niepełnosprawnościami jest poczucie bezpieczeństwa i obecność kogoś, kto pomoże w razie potrzeby o każdej porze dnia i nocy. W naszej placówce obowiązuje całodobowa opieka opiekuńczo-pielęgnacyjna oraz wsparcie w codziennych czynnościach – od porannej toalety i posiłków, przez ubieranie się i przyjmowanie leków, po spacery i wieczorny odpoczynek.</p>
+        </div>
+      </article>
+
+      <article class="strip">
+        <span class="icon-circle">
+          <svg viewBox="0 0 24 24"><path d="M9 2v6a3 3 0 0 0 6 0V2"/><path d="M12 11v4"/><circle cx="12" cy="18" r="3"/></svg>
+        </span>
+        <div>
+          <h2>Regularne wizyty lekarskie</h2>
+          <p>Osoby starsze, schorowane oraz z niepełnosprawnościami muszą nieustannie pozostawać w kontakcie z medykiem, który będzie kontrolował ich stan zdrowia i zwracał uwagę na pojawiające się dolegliwości. W naszej placówce opiekuńczej odbywają się regularne wizyty lekarskie, w trakcie których pensjonariusze są badani pod każdym względem.</p>
+        </div>
+      </article>
+
+      <article class="strip">
+        <span class="icon-circle">
+          <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </span>
+        <div>
+          <h2>Opieka fizjoterapeutyczna</h2>
+          <p>Seniorzy bardzo często zmagają się z różnymi chorobami układu ruchu, które utrudniają im codzienne funkcjonowanie. Gwarantowana przez naszą placówkę opieka fizjoterapeutyczna ma na celu pomóc w tym, by jesień życia stała się przyjemniejsza. Prowadzone zajęcia rehabilitacyjne dostosowane są do stanu zdrowia seniorów oraz wskazywanych przez nich problemów oraz potrzeb. Uzupełnieniem programu rehabilitacyjnego jest <a href="#">Metoda Montessori</a>, którą stosujemy w codziennej aktywizacji mieszkańców.</p>
+        </div>
+      </article>
+
+      <article class="strip">
+        <span class="icon-circle">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+        </span>
+        <div>
+          <h2>Komfortowe pomieszczenia</h2>
+          <p>Prowadzony przez nas dom spokojnej starości dysponuje dziesięcioma pokojami przeznaczonymi dla dwóch, trzech lub czterech osób. Świadomie nie oferujemy pokoi jednoosobowych – z naszego doświadczenia wynika, że pensjonariusze znacznie lepiej czują się w towarzystwie innych mieszkańców, a wspólne życie codzienne łagodzi poczucie samotności. Każde komfortowe pomieszczenie jest w pełni wyposażone oraz posiada prywatną łazienkę.</p>
+        </div>
+      </article>
+
+      <article class="strip">
+        <span class="icon-circle">
+          <svg viewBox="0 0 24 24"><path d="M12 2 4 22h16z"/><path d="M12 8v14"/></svg>
+        </span>
+        <div>
+          <h2>Kaszuby – bliskość natury</h2>
+          <p>Jesień życia najlepiej spędzić w cichej i spokojnej okolicy, gdzie nie męczy hałas życia miejskiego. Z tego powodu nasz ośrodek opiekuńczy położony jest na Kaszubach – bliskość natury gwarantuje ubocze i pozbawienie obecności zabudowy mieszkaniowej oraz usługowej wokół. Położenie w okolicy Parku Narodowego „Bory Tucholskie" oraz Zaborskiego Parku Krajobrazowego daje możliwość spędzania czasu na świeżym powietrzu.</p>
+        </div>
+      </article>
+
+    </div>
+
+
+    <header class="page-head" style="margin-top: 80px;">
+      <h1>Variant — alternating soft tint (optional)</h1>
+      <p>Same layout but alternate rows have a very subtle pink-tinted card background — adds rhythm to a long list of strips. Pick this variant if the plain version feels too austere.</p>
+    </header>
+
+    <div class="section-eyebrow">Co obejmuje pobyt</div>
+
+    <div class="strips alt">
+
+      <article class="strip">
+        <span class="icon-circle">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </span>
+        <div>
+          <h2>Całodobowa opieka i wsparcie w codziennym funkcjonowaniu</h2>
+          <p>Wiemy, jak ważne dla osób starszych, schorowanych oraz z niepełnosprawnościami jest poczucie bezpieczeństwa i obecność kogoś, kto pomoże w razie potrzeby o każdej porze dnia i nocy. W naszej placówce obowiązuje całodobowa opieka opiekuńczo-pielęgnacyjna oraz wsparcie w codziennych czynnościach.</p>
+        </div>
+      </article>
+
+      <article class="strip">
+        <span class="icon-circle">
+          <svg viewBox="0 0 24 24"><path d="M9 2v6a3 3 0 0 0 6 0V2"/><path d="M12 11v4"/><circle cx="12" cy="18" r="3"/></svg>
+        </span>
+        <div>
+          <h2>Regularne wizyty lekarskie</h2>
+          <p>W naszej placówce opiekuńczej odbywają się regularne wizyty lekarskie, w trakcie których pensjonariusze są badani pod każdym względem. W taki sposób troszczymy się o przebywające u nas osoby, zapewniając im poczucie bezpieczeństwa.</p>
+        </div>
+      </article>
+
+      <article class="strip">
+        <span class="icon-circle">
+          <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </span>
+        <div>
+          <h2>Opieka fizjoterapeutyczna</h2>
+          <p>Gwarantowana przez naszą placówkę opieka fizjoterapeutyczna ma na celu pomóc w tym, by jesień życia stała się przyjemniejsza. Program ćwiczeń jest dostosowany do stanu zdrowia i potrzeb seniora.</p>
+        </div>
+      </article>
+
+      <article class="strip">
+        <span class="icon-circle">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+        </span>
+        <div>
+          <h2>Komfortowe pomieszczenia</h2>
+          <p>10 pokoi 2-, 3- i 4-osobowych z prywatną łazienką. Świadomie bez jedynek – seniorzy lepiej czują się w towarzystwie innych mieszkańców.</p>
+        </div>
+      </article>
+
+      <article class="strip">
+        <span class="icon-circle">
+          <svg viewBox="0 0 24 24"><path d="M12 2 4 22h16z"/><path d="M12 8v14"/></svg>
+        </span>
+        <div>
+          <h2>Kaszuby – bliskość natury</h2>
+          <p>Nasz ośrodek położony jest na Kaszubach – w sąsiedztwie Parku Narodowego „Bory Tucholskie" oraz Zaborskiego Parku Krajobrazowego.</p>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</body>
+</html>
