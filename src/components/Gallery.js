@@ -127,9 +127,8 @@ const imageAlt = name => {
     .replace(/^(.)/, c => c.toUpperCase())
 }
 
-// Year boundaries are baked into filenames:
-// image_a*..image_t* were taken in 2020,
-// image_w* onward were taken in 2019.
+// Boundary: names < 'image_w' → 2020; names >= 'image_w' → 2019.
+// New batches require extending this helper with an additional boundary.
 const imageYear = name => (name >= 'image_w' ? 2019 : 2020)
 
 const Gallery = () => {
@@ -190,9 +189,9 @@ const Gallery = () => {
   return (
     <>
       {groups.map(group => (
-        <YearSection key={group.year}>
+        <YearSection key={group.year} aria-labelledby={`year-heading-${group.year}`}>
           <YearEyebrow>Rok</YearEyebrow>
-          <YearHeading>{group.year}</YearHeading>
+          <YearHeading id={`year-heading-${group.year}`}>{group.year}</YearHeading>
           <Grid>
             {group.images.map(image => {
               const flatIndex = images.indexOf(image)
