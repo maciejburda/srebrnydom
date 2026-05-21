@@ -100,6 +100,11 @@ const imageAlt = name => {
     .replace(/^(.)/, c => c.toUpperCase())
 }
 
+// Year boundaries are baked into filenames:
+// image_a*..image_t* were taken in 2020,
+// image_w* onward were taken in 2019.
+const imageYear = name => (name >= 'image_w' ? 2019 : 2020)
+
 const Gallery = () => {
   const data = useStaticQuery(graphql`
     query GalleryImages {
