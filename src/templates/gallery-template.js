@@ -58,7 +58,7 @@ class GalleryTemplate extends React.Component {
           eyebrow="Spodobało Ci się?"
           title="Sprawdź ofertę i cennik"
           sub="Zobacz pełen zakres opieki oraz pakiety cenowe Srebrnego Domu."
-          primaryLabel="Zobacz cennik"
+          primaryLabel="Sprawdź cennik"
           primaryHref="/cennik/"
           secondaryLabel="Skontaktuj się"
           secondaryHref="/kontakt/"

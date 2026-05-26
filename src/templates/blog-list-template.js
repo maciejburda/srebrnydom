@@ -71,7 +71,7 @@ class BlogList extends React.Component {
             eyebrow="Pomyśl o swoim bliskim"
             title="Chętnie odpowiemy na Twoje pytania"
             sub="Sprawdź ofertę i cennik Srebrnego Domu lub skontaktuj się z nami osobiście."
-            primaryLabel="Zobacz cennik"
+            primaryLabel="Cennik domu seniora"
             primaryHref="/cennik/"
             secondaryLabel="Skontaktuj się"
             secondaryHref="/kontakt/"

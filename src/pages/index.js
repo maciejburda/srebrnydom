@@ -86,7 +86,7 @@ const NotFoundPage = props => {
       <TextColumn>
         <SectionEyebrow>Kaszuby – bliskość natury</SectionEyebrow>
         <Content>
-          Prowadzony przez nas luksusowy dom spokojnej starości znajduje się w
+          Prowadzony przez nas luksusowy dom seniora znajduje się w
           środku lasu, nieopodal miejscowości Swornegacie w gminie Chojnice.
           Jest położony w centrum ogromnej działki leśnej, spokój i możliwość
           wypoczynku w komfortowych warunkach gwarantuje brak zabudowy
@@ -105,7 +105,7 @@ const NotFoundPage = props => {
         eyebrow="Porozmawiajmy"
         title="Sprawdź, jak możemy zadbać o Twojego bliskiego"
         sub="Zobacz pełen cennik pakietów lub umów wizytę — chętnie pomożemy dopasować opiekę do potrzeb i możliwości Twojej rodziny."
-        primaryLabel="Zobacz cennik"
+        primaryLabel="Zobacz cennik domu seniora"
         primaryHref="/cennik/"
         secondaryLabel="Skontaktuj się"
         secondaryHref="/kontakt/"

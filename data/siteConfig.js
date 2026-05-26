@@ -1,11 +1,11 @@
 module.exports = {
   siteTitle: 'Dom Seniora - Srebrny Dom - Swornegacie',
-  siteDescription: 'Wolne miejsca! Trwa nabór pensjonariuszy. Dom spokojnej starości prowadzony w metodyce Montessori w miejscowości Swornegacie w województwie pomorskim.',
+  siteDescription: 'Wolne miejsca! Trwa nabór pensjonariuszy. Dom seniora prowadzony w metodyce Montessori w miejscowości Swornegacie w województwie pomorskim.',
   authorName: 'Srebrny Dom Swornegacie',
   twitterUsername: 'srebrnydomswornegacie',
   authorAvatar: 'logo.png', // file in content/images
   defaultLang: 'pl',
-  authorDescription: `Dom spokojnej starości prowadzonego w metodyce Montessori w miejscowości Swornegacie w województwie pomorskim.`,
+  authorDescription: `Dom seniora prowadzony w metodyce Montessori w miejscowości Swornegacie w województwie pomorskim.`,
   siteUrl: 'https://www.srebrnydom.pl/',
   disqusSiteUrl: 'https://www.srebrnydom.pl/',
   siteCover: 'covers/index-cover.jpg', // file in content/images
