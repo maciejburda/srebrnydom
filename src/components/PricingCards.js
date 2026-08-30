@@ -239,7 +239,7 @@ const PricingCards = () => (
         Wsparcie na czas urlopu, wyjazdu lub rekonwalescencji bliskiej osoby.
       </Tagline>
       <PriceRow>
-        <Price>300</Price>
+        <Price>380</Price>
         <Currency>zł</Currency>
         <Period>/ doba</Period>
       </PriceRow>
@@ -275,7 +275,7 @@ const PricingCards = () => (
         Dom, w którym senior poczuje się bezpiecznie każdego dnia.
       </Tagline>
       <PriceRow>
-        <Price>6&nbsp;500</Price>
+        <Price>7&nbsp;200</Price>
         <Currency>zł</Currency>
         <Period>/ miesiąc</Period>
       </PriceRow>
